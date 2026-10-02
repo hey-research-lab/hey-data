@@ -1,0 +1,136 @@
+name: Snapshot
+# Manual only: there is no schedule. The snapshot is uploaded as a workflow
+# artifact; with `release` set, a separate job attaches it to a GitHub Release.
+# Snapshots are never committed to the repository.
+on:
+  workflow_dispatch:
+    inputs:
+      details:
+        description: Read each project's dossier and coverage (about two requests per project)
+        type: boolean
+        default: true
+      evidence_limit:
+        description: Evidence records to fetch (0 for none)
+        type: string
+        default: '500'
+      resume_from_run:
+        description: Run id of a stopped Snapshot run to resume from its partial work (optional)
+        type: string
+        default: ''
+      release:
+        description: Attach the finished snapshot to a GitHub Release (data licence CC BY 4.0)
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: snapshot
+  cancel-in-progress: false
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 345
+    permissions:
+      contents: read
+      # Only to download a stopped run's partial work when resume_from_run is set.
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: corepack enable
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
+      - name: Validate inputs
+        env:
+          EVIDENCE_LIMIT: ${{ inputs.evidence_limit }}
+          RESUME_FROM_RUN: ${{ inputs.resume_from_run }}
+        run: |
+          set -euo pipefail
+          [[ "$EVIDENCE_LIMIT" =~ ^[0-9]{1,5}$ ]] || { echo "evidence_limit must be a whole number"; exit 2; }
+          [[ -z "$RESUME_FROM_RUN" || "$RESUME_FROM_RUN" =~ ^[0-9]{1,20}$ ]] || { echo "resume_from_run must be a run id"; exit 2; }
+      - name: Download partial work from the stopped run
+        if: inputs.resume_from_run != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: hey-data-partial
+          path: snapshot/.work
+          run-id: ${{ inputs.resume_from_run }}
+          github-token: ${{ github.token }}
+      - name: Generate
+        env:
+          EVIDENCE_LIMIT: ${{ inputs.evidence_limit }}
+          DETAILS: ${{ inputs.details }}
+        run: |
+          set -euo pipefail
+          args=(generate --out snapshot --evidence-limit "$EVIDENCE_LIMIT")
+          if [ "$DETAILS" != "true" ]; then args+=(--no-details); fi
+          node dist/bin.js "${args[@]}"
+      - name: Keep partial work for a resume
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hey-data-partial
+          path: snapshot/.work
+          include-hidden-files: true
+          if-no-files-found: ignore
+          retention-days: 7
+      - name: Add the data licence
+        run: cp LICENSE-DATA snapshot/LICENSE-DATA
+      - name: Upload snapshot
+        uses: actions/upload-artifact@v4
+        with:
+          name: hey-data-snapshot-${{ github.run_id }}
+          path: |
+            snapshot/*.ndjson
+            snapshot/metadata.json
+            snapshot/LICENSE-DATA
+          if-no-files-found: error
+          retention-days: 30
+
+  release:
+    needs: snapshot
+    if: inputs.release
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      # The only job that can write: it creates the release and its tag.
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: hey-data-snapshot-${{ github.run_id }}
+          path: snapshot
+      - name: Package and release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
+          TARGET_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          cd snapshot
+          generated=$(jq -r '.generatedAt' metadata.json)
+          [[ "$generated" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}T ]] || { echo "metadata.json has no generatedAt"; exit 1; }
+          day=${generated:0:10}
+          tag="data-${day}-${RUN_ID}"
+          tar -czf "hey-data-${day}.tar.gz" ./*.ndjson metadata.json LICENSE-DATA
+          sha256sum ./*.ndjson metadata.json LICENSE-DATA "hey-data-${day}.tar.gz" > SHA256SUMS
+          {
+            echo "HEY data snapshot generated at ${generated}."
+            echo
+            echo "Record counts:"
+            jq -r '.recordCount | to_entries[] | "- \(.key): \(.value)"' metadata.json
+            echo
+            echo "Data licence: CC BY 4.0. Attribution: Hey Research Lab, https://heyresearch.xyz"
+            echo
+            jq -r '.disclaimer' metadata.json
+            echo
+            jq -r '.nonAffiliation' metadata.json
+          } > notes.md
+          gh release create "$tag" --target "$TARGET_SHA" --title "HEY data snapshot ${day}" \
+            --notes-file notes.md \
+            ./*.ndjson metadata.json LICENSE-DATA "hey-data-${day}.tar.gz" SHA256SUMS
