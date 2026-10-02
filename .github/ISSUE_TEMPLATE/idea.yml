@@ -1,0 +1,15 @@
+name: Idea
+description: Something this repository should do. Robinhood Chain (4663) only; no wallet analytics, prices or trading signals.
+labels: [idea]
+body:
+  - type: textarea
+    id: need
+    attributes:
+      label: What you are trying to do
+      description: The job, not the solution. What would you build with it?
+    validations:
+      required: true
+  - type: textarea
+    id: today
+    attributes:
+      label: What you do today instead

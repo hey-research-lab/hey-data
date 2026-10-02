@@ -71,7 +71,7 @@ import {
 import { existsSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 
-export const GENERATOR_VERSION = '0.1.0';
+export const GENERATOR_VERSION = '0.1.1';
 export const STATUSES = ['SHIPPING', 'ACTIVE', 'QUIET', 'DORMANT', 'RESUMED', 'UNKNOWN'] as const;
 export const PAGE_LIMIT = 48;
 export const CHANGES_LIMIT = 100;

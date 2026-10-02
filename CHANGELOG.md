@@ -4,6 +4,13 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## 0.1.1 — 2026-10-02
+
+- `pnpm generate -- --out …` works: the separator pnpm 9 passes through is dropped (it failed as `Unknown command`). The README no longer uses it.
+- Ctrl-C prints "stopped. Run the same command again to resume."
+- Examples run on a quick `--no-details` snapshot: `node.mjs` takes each project's newest ship from `ships.ndjson`, and the DuckDB coverage query reads raw JSON, so a snapshot with no coverage field says "not read in this snapshot" instead of failing.
+- Issue templates (bug, idea) with private security reporting and HEY corrections linked.
+
 ## 0.1.0 — 2026-10-02
 
 Initial release.

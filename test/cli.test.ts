@@ -27,6 +27,11 @@ describe('cli', () => {
     expect(await main(['scrape'])).toBe(2);
     expect(await main(['generate', '--bogus'])).toBe(2);
     expect(await main(['generate', '--delay-ms', '100'])).toBe(2);
+    // `pnpm generate -- --delay-ms 100` reaches the CLI with the separator: still the option, not a command.
+    const stderr = vi.spyOn(process.stderr, 'write').mockImplementation(() => true);
+    expect(await main(['generate', '--', '--delay-ms', '100'])).toBe(2);
+    expect(stderr.mock.calls.map(([line]) => String(line)).join('')).toMatch(/--delay-ms must be/);
+    stderr.mockRestore();
     expect(await main(['generate', '--max-retries', '9'])).toBe(2);
     expect(await main(['generate', '--evidence-limit', '-1'])).toBe(2);
   });

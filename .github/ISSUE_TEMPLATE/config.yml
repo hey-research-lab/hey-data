@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security report (private)
+    url: https://github.com/hey-research-lab/hey-data/security/advisories/new
+    about: Report a vulnerability privately. Never in a public issue.
+  - name: A fact about a project on HEY is wrong
+    url: https://heyresearch.xyz/corrections
+    about: Corrections to HEY's research go through the site, where a moderator checks them against sources.

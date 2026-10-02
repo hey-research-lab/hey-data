@@ -14,11 +14,21 @@ async function* records(file) {
 const meta = JSON.parse(readFileSync(join(root, 'metadata.json'), 'utf8'));
 console.log(`snapshot ${meta.generatedAt}, chain ${meta.chainId}, licence ${meta.license}`);
 
+// Each project's newest ship in ships.ndjson: present in every snapshot, including a quick
+// --no-details one, where projects carry no latestShip.
+const newest = new Map();
+for await (const s of records('ships.ndjson')) {
+  const slug = s.project?.slug;
+  if (slug && (!newest.has(slug) || s.publishedAt > newest.get(slug).publishedAt))
+    newest.set(slug, s);
+}
+
 // Verified builders whose newest ship HEY lists is a GitHub release.
-// A project without latestShip is skipped: absent means unknown, not "never shipped".
+// A project with no ship in the snapshot is skipped: absent means unknown, not "never shipped".
 for await (const p of records('projects.ndjson')) {
-  if (p.researchLevel === 'VERIFIED_BUILDER' && p.latestShip?.eventType === 'GITHUB_RELEASE') {
-    console.log(`${p.slug}\t${p.activityStatus}\t${p.latestShip.publishedAt}\t${p.url}`);
+  const latest = p.latestShip ?? newest.get(p.slug);
+  if (p.researchLevel === 'VERIFIED_BUILDER' && latest?.eventType === 'GITHUB_RELEASE') {
+    console.log(`${p.slug}\t${p.activityStatus}\t${latest.publishedAt}\t${p.url}`);
   }
 }
 

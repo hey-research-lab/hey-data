@@ -89,11 +89,18 @@ function describe(error: unknown): string {
   return parts.join(' — ');
 }
 
+/** No option of hey-data takes a value starting with `--`, so the first bare `--` is only a runner's separator. */
+const withoutSeparator = (argv: string[]): string[] => {
+  const at = argv.indexOf('--');
+  return at < 0 ? argv : [...argv.slice(0, at), ...argv.slice(at + 1)];
+};
+
 export async function main(argv: string[]): Promise<number> {
   let parsed;
   try {
     parsed = parseArgs({
-      args: argv,
+      // `pnpm generate -- --out x` hands the separator through (pnpm 9: `generate -- --out x`): drop it.
+      args: withoutSeparator(argv),
       allowPositionals: true,
       options: {
         out: { type: 'string' },

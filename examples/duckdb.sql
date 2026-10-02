@@ -21,9 +21,11 @@ ORDER BY s.publishedAt DESC
 LIMIT 20;
 
 -- Coverage: how many projects HEY could read releases for, by state (states, never a score).
-SELECT coverage.releases.state AS releases_state, count(*) AS projects
-FROM projects
-WHERE coverage IS NOT NULL
+-- Read as raw JSON so the query also runs on a --no-details snapshot, which has no coverage
+-- field: there every project is "not read in this snapshot", never a state of zero.
+SELECT coalesce(json_extract_string(json, '$.coverage.releases.state'), 'not read in this snapshot') AS releases_state,
+       count(*) AS projects
+FROM read_json_objects('projects.ndjson')
 GROUP BY 1
 ORDER BY 2 DESC;
 

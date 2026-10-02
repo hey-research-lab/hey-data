@@ -1,6 +1,6 @@
 {
   "name": "hey-data",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "Research snapshots of HEY Research Lab's public builder records on Robinhood Chain (projects, ships, changes, evidence) as NDJSON, generated from the public API.",
   "license": "MIT",

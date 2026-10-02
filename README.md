@@ -44,7 +44,7 @@ A quick snapshot without per-project detail reads (about 800 requests, roughly 1
 default pace):
 
 ```sh
-pnpm generate -- --out snapshot --no-details --evidence-limit 0
+pnpm generate --out snapshot --no-details --evidence-limit 0
 head -n 1 snapshot/projects.ndjson
 ```
 
@@ -52,7 +52,7 @@ The full snapshot reads each project's dossier and coverage too (about two reque
 roughly three and a half hours for ~5,000 projects). Stop it at any time; the same command resumes.
 
 ```sh
-pnpm generate -- --out snapshot
+pnpm generate --out snapshot
 ```
 
 The test suite runs offline over recorded API answers: `pnpm test`.

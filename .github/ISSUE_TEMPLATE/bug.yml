@@ -1,0 +1,23 @@
+name: Bug
+description: Something in this repository does not do what its README says.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: The command or code you ran, what you expected, and what you got (output, exit code).
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The package or action version, and your Node.js version.
+    validations:
+      required: true
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: Never paste an API key, a private key or a token.
