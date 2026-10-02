@@ -1,0 +1,112 @@
+{
+  "path": "/api/projects/builder-twelve-robinxbt",
+  "recordedAt": "2026-10-02T11:40:17.282Z",
+  "body": {
+    "slug": "builder-twelve-robinxbt",
+    "name": "builder-twelve",
+    "projectKind": "OTHER",
+    "activityStatus": "UNKNOWN",
+    "researchLevel": "VERIFIED_BUILDER",
+    "catalogStatus": "VERIFIED_BUILDER",
+    "stillBuilding": false,
+    "stillBuildingState": "NOT_MEASURED",
+    "lastShippedAt": "2026-08-31T21:26:53.000Z",
+    "hasBuilderSource": false,
+    "logoUrl": "https://avatars.githubusercontent.com/builder-twelve",
+    "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt",
+    "ships": [
+      {
+        "id": "01a4fed1-6b22-4bc2-874b-2411757537af",
+        "title": "Active development: 18 commits across 1 contributor",
+        "summary": "1 active day(s) in builder-twelve/thunderdome.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-08-31T21:26:53.000Z",
+        "detectedAt": "2026-09-03T21:44:46.208Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:01a4fed1-6b22-4bc2-874b-2411757537af",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/builder-twelve/thunderdome",
+        "project": {
+          "slug": "builder-twelve-robinxbt",
+          "name": "builder-twelve",
+          "projectKind": "OTHER",
+          "activityStatus": "UNKNOWN",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-08-31T21:26:53.000Z",
+          "hasBuilderSource": false,
+          "logoUrl": "https://avatars.githubusercontent.com/builder-twelve",
+          "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt"
+        },
+        "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt#ship-01a4fed1-6b22-4bc2-874b-2411757537af"
+      },
+      {
+        "id": "0bf5014e-e835-4664-a6c5-0c8c3240b089",
+        "title": "Active development: 85 commits across 2 contributors",
+        "summary": "7 active day(s) in builder-twelve/robinxbt.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-08-01T08:56:33.000Z",
+        "detectedAt": "2026-09-03T21:44:47.325Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:0bf5014e-e835-4664-a6c5-0c8c3240b089",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/builder-twelve/robinxbt",
+        "project": {
+          "slug": "builder-twelve-robinxbt",
+          "name": "builder-twelve",
+          "projectKind": "OTHER",
+          "activityStatus": "UNKNOWN",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-08-31T21:26:53.000Z",
+          "hasBuilderSource": false,
+          "logoUrl": "https://avatars.githubusercontent.com/builder-twelve",
+          "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt"
+        },
+        "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt#ship-0bf5014e-e835-4664-a6c5-0c8c3240b089"
+      }
+    ],
+    "firstSeenAt": "2026-09-03T20:54:48.881Z",
+    "firstRecordedByHeyAt": "2026-09-03T21:05:05.374Z",
+    "isClaimed": false,
+    "submitted": false,
+    "narratives": [],
+    "sources": [
+      {
+        "url": "https://github.com/builder-twelve/robinxbt",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://github.com/builder-twelve/thunderdome",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://github.com/builder-twelve",
+        "sourceType": "GITHUB_ORG",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      }
+    ],
+    "score": {
+      "buildMomentum": 16.3,
+      "discoveryGapWithheld": "no_token",
+      "stillBuilding": false,
+      "stillBuildingState": "NOT_MEASURED",
+      "stillBuildingWithheld": "no_token",
+      "calculatedAt": "2026-10-02T06:06:23.269Z",
+      "scoringVersion": "hbm-v22"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

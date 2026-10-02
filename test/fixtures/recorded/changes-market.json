@@ -1,0 +1,130 @@
+{
+  "path": "/api/changes?domain=market&limit=3",
+  "recordedAt": "2026-10-02T11:40:22.748Z",
+  "body": {
+    "query": {
+      "domain": "market",
+      "mode": "browse",
+      "limit": 3
+    },
+    "items": [
+      {
+        "id": "state:3ee9f103-f67a-4d3b-b529-529313730682:market_status:13197",
+        "revision": 1,
+        "op": "upsert",
+        "type": "market.status_changed",
+        "domain": "market",
+        "origin": "live",
+        "project": {
+          "slug": "parcel-rush",
+          "name": "Parcel Rush",
+          "url": "https://heyresearch.xyz/project/parcel-rush"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T11:14:01.681Z",
+        "recordedAt": "2026-10-02T11:15:22.569Z",
+        "summary": "Token market moved from Active market to Trading inactive",
+        "before": "ACTIVE_MARKET",
+        "after": "TRADING_INACTIVE",
+        "evidence": [
+          {
+            "id": "state:3ee9f103-f67a-4d3b-b529-529313730682:market_status:13197",
+            "label": "HEY state record"
+          }
+        ],
+        "source": "hey_state",
+        "facts": {
+          "key": "market_status",
+          "scoringVersion": "hbm-v22"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/parcel-rush",
+          "evidence": "https://heyresearch.xyz/api/evidence/state%3A3ee9f103-f67a-4d3b-b529-529313730682%3Amarket_status%3A13197",
+          "timeline": "https://heyresearch.xyz/api/projects/parcel-rush/timeline"
+        }
+      },
+      {
+        "id": "state:95985982-6ee3-47f5-b227-90be006f68d7:market_status:13195",
+        "revision": 1,
+        "op": "upsert",
+        "type": "market.status_changed",
+        "domain": "market",
+        "origin": "live",
+        "project": {
+          "slug": "crosshair",
+          "name": "crosshair",
+          "url": "https://heyresearch.xyz/project/crosshair"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T11:14:01.681Z",
+        "recordedAt": "2026-10-02T11:15:22.569Z",
+        "summary": "Token market moved from Trading inactive to Active market",
+        "before": "TRADING_INACTIVE",
+        "after": "ACTIVE_MARKET",
+        "evidence": [
+          {
+            "id": "state:95985982-6ee3-47f5-b227-90be006f68d7:market_status:13195",
+            "label": "HEY state record"
+          }
+        ],
+        "source": "hey_state",
+        "facts": {
+          "key": "market_status",
+          "scoringVersion": "hbm-v22"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/crosshair",
+          "evidence": "https://heyresearch.xyz/api/evidence/state%3A95985982-6ee3-47f5-b227-90be006f68d7%3Amarket_status%3A13195",
+          "timeline": "https://heyresearch.xyz/api/projects/crosshair/timeline"
+        }
+      },
+      {
+        "id": "state:3817861f-8181-49cd-a87d-5599b16e1d0a:market_status:13190",
+        "revision": 1,
+        "op": "upsert",
+        "type": "market.status_changed",
+        "domain": "market",
+        "origin": "live",
+        "project": {
+          "slug": "sonder-protocol",
+          "name": "Sonder Protocol",
+          "url": "https://heyresearch.xyz/project/sonder-protocol"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T11:14:01.681Z",
+        "recordedAt": "2026-10-02T11:15:22.569Z",
+        "summary": "Token market moved from Active market to Trading inactive",
+        "before": "ACTIVE_MARKET",
+        "after": "TRADING_INACTIVE",
+        "evidence": [
+          {
+            "id": "state:3817861f-8181-49cd-a87d-5599b16e1d0a:market_status:13190",
+            "label": "HEY state record"
+          }
+        ],
+        "source": "hey_state",
+        "facts": {
+          "key": "market_status",
+          "scoringVersion": "hbm-v22"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/sonder-protocol",
+          "evidence": "https://heyresearch.xyz/api/evidence/state%3A3817861f-8181-49cd-a87d-5599b16e1d0a%3Amarket_status%3A13190",
+          "timeline": "https://heyresearch.xyz/api/projects/sonder-protocol/timeline"
+        }
+      }
+    ],
+    "nextCursor": "YzEuNTQ4ODQ",
+    "hasMore": true,
+    "ledger": {
+      "collectionStart": "2026-09-26T11:35:57.227Z",
+      "transitionsFrom": "2026-09-26T11:32:48.791Z",
+      "newestRecordedAt": "2026-10-02T11:40:02.246Z",
+      "projectorRanAt": "2026-10-02T11:40:02.246Z"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

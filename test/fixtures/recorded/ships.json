@@ -1,0 +1,465 @@
+{
+  "path": "/api/ships?sort=detected&limit=6",
+  "recordedAt": "2026-10-02T11:40:20.035Z",
+  "body": {
+    "query": {
+      "limit": 6,
+      "offset": 0,
+      "sort": "detected"
+    },
+    "total": 3014,
+    "nextOffset": 6,
+    "items": [
+      {
+        "id": "9b0eb53a-3693-4db4-815a-9c606aa47d4c",
+        "title": "Active development: 1 commit in the last 90 days across 1 contributor",
+        "summary": "1 active day(s) in builder-twentyone/contracts.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-07-17T10:10:53.000Z",
+        "detectedAt": "2026-10-02T09:12:46.267Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:9b0eb53a-3693-4db4-815a-9c606aa47d4c",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/builder-twentyone/contracts",
+        "codeSubstance": {
+          "verdict": "UNKNOWN",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 1,
+          "commitsRead": 0,
+          "changedCode": 0,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 0,
+          "notRead": 1,
+          "files": {
+            "source": 0,
+            "test": 0,
+            "docs": 0,
+            "readme": 0,
+            "dependency": 0,
+            "config": 0,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 0
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 0,
+          "sampled": false,
+          "basis": null,
+          "summary": "HEY has not yet looked inside 1 commit from this week."
+        },
+        "codeWeek": {
+          "isoWeek": "2026-w29",
+          "start": "2026-07-13T00:00:00.000Z",
+          "end": "2026-07-20T00:00:00.000Z",
+          "repository": "builder-twentyone/contracts",
+          "commits": 1,
+          "commitsAtLeast": false,
+          "commitsUrl": "https://github.com/builder-twentyone/contracts/commits?since=2026-07-13T00%3A00%3A00.000Z&until=2026-07-20T00%3A00%3A00.000Z",
+          "highlights": [
+            {
+              "subject": "feat: value-routing contracts — BuybackVault (mainnet), BurnJackpot, Incinerator",
+              "sha": "b60de4973c568b34975c20f18cde1afd71a59f1b",
+              "committedAt": "2026-07-17T10:10:53.000Z",
+              "readAsCode": false,
+              "url": "https://github.com/builder-twentyone/contracts/commit/b60de4973c568b34975c20f18cde1afd71a59f1b"
+            }
+          ],
+          "title": "Code changes, week of 2026-07-13 – 2026-07-19 · 1 commit"
+        },
+        "project": {
+          "slug": "gitlawb-contracts",
+          "name": "Gitlawb",
+          "shortDescription": "On-chain contracts for the Gitlawb protocol",
+          "projectKind": "OTHER",
+          "activityStatus": "RESUMED",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-09-25T15:54:31.000Z",
+          "primaryNarrative": {
+            "slug": "launchpad",
+            "name": "Launchpad"
+          },
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/Gitlawb",
+          "url": "https://heyresearch.xyz/project/gitlawb-contracts"
+        },
+        "url": "https://heyresearch.xyz/project/gitlawb-contracts#ship-9b0eb53a-3693-4db4-815a-9c606aa47d4c"
+      },
+      {
+        "id": "9c720ad9-abb9-4162-881f-74a1c2ef64ce",
+        "title": "v0.134.25",
+        "summary": "## What's Changed * fix(ladder): zero reserves of unquoted directions by @NgoKimPhu in https://github.com/KyberNetwork/kyberswap-dex-lib/pull/1738 **Full Changelog**: https://github.com/KyberNetwork/kyberswap-dex-lib/compare/v0.134.24...v0.134.25",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-10-02T07:30:14.000Z",
+        "detectedAt": "2026-10-02T08:19:04.388Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:9c720ad9-abb9-4162-881f-74a1c2ef64ce",
+        "verification": "PUBLICLY_VERIFIED",
+        "sourceUrl": "https://github.com/KyberNetwork/kyberswap-dex-lib/releases/tag/v0.134.25",
+        "project": {
+          "slug": "kybernetwork-kyberswap-dex-lib",
+          "name": "KyberNetwork",
+          "symbol": "INVERSE",
+          "shortDescription": "DexLib is a library used by Kyberswap backend to integrate with decentralized exchanges. This library enables external DEX developers to integrate their DEX with Kyberswap by creating pull requests to this repository.",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T08:21:43.000Z",
+          "primaryNarrative": {
+            "slug": "dex",
+            "name": "DEX"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x07c8f63efac882d882427ef3e6471eda9cde6a3b"
+          },
+          "valuationWithheld": "launch_pool_no_trades",
+          "liquidity": {
+            "usd": 0.8252,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "TRADING_INACTIVE",
+            "reason": "launch_pool_no_trades"
+          },
+          "tokenVerification": {
+            "status": "UNVERIFIED",
+            "reason": "site_silent"
+          },
+          "venue": "v4-style",
+          "trades24h": {
+            "buys": 0,
+            "sells": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z"
+          },
+          "priceChange24hPct": 0,
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/KyberNetwork",
+          "url": "https://heyresearch.xyz/project/kybernetwork-kyberswap-dex-lib"
+        },
+        "url": "https://heyresearch.xyz/project/kybernetwork-kyberswap-dex-lib#ship-9c720ad9-abb9-4162-881f-74a1c2ef64ce"
+      },
+      {
+        "id": "6f61f341-2230-43ab-a858-f6e3dd233dfc",
+        "title": "kyberswap-dex-lib v0.134.24",
+        "summary": "## What's Changed * fix(algebra,velodrome-v2): stale timepoints, adaptive fee math, checked stable math by @sunspirit99 in https://github.com/KyberNetwork/kyberswap-dex-lib/pull/1736 **Full Changelog**: https://github.com/KyberNetwork/kyberswap-dex-lib/compare/v0.134.23...v0.134.24",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-10-02T06:10:53.000Z",
+        "detectedAt": "2026-10-02T07:08:52.695Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:6f61f341-2230-43ab-a858-f6e3dd233dfc",
+        "verification": "PUBLICLY_VERIFIED",
+        "sourceUrl": "https://github.com/KyberNetwork/kyberswap-dex-lib/releases/tag/v0.134.24",
+        "project": {
+          "slug": "kybernetwork-kyberswap-dex-lib",
+          "name": "KyberNetwork",
+          "symbol": "INVERSE",
+          "shortDescription": "DexLib is a library used by Kyberswap backend to integrate with decentralized exchanges. This library enables external DEX developers to integrate their DEX with Kyberswap by creating pull requests to this repository.",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T08:21:43.000Z",
+          "primaryNarrative": {
+            "slug": "dex",
+            "name": "DEX"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x07c8f63efac882d882427ef3e6471eda9cde6a3b"
+          },
+          "valuationWithheld": "launch_pool_no_trades",
+          "liquidity": {
+            "usd": 0.8252,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "TRADING_INACTIVE",
+            "reason": "launch_pool_no_trades"
+          },
+          "tokenVerification": {
+            "status": "UNVERIFIED",
+            "reason": "site_silent"
+          },
+          "venue": "v4-style",
+          "trades24h": {
+            "buys": 0,
+            "sells": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z"
+          },
+          "priceChange24hPct": 0,
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/KyberNetwork",
+          "url": "https://heyresearch.xyz/project/kybernetwork-kyberswap-dex-lib"
+        },
+        "url": "https://heyresearch.xyz/project/kybernetwork-kyberswap-dex-lib#ship-6f61f341-2230-43ab-a858-f6e3dd233dfc"
+      },
+      {
+        "id": "2558fa7f-3a7a-4686-ab75-d882f427c1e1",
+        "title": "Deployed a new contract: 0x8dff…e85c",
+        "summary": "The account that launched Reservum’s token deployed 0x8dff…e85c on 2026-09-26. Read from the chain; the creating transaction is the evidence.",
+        "eventType": "CONTRACT_DEPLOY_FOLLOWUP",
+        "publishedAt": "2026-09-26T04:05:45.000Z",
+        "detectedAt": "2026-10-02T06:14:51.892Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:2558fa7f-3a7a-4686-ab75-d882f427c1e1",
+        "verification": "PUBLICLY_VERIFIED",
+        "sourceUrl": "https://robinhoodchain.blockscout.com/address/0x8dff5d4b32fa00ed3088a4c5e84ff5b49de6e85c",
+        "project": {
+          "slug": "reservum",
+          "name": "Reservum",
+          "symbol": "RESV",
+          "shortDescription": "Reservum ($RESV) is a fixed-supply token on Robinhood Chain. Every trade pays a fee that automatically converts into ETH, held directly in the verified contract — no basket, no intermediary asset. Holders can redeem anytime for their pro-rata share of the reserve. 99% of coins can go to zero, Reservum has a floor that can only raise.",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-09-26T04:05:45.000Z",
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x4d897bb08c5af792cf50451a20487d4f70f1f2b2"
+          },
+          "websiteUrl": "https://reservum.org/",
+          "officialX": {
+            "handle": "ReservumFi",
+            "url": "https://x.com/ReservumFi"
+          },
+          "marketCap": {
+            "usd": 2079.797631,
+            "source": "geckoterminal",
+            "kind": "fdv",
+            "observedAt": "2026-10-02T09:28:19.951Z"
+          },
+          "liquidity": {
+            "usd": 2202.4903,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T09:28:19.951Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 4.878122,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T09:28:19.951Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "ACTIVE_MARKET",
+            "reason": "launch_pool_trading"
+          },
+          "tokenVerification": {
+            "status": "VERIFIED",
+            "reason": "site_names_contract"
+          },
+          "venue": "Uniswap v2",
+          "trades24h": {
+            "buys": 1,
+            "sells": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T09:28:19.951Z"
+          },
+          "priceChange24hPct": 0,
+          "hasBuilderSource": false,
+          "logoUrl": "https://reservum.org/reservum_profile.svg",
+          "url": "https://heyresearch.xyz/project/reservum"
+        },
+        "url": "https://heyresearch.xyz/project/reservum#ship-2558fa7f-3a7a-4686-ab75-d882f427c1e1"
+      },
+      {
+        "id": "656c0961-26de-4e61-a2a3-2ceeef434621",
+        "title": "Active development: 10 commits in the last 90 days across 1 contributor",
+        "summary": "2 active day(s) in builder-fourteen/predly.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-09-10T10:54:34.000Z",
+        "detectedAt": "2026-10-02T06:02:03.959Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:656c0961-26de-4e61-a2a3-2ceeef434621",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/builder-fourteen/predly",
+        "codeSubstance": {
+          "verdict": "UNKNOWN",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 10,
+          "commitsRead": 0,
+          "changedCode": 0,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 0,
+          "notRead": 10,
+          "files": {
+            "source": 0,
+            "test": 0,
+            "docs": 0,
+            "readme": 0,
+            "dependency": 0,
+            "config": 0,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 0
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 16,
+          "sampled": false,
+          "basis": null,
+          "summary": "HEY has not yet looked inside 10 commits from this week. 16 automated commits (bot accounts or a repeating scripted message) not counted."
+        },
+        "codeWeek": {
+          "isoWeek": "2026-w37",
+          "start": "2026-09-07T00:00:00.000Z",
+          "end": "2026-09-14T00:00:00.000Z",
+          "repository": "builder-fourteen/predly",
+          "commits": 10,
+          "commitsAtLeast": false,
+          "commitsUrl": "https://github.com/builder-fourteen/predly/commits?since=2026-09-07T00%3A00%3A00.000Z&until=2026-09-14T00%3A00%3A00.000Z",
+          "highlights": [
+            {
+              "subject": "assets: refresh the token gallery from the current snapshot",
+              "sha": "fcd6e9dbfad6fbdeb7a61bcedf03e0f78d7272b9",
+              "committedAt": "2026-09-10T10:54:34.000Z",
+              "readAsCode": false,
+              "url": "https://github.com/builder-fourteen/predly/commit/fcd6e9dbfad6fbdeb7a61bcedf03e0f78d7272b9"
+            },
+            {
+              "subject": "repo: rename to predly",
+              "sha": "9faf4eb742c67b2df5c6a015fbbbbf6fff77926b",
+              "committedAt": "2026-09-10T08:42:49.000Z",
+              "readAsCode": false,
+              "url": "https://github.com/builder-fourteen/predly/commit/9faf4eb742c67b2df5c6a015fbbbbf6fff77926b"
+            },
+            {
+              "subject": "docs: the board prices the top twenty by cap, not every launch",
+              "sha": "750f9392eb3259e8c2be1c191b02d88a442a5d49",
+              "committedAt": "2026-09-10T08:39:07.000Z",
+              "readAsCode": false,
+              "url": "https://github.com/builder-fourteen/predly/commit/750f9392eb3259e8c2be1c191b02d88a442a5d49"
+            }
+          ],
+          "title": "Code changes, week of 2026-09-07 – 2026-09-13 · 10 commits"
+        },
+        "project": {
+          "slug": "builder-fourteen-predly-tools",
+          "name": "builder-fourteen",
+          "shortDescription": "Open tooling for Predly: recompute every market price, read Robinhood Chain yourself, run the board offline.",
+          "projectKind": "OTHER",
+          "activityStatus": "ACTIVE",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-09-13T00:38:09.000Z",
+          "primaryNarrative": {
+            "slug": "perps",
+            "name": "Perps"
+          },
+          "websiteUrl": "https://predly.tech",
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/builder-fourteen",
+          "url": "https://heyresearch.xyz/project/builder-fourteen-predly-tools"
+        },
+        "url": "https://heyresearch.xyz/project/builder-fourteen-predly-tools#ship-656c0961-26de-4e61-a2a3-2ceeef434621"
+      },
+      {
+        "id": "566d6739-5acf-4773-bf71-54d3589cf4dc",
+        "title": "v0.134.22",
+        "summary": "## What's Changed * feat(nabla): support surge fees from DynamicFeeProvider by @NgoKimPhu in https://github.com/KyberNetwork/kyberswap-dex-lib/pull/1732 * feat(tidefi-prop): optional static token list instead of Taker API discovery by @NgoKimPhu in https://github.com/KyberNetwork/kyberswap-dex-lib/pull/1735 **Full Changelog**: https://github.com/KyberNetwork/kyberswap-dex-lib/compare/v0.134.21...v0.134.22",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-10-02T04:25:37.000Z",
+        "detectedAt": "2026-10-02T05:51:26.837Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:566d6739-5acf-4773-bf71-54d3589cf4dc",
+        "verification": "PUBLICLY_VERIFIED",
+        "sourceUrl": "https://github.com/KyberNetwork/kyberswap-dex-lib/releases/tag/v0.134.22",
+        "project": {
+          "slug": "kybernetwork-kyberswap-dex-lib",
+          "name": "KyberNetwork",
+          "symbol": "INVERSE",
+          "shortDescription": "DexLib is a library used by Kyberswap backend to integrate with decentralized exchanges. This library enables external DEX developers to integrate their DEX with Kyberswap by creating pull requests to this repository.",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T08:21:43.000Z",
+          "primaryNarrative": {
+            "slug": "dex",
+            "name": "DEX"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x07c8f63efac882d882427ef3e6471eda9cde6a3b"
+          },
+          "valuationWithheld": "launch_pool_no_trades",
+          "liquidity": {
+            "usd": 0.8252,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "TRADING_INACTIVE",
+            "reason": "launch_pool_no_trades"
+          },
+          "tokenVerification": {
+            "status": "UNVERIFIED",
+            "reason": "site_silent"
+          },
+          "venue": "v4-style",
+          "trades24h": {
+            "buys": 0,
+            "sells": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T10:56:26.787Z"
+          },
+          "priceChange24hPct": 0,
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/KyberNetwork",
+          "url": "https://heyresearch.xyz/project/kybernetwork-kyberswap-dex-lib"
+        },
+        "url": "https://heyresearch.xyz/project/kybernetwork-kyberswap-dex-lib#ship-566d6739-5acf-4773-bf71-54d3589cf4dc"
+      }
+    ],
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "path": "/api/evidence/ship%3Ab455fb13-e74b-412c-90d5-69dc197c9f66",
+  "recordedAt": "2026-10-02T11:40:32.174Z",
+  "body": {
+    "id": "ship:b455fb13-e74b-412c-90d5-69dc197c9f66",
+    "withdrawn": false,
+    "project": {
+      "slug": "ledgerhq-ledger-live",
+      "name": "LedgerHQ",
+      "url": "https://heyresearch.xyz/project/ledgerhq-ledger-live"
+    },
+    "domain": "build",
+    "claimType": "CODE_ACTIVITY",
+    "summary": "Active development: 100+ commits since 2026-09-11 across 23 contributors",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ledgerhq/ledger-live",
+    "publishedAt": "2026-09-19T11:56:21.000Z",
+    "detectedAt": "2026-09-18T01:33:50.145Z",
+    "precision": "WEEK",
+    "window": {
+      "isoWeek": "2026-W38",
+      "start": "2026-09-14T00:00:00.000Z",
+      "end": "2026-09-21T00:00:00.000Z",
+      "firstDay": "2026-09-14",
+      "lastDay": "2026-09-20",
+      "sourceUrl": "https://github.com/ledgerhq/ledger-live/commits?since=2026-09-14T00%3A00%3A00.000Z&until=2026-09-21T00%3A00%3A00.000Z"
+    },
+    "codeWeek": {
+      "isoWeek": "2026-w38",
+      "start": "2026-09-14T00:00:00.000Z",
+      "end": "2026-09-21T00:00:00.000Z",
+      "repository": "ledgerhq/ledger-live",
+      "commits": 97,
+      "commitsAtLeast": true,
+      "commitsUrl": "https://github.com/ledgerhq/ledger-live/commits?since=2026-09-14T00%3A00%3A00.000Z&until=2026-09-21T00%3A00%3A00.000Z",
+      "highlights": [],
+      "title": "Code changes, week of 2026-09-14 – 2026-09-20 · at least 97 commits"
+    },
+    "verification": "SOURCE_LINKED",
+    "countsAsBuilding": true,
+    "recordedAt": "2026-09-18T01:33:50.145Z",
+    "metadata": {
+      "summary": "6 active day(s) in ledgerhq/ledger-live since 2026-09-11; only the newest 100 commits were read.",
+      "prerelease": false
+    },
+    "sources": [
+      {
+        "evidenceRowId": "40ce6bca-e6c5-412c-b355-84f2a02e4498",
+        "sourceType": "GITHUB_REPO",
+        "sourceUrl": "https://github.com/ledgerhq/ledger-live",
+        "observedAt": "2026-09-18T01:33:50.145Z",
+        "metadata": {
+          "truncated": true,
+          "windowEnd": "2026-09-21T04:53:48.812Z",
+          "activeDays": 6,
+          "commitCount": 98,
+          "windowStart": "2026-09-11T07:59:18.000Z",
+          "contributorCount": 23
+        }
+      }
+    ],
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

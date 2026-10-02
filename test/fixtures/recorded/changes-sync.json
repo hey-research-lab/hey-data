@@ -1,0 +1,465 @@
+{
+  "path": "/api/changes?after=c1.0&limit=12",
+  "recordedAt": "2026-10-02T11:40:21.415Z",
+  "body": {
+    "query": {
+      "after": "c1.0",
+      "mode": "sync",
+      "limit": 12
+    },
+    "items": [
+      {
+        "id": "ship:b455fb13-e74b-412c-90d5-69dc197c9f66",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.code_activity",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "ledgerhq-ledger-live",
+          "name": "LedgerHQ",
+          "url": "https://heyresearch.xyz/project/ledgerhq-ledger-live"
+        },
+        "occurredAt": "2026-09-19T11:56:21.000Z",
+        "precision": "WEEK",
+        "detectedAt": "2026-09-18T01:33:50.145Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "Active development: 100+ commits since 2026-09-11 across 23 contributors",
+        "evidence": [
+          {
+            "id": "ship:b455fb13-e74b-412c-90d5-69dc197c9f66",
+            "url": "https://github.com/ledgerhq/ledger-live",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "CODE_ACTIVITY",
+          "verification": "SOURCE_LINKED"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/ledgerhq-ledger-live",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3Ab455fb13-e74b-412c-90d5-69dc197c9f66",
+          "timeline": "https://heyresearch.xyz/api/projects/ledgerhq-ledger-live/timeline"
+        }
+      },
+      {
+        "id": "ship:87a92447-e637-4801-b6d2-b5692efc8ca0",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-08-23T19:05:48.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.855Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.29.0",
+        "evidence": [
+          {
+            "id": "ship:87a92447-e637-4801-b6d2-b5692efc8ca0",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.29.0",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.29.0"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A87a92447-e637-4801-b6d2-b5692efc8ca0",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:86647129-9e16-4990-a5ac-ee0957537eb8",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-07-21T04:39:41.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.861Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.28.5",
+        "evidence": [
+          {
+            "id": "ship:86647129-9e16-4990-a5ac-ee0957537eb8",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.28.5",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.28.5"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A86647129-9e16-4990-a5ac-ee0957537eb8",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:2fa52ba6-7169-4bb8-98f6-20394504d573",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-07-12T20:43:44.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.865Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.28.4",
+        "evidence": [
+          {
+            "id": "ship:2fa52ba6-7169-4bb8-98f6-20394504d573",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.28.4",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.28.4"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A2fa52ba6-7169-4bb8-98f6-20394504d573",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:408c2560-2810-4205-8c4c-6062d3637e74",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-07-12T03:13:14.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.868Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.28.3",
+        "evidence": [
+          {
+            "id": "ship:408c2560-2810-4205-8c4c-6062d3637e74",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.28.3",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.28.3"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A408c2560-2810-4205-8c4c-6062d3637e74",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:97a30474-fcfe-4437-a64a-2a3256331b6e",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-07-10T18:13:08.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.872Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.28.2",
+        "evidence": [
+          {
+            "id": "ship:97a30474-fcfe-4437-a64a-2a3256331b6e",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.28.2",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.28.2"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A97a30474-fcfe-4437-a64a-2a3256331b6e",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:767472b4-974f-4993-a936-be62080b7176",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-07-10T15:07:18.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.877Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.28.1",
+        "evidence": [
+          {
+            "id": "ship:767472b4-974f-4993-a936-be62080b7176",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.28.1",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.28.1"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A767472b4-974f-4993-a936-be62080b7176",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:4da317eb-14da-4342-94b8-aa9d950167bf",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-07-08T19:52:25.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.880Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.28.0",
+        "evidence": [
+          {
+            "id": "ship:4da317eb-14da-4342-94b8-aa9d950167bf",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.28.0",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.28.0"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A4da317eb-14da-4342-94b8-aa9d950167bf",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:60f0effa-3e71-42e7-8061-5692ca848cc0",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-07-02T17:59:32.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.883Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.27.0",
+        "evidence": [
+          {
+            "id": "ship:60f0effa-3e71-42e7-8061-5692ca848cc0",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.27.0",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.27.0"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A60f0effa-3e71-42e7-8061-5692ca848cc0",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:85431237-f224-41e2-a822-45c9f06f111d",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-07-01T02:58:33.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.887Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.26.1",
+        "evidence": [
+          {
+            "id": "ship:85431237-f224-41e2-a822-45c9f06f111d",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.26.1",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.26.1"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A85431237-f224-41e2-a822-45c9f06f111d",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:96bcb9ed-dd97-4ab6-8a92-7324cd66f7bb",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-06-30T23:06:06.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.890Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.26.0",
+        "evidence": [
+          {
+            "id": "ship:96bcb9ed-dd97-4ab6-8a92-7324cd66f7bb",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.26.0",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.26.0"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A96bcb9ed-dd97-4ab6-8a92-7324cd66f7bb",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      },
+      {
+        "id": "ship:29968c07-9f3f-4cda-ba91-33fbc7c23376",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-06-27T14:49:14.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.894Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.25.0",
+        "evidence": [
+          {
+            "id": "ship:29968c07-9f3f-4cda-ba91-33fbc7c23376",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.25.0",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.25.0"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A29968c07-9f3f-4cda-ba91-33fbc7c23376",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
+      }
+    ],
+    "nextCursor": "YzEuMTM",
+    "hasMore": true,
+    "ledger": {
+      "collectionStart": "2026-09-26T11:35:57.227Z",
+      "transitionsFrom": "2026-09-26T11:32:48.791Z",
+      "newestRecordedAt": "2026-10-02T11:40:02.246Z",
+      "projectorRanAt": "2026-10-02T11:40:02.246Z"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "path": "/api/projects?has=token&limit=2",
+  "recordedAt": "2026-10-02T11:40:07.976Z",
+  "body": {
+    "query": {
+      "limit": 2,
+      "offset": 0,
+      "has": "token",
+      "sort": "activity"
+    },
+    "total": 2987,
+    "nextOffset": 2,
+    "items": [
+      {
+        "slug": "priors-agents",
+        "name": "Priors Agents",
+        "symbol": "PRIORS",
+        "shortDescription": "The credit layer for AI agents. Unsecured USDG lines, repayment records on-chain, x402 payments. Built on Robinhood Chain.",
+        "projectKind": "OTHER",
+        "activityStatus": "SHIPPING",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-10-02T10:39:03.000Z",
+        "primaryNarrative": {
+          "slug": "ai-agents",
+          "name": "AI Agents"
+        },
+        "token": {
+          "chainId": 4663,
+          "contractAddress": "0x7e7154eb9dd81084625a7a2e9e731cadfddb9ab7"
+        },
+        "websiteUrl": "https://www.priors.live/",
+        "officialX": {
+          "handle": "priors_agent",
+          "url": "https://x.com/priors_agent"
+        },
+        "valuationWithheld": "launch_pool_no_trades",
+        "liquidity": {
+          "usd": 1.8769,
+          "source": "geckoterminal",
+          "observedAt": "2026-10-02T11:36:52.443Z",
+          "kind": "launch_inventory"
+        },
+        "volume24h": {
+          "usd": 0,
+          "source": "geckoterminal",
+          "observedAt": "2026-10-02T11:36:52.443Z"
+        },
+        "launchStage": "DEX",
+        "tokenMarket": {
+          "status": "TRADING_INACTIVE",
+          "reason": "launch_pool_no_trades"
+        },
+        "tokenVerification": {
+          "status": "UNVERIFIED",
+          "reason": "market_listing"
+        },
+        "venue": "Uniswap v2",
+        "trades24h": {
+          "buys": 0,
+          "sells": 0,
+          "source": "geckoterminal",
+          "observedAt": "2026-10-02T11:36:52.443Z"
+        },
+        "priceChange24hPct": 0,
+        "hasBuilderSource": true,
+        "logoUrl": "https://cdn.dexscreener.com/cms/images/ok_csxBkS9qtiMzl?width=64&height=64&fit=crop&quality=95&format=auto",
+        "url": "https://heyresearch.xyz/project/priors-agents"
+      },
+      {
+        "slug": "merrymen",
+        "name": "Merrymen",
+        "symbol": "MERRYMEN",
+        "shortDescription": "**MERRYMEN** ,your own band of autonomous trading agents. WE run 24/7 on your machine, trade only within your on chain permission walls, and never take custody of your funds. Name them. Chat with them. Control them from Telegram. Self hosted. Open source.",
+        "projectKind": "OTHER",
+        "activityStatus": "SHIPPING",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_HELD",
+        "lastShippedAt": "2026-10-02T10:31:42.000Z",
+        "primaryNarrative": {
+          "slug": "ai-agents",
+          "name": "AI Agents"
+        },
+        "token": {
+          "chainId": 4663,
+          "contractAddress": "0xa15cd06dd305269a0f48bebeb30aa3588fba7b32"
+        },
+        "launchedVia": {
+          "name": "Virtuals",
+          "url": "https://app.virtuals.io/virtuals/5ff1941a-7501-4de1-9c71-676a107d4995"
+        },
+        "websiteUrl": "https://merrymen.dev/",
+        "officialX": {
+          "handle": "merrymenai",
+          "url": "https://x.com/merrymenai"
+        },
+        "marketCap": {
+          "usd": 515040,
+          "source": "dexscreener",
+          "kind": "fdv",
+          "observedAt": "2026-10-02T11:38:38.309Z"
+        },
+        "liquidity": {
+          "usd": 123407.33,
+          "source": "dexscreener",
+          "observedAt": "2026-10-02T11:38:38.309Z",
+          "kind": "market"
+        },
+        "volume24h": {
+          "usd": 86578.29,
+          "source": "dexscreener",
+          "observedAt": "2026-10-02T11:38:38.309Z"
+        },
+        "launchStage": "DEX",
+        "tokenMarket": {
+          "status": "ACTIVE_MARKET",
+          "reason": "liquidity_and_volume"
+        },
+        "tokenVerification": {
+          "status": "VERIFIED",
+          "reason": "site_names_contract"
+        },
+        "venue": "Uniswap v2",
+        "trades24h": {
+          "buys": 202,
+          "sells": 148,
+          "source": "dexscreener",
+          "observedAt": "2026-10-02T11:38:38.309Z"
+        },
+        "priceChange24hPct": -25.6,
+        "hasBuilderSource": true,
+        "logoUrl": "https://s3.ap-southeast-1.amazonaws.com/virtualprotocolcdn/108011_Merrymen_eb9a3613ae.png",
+        "url": "https://heyresearch.xyz/project/merrymen"
+      }
+    ],
+    "catalogue": {
+      "verifiedBuilders": 1871,
+      "stillBuilding": 4,
+      "underTheRadar": 9,
+      "verifiedBuildersOnChain": 907,
+      "published": 5032,
+      "chainId": 4663,
+      "asOf": "2026-10-02T11:39:49.577Z",
+      "listScope": "published",
+      "definitions": "https://heyresearch.xyz/methodology#counts"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

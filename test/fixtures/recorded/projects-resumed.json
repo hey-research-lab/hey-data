@@ -1,0 +1,64 @@
+{
+  "path": "/api/projects?status=RESUMED&limit=2",
+  "recordedAt": "2026-10-02T11:40:05.237Z",
+  "body": {
+    "query": {
+      "limit": 2,
+      "offset": 0,
+      "status": "RESUMED",
+      "sort": "activity"
+    },
+    "total": 22,
+    "nextOffset": 2,
+    "items": [
+      {
+        "slug": "builder-sixteen-founders-website",
+        "name": "founders-website",
+        "shortDescription": "Build in public. Publish everywhere. Prove it before you raise.",
+        "projectKind": "OTHER",
+        "activityStatus": "RESUMED",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-10-02T11:09:40.000Z",
+        "websiteUrl": "https://example.com/",
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-sixteen",
+        "url": "https://heyresearch.xyz/project/builder-sixteen-founders-website"
+      },
+      {
+        "slug": "builder-eleven-arb-guardian",
+        "name": "arb-guardian",
+        "shortDescription": "Guild bank protection for gaming teams. Review spends, block scams, freeze with Officer AI — live on Arbitrum + Robinhood Chain.",
+        "projectKind": "OTHER",
+        "activityStatus": "RESUMED",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-10-02T10:05:35.000Z",
+        "primaryNarrative": {
+          "slug": "gaming",
+          "name": "Gaming"
+        },
+        "websiteUrl": "https://arb-guardian.vercel.app",
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-eleven",
+        "url": "https://heyresearch.xyz/project/builder-eleven-arb-guardian"
+      }
+    ],
+    "catalogue": {
+      "verifiedBuilders": 1871,
+      "stillBuilding": 4,
+      "underTheRadar": 9,
+      "verifiedBuildersOnChain": 907,
+      "published": 5032,
+      "chainId": 4663,
+      "asOf": "2026-10-02T11:39:49.577Z",
+      "listScope": "published",
+      "definitions": "https://heyresearch.xyz/methodology#counts"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

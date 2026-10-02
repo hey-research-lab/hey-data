@@ -1,0 +1,113 @@
+{
+  "path": "/api/projects/builder-thirteen-clubpengu",
+  "recordedAt": "2026-10-02T11:40:14.617Z",
+  "body": {
+    "slug": "builder-thirteen-clubpengu",
+    "name": "ClubPengu",
+    "shortDescription": "Play at https://waddle.bet - please read the whitepaper, it will answer all questions. ETH: 0xcf83b446d4cf400b132538d7bb03e36bdbd3c8b8 - SOL: 9kdJA8Ahjyh7Yt8UDWpihznwTMtKJVEAmhsUFmeppump - BSC: soon",
+    "projectKind": "OTHER",
+    "activityStatus": "DORMANT",
+    "researchLevel": "VERIFIED_BUILDER",
+    "catalogStatus": "VERIFIED_BUILDER",
+    "stillBuilding": false,
+    "stillBuildingState": "NOT_MEASURED",
+    "lastShippedAt": "2026-08-02T23:59:00.000Z",
+    "websiteUrl": "https://whitepaper.waddle.bet",
+    "hasBuilderSource": true,
+    "logoUrl": "https://avatars.githubusercontent.com/builder-thirteen",
+    "url": "https://heyresearch.xyz/project/builder-thirteen-clubpengu",
+    "ships": [
+      {
+        "id": "a1c0a550-c785-497b-b0bf-1c1c3345c3a2",
+        "title": "Active development: 30 commits in the last 90 days across 1 contributor",
+        "summary": "10 active day(s) in builder-thirteen/clubpengu.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-08-02T23:59:00.000Z",
+        "detectedAt": "2026-09-17T20:31:46.964Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:a1c0a550-c785-497b-b0bf-1c1c3345c3a2",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/builder-thirteen/clubpengu",
+        "codeSubstance": {
+          "verdict": "SUBSTANTIVE",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 6,
+          "commitsRead": 1,
+          "changedCode": 1,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 0,
+          "notRead": 5,
+          "files": {
+            "source": 5,
+            "test": 0,
+            "docs": 0,
+            "readme": 0,
+            "dependency": 0,
+            "config": 0,
+            "ci": 0,
+            "generated": 0,
+            "asset": 2,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 0
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 0,
+          "sampled": false,
+          "basis": null,
+          "summary": "This week HEY looked inside 1 of 6 commits to see what changed: 1 changed code. One code change is enough for the week to count, so HEY stopped there."
+        },
+        "project": {
+          "slug": "builder-thirteen-clubpengu",
+          "name": "ClubPengu",
+          "shortDescription": "Play at https://waddle.bet - please read the whitepaper, it will answer all questions. ETH: 0xcf83b446d4cf400b132538d7bb03e36bdbd3c8b8 - SOL: 9kdJA8Ahjyh7Yt8UDWpihznwTMtKJVEAmhsUFmeppump - BSC: soon",
+          "projectKind": "OTHER",
+          "activityStatus": "DORMANT",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-08-02T23:59:00.000Z",
+          "websiteUrl": "https://whitepaper.waddle.bet",
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/builder-thirteen",
+          "url": "https://heyresearch.xyz/project/builder-thirteen-clubpengu"
+        },
+        "url": "https://heyresearch.xyz/project/builder-thirteen-clubpengu#ship-a1c0a550-c785-497b-b0bf-1c1c3345c3a2"
+      }
+    ],
+    "firstSeenAt": "2026-09-03T20:54:48.881Z",
+    "firstRecordedByHeyAt": "2026-09-03T21:05:05.180Z",
+    "isClaimed": false,
+    "submitted": false,
+    "narratives": [],
+    "sources": [
+      {
+        "url": "https://whitepaper.waddle.bet",
+        "sourceType": "WEBSITE",
+        "isVerified": false,
+        "confidence": "DISCOVERED",
+        "contextOnly": false
+      },
+      {
+        "url": "https://github.com/builder-thirteen/ClubPengu",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      }
+    ],
+    "score": {
+      "buildMomentum": 0,
+      "discoveryGapWithheld": "no_token",
+      "stillBuilding": false,
+      "stillBuildingState": "NOT_MEASURED",
+      "stillBuildingWithheld": "no_token",
+      "calculatedAt": "2026-10-02T06:54:34.140Z",
+      "scoringVersion": "hbm-v22"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "path": "/api/projects?status=UNKNOWN&limit=2",
+  "recordedAt": "2026-10-02T11:40:06.569Z",
+  "body": {
+    "query": {
+      "limit": 2,
+      "offset": 0,
+      "status": "UNKNOWN",
+      "sort": "activity"
+    },
+    "total": 3084,
+    "nextOffset": 2,
+    "items": [
+      {
+        "slug": "builder-twelve-robinxbt",
+        "name": "builder-twelve",
+        "projectKind": "OTHER",
+        "activityStatus": "UNKNOWN",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-08-31T21:26:53.000Z",
+        "hasBuilderSource": false,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-twelve",
+        "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt"
+      },
+      {
+        "slug": "bitcoin-ethereum-tether-usdt-bnb-usdc-xrp-solana-tron-hyperliqui",
+        "name": "Bitcoin Ethereum Tether USDt BNB USDC XRP Solana TRON Hyperliquid Dogecoin Rain Zcash Decimal UNUS SED LEO Stellar Monero Chainlink Cardano Canton Dai Bitcoin Cash World Liberty Financial USD Ethena U",
+        "symbol": "BTCETHUSDTBNBUSDCXRPSOLTRXHYPEDO",
+        "shortDescription": "There are too many coins to choose from. Bitcoin. DOGE. PEPE. WIF. Hundreds more. So why keep choosing? $ALLCOINSINONE is the meme that says: what if you just had them all?",
+        "projectKind": "OTHER",
+        "activityStatus": "UNKNOWN",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-08-30T02:59:55.000Z",
+        "primaryNarrative": {
+          "slug": "animal-meme",
+          "name": "Animal Meme"
+        },
+        "token": {
+          "chainId": 4663,
+          "contractAddress": "0xae2df3c1749daee721c1bfcbbfdde5d61ae7cb99"
+        },
+        "websiteUrl": "https://allcoinsinonehood.fun/",
+        "marketCap": {
+          "usd": 69791,
+          "source": "dexscreener",
+          "kind": "fdv",
+          "observedAt": "2026-10-02T10:58:37.594Z"
+        },
+        "liquidity": {
+          "usd": 52822.51,
+          "source": "dexscreener",
+          "observedAt": "2026-10-02T10:58:37.594Z",
+          "kind": "launch_inventory"
+        },
+        "volume24h": {
+          "usd": 4080.67,
+          "source": "dexscreener",
+          "observedAt": "2026-10-02T10:58:37.594Z"
+        },
+        "launchStage": "DEX",
+        "tokenMarket": {
+          "status": "ACTIVE_MARKET",
+          "reason": "launch_pool_trading"
+        },
+        "tokenVerification": {
+          "status": "VERIFIED",
+          "reason": "site_names_contract"
+        },
+        "venue": "Uniswap v3",
+        "trades24h": {
+          "buys": 103,
+          "sells": 319,
+          "source": "dexscreener",
+          "observedAt": "2026-10-02T10:58:37.594Z"
+        },
+        "priceChange24hPct": 15.86,
+        "hasBuilderSource": false,
+        "logoUrl": "https://cdn.dexscreener.com/cms/images/q9oMOMQO01JtYFvT?width=800&height=800&quality=95&format=auto",
+        "url": "https://heyresearch.xyz/project/bitcoin-ethereum-tether-usdt-bnb-usdc-xrp-solana-tron-hyperliqui"
+      }
+    ],
+    "catalogue": {
+      "verifiedBuilders": 1871,
+      "stillBuilding": 4,
+      "underTheRadar": 9,
+      "verifiedBuildersOnChain": 907,
+      "published": 5032,
+      "chainId": 4663,
+      "asOf": "2026-10-02T11:39:49.577Z",
+      "listScope": "published",
+      "definitions": "https://heyresearch.xyz/methodology#counts"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

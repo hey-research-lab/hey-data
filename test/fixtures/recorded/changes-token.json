@@ -1,0 +1,140 @@
+{
+  "path": "/api/changes?domain=token&limit=3",
+  "recordedAt": "2026-10-02T11:40:25.475Z",
+  "body": {
+    "query": {
+      "domain": "token",
+      "mode": "browse",
+      "limit": 3
+    },
+    "items": [
+      {
+        "id": "state:99c89006-8f20-44ab-9f21-a95ab44fa52b:verification:12936",
+        "revision": 1,
+        "op": "upsert",
+        "type": "token.verification_changed",
+        "domain": "token",
+        "origin": "live",
+        "project": {
+          "slug": "kybernetwork-kyberswap-dex-lib",
+          "name": "KyberNetwork",
+          "url": "https://heyresearch.xyz/project/kybernetwork-kyberswap-dex-lib"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T07:14:36.596Z",
+        "recordedAt": "2026-10-02T07:15:16.836Z",
+        "summary": "Token verification moved from Verified to Unverified",
+        "before": "VERIFIED",
+        "after": "UNVERIFIED",
+        "evidence": [
+          {
+            "id": "state:99c89006-8f20-44ab-9f21-a95ab44fa52b:verification:12936",
+            "label": "HEY state record"
+          }
+        ],
+        "source": "hey_state",
+        "facts": {
+          "key": "verification",
+          "scoringVersion": "hbm-v22"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/kybernetwork-kyberswap-dex-lib",
+          "evidence": "https://heyresearch.xyz/api/evidence/state%3A99c89006-8f20-44ab-9f21-a95ab44fa52b%3Averification%3A12936",
+          "timeline": "https://heyresearch.xyz/api/projects/kybernetwork-kyberswap-dex-lib/timeline"
+        }
+      },
+      {
+        "id": "state:e11860fe-a3dd-47fc-9ae9-84e5d2aee4e7:launch_stage:12728",
+        "revision": 1,
+        "op": "upsert",
+        "type": "token.launch_stage_changed",
+        "domain": "token",
+        "origin": "live",
+        "project": {
+          "slug": "robinhood-chan",
+          "name": "Robinhood-Chan",
+          "url": "https://heyresearch.xyz/project/robinhood-chan"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T02:12:25.796Z",
+        "recordedAt": "2026-10-02T02:15:00.849Z",
+        "summary": "Launch stage moved from On its launch curve to Trading in a DEX pool",
+        "before": "CURVE",
+        "after": "DEX",
+        "evidence": [
+          {
+            "id": "state:e11860fe-a3dd-47fc-9ae9-84e5d2aee4e7:launch_stage:12728",
+            "label": "HEY state record"
+          }
+        ],
+        "source": "hey_state",
+        "annotations": {
+          "signalIds": [
+            "signal:fe083513-3a6f-4cdd-a38e-293af4b9915c"
+          ]
+        },
+        "facts": {
+          "key": "launch_stage",
+          "scoringVersion": "hbm-v21"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/robinhood-chan",
+          "evidence": "https://heyresearch.xyz/api/evidence/state%3Ae11860fe-a3dd-47fc-9ae9-84e5d2aee4e7%3Alaunch_stage%3A12728",
+          "timeline": "https://heyresearch.xyz/api/projects/robinhood-chan/timeline"
+        }
+      },
+      {
+        "id": "state:7ceb07ed-e705-4bbd-9196-21ca2dd0ecd9:verification:12710",
+        "revision": 1,
+        "op": "upsert",
+        "type": "token.verification_changed",
+        "domain": "token",
+        "origin": "live",
+        "project": {
+          "slug": "metha-2ae949",
+          "name": "Metha",
+          "url": "https://heyresearch.xyz/project/metha-2ae949"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T02:12:25.796Z",
+        "recordedAt": "2026-10-02T02:15:00.849Z",
+        "summary": "Token verification moved from Unverified to Verified",
+        "before": "UNVERIFIED",
+        "after": "VERIFIED",
+        "evidence": [
+          {
+            "id": "state:7ceb07ed-e705-4bbd-9196-21ca2dd0ecd9:verification:12710",
+            "label": "HEY state record"
+          }
+        ],
+        "source": "hey_state",
+        "annotations": {
+          "signalIds": [
+            "signal:a6a4b9a1-cab0-4254-a629-ced2e1cd3202"
+          ]
+        },
+        "facts": {
+          "key": "verification",
+          "scoringVersion": "hbm-v21"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/metha-2ae949",
+          "evidence": "https://heyresearch.xyz/api/evidence/state%3A7ceb07ed-e705-4bbd-9196-21ca2dd0ecd9%3Averification%3A12710",
+          "timeline": "https://heyresearch.xyz/api/projects/metha-2ae949/timeline"
+        }
+      }
+    ],
+    "nextCursor": "YzEuNDk1NDc",
+    "hasMore": true,
+    "ledger": {
+      "collectionStart": "2026-09-26T11:35:57.227Z",
+      "transitionsFrom": "2026-09-26T11:32:48.791Z",
+      "newestRecordedAt": "2026-10-02T11:40:02.246Z",
+      "projectorRanAt": "2026-10-02T11:40:02.246Z"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

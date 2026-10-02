@@ -1,0 +1,130 @@
+{
+  "path": "/api/projects/builder-twelve-robinxbt/coverage",
+  "recordedAt": "2026-10-02T11:40:18.607Z",
+  "body": {
+    "project": {
+      "slug": "builder-twelve-robinxbt",
+      "name": "builder-twelve",
+      "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt"
+    },
+    "dimensions": {
+      "identity": {
+        "state": "MEASURED",
+        "since": "2026-09-03T21:05:05.374Z",
+        "asOf": "2026-09-03T20:54:48.881Z",
+        "reason": "research_level_verified_builder",
+        "detailUrl": "https://heyresearch.xyz/api/projects/builder-twelve-robinxbt"
+      },
+      "builderEvidence": {
+        "state": "NOT_ENOUGH_YET",
+        "reason": "no_readable_builder_source"
+      },
+      "repositories": {
+        "state": "SOURCE_UNAVAILABLE",
+        "reason": "every_repository_unavailable"
+      },
+      "releases": {
+        "state": "NOT_ENOUGH_YET",
+        "reason": "no_readable_builder_source"
+      },
+      "marketCurrent": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "marketHistory": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "contractDeployment": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "contractActivity": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "contractSource": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "contractInterface": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "distribution": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "locks": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "marketIntegrity": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "protocolEconomics": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_protocol_listing"
+      },
+      "timeline": {
+        "state": "MEASURED",
+        "since": "2026-09-03T21:05:05.374Z",
+        "reason": "complete_default_window",
+        "detailUrl": "https://heyresearch.xyz/api/projects/builder-twelve-robinxbt/timeline"
+      },
+      "officialDocs": {
+        "state": "NO_SOURCE",
+        "reason": "no_official_site"
+      },
+      "apiDocs": {
+        "state": "NO_SOURCE",
+        "reason": "no_official_site"
+      },
+      "sourceChanges": {
+        "state": "NO_SOURCE",
+        "reason": "no_official_site"
+      },
+      "gitHost": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_repository"
+      },
+      "package": {
+        "state": "NO_SOURCE",
+        "reason": "no_repository"
+      },
+      "securityContext": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_accepted_package"
+      }
+    },
+    "freshness": [
+      {
+        "source": "code",
+        "label": "Code",
+        "state": "unknown",
+        "staleAfterHours": 72
+      },
+      {
+        "source": "score",
+        "label": "Scores",
+        "state": "fresh",
+        "observedAt": "2026-10-02T06:06:23.269Z",
+        "staleAfterHours": 24
+      }
+    ],
+    "computedAt": "2026-10-02T11:40:18.665Z",
+    "states": {
+      "MEASURED": "HEY read it; figures elsewhere are measurements, zeros included.",
+      "NO_SOURCE": "HEY holds nothing to read it from; a zero or an absence is not a finding.",
+      "NOT_ENOUGH_YET": "HEY has not read enough of it yet.",
+      "STALE": "HEY read it, and the reading is older than its freshness limit.",
+      "SOURCE_UNAVAILABLE": "The source HEY holds no longer answers.",
+      "NOT_APPLICABLE": "It does not apply to this project.",
+      "NOT_RESEARCHED": "HEY indexed the record and did not research it.",
+      "ERROR": "HEY's last read failed; earlier figures stand as they were.",
+      "WITHHELD": "HEY measures it and does not publish it on this surface."
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

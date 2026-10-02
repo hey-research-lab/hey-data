@@ -1,0 +1,175 @@
+{
+  "path": "/api/projects/priors-agents/coverage",
+  "recordedAt": "2026-10-02T11:40:13.325Z",
+  "body": {
+    "project": {
+      "slug": "priors-agents",
+      "name": "Priors Agents",
+      "url": "https://heyresearch.xyz/project/priors-agents"
+    },
+    "dimensions": {
+      "identity": {
+        "state": "MEASURED",
+        "since": "2026-09-29T11:04:38.577Z",
+        "asOf": "2026-09-29T12:03:07.708Z",
+        "reason": "research_level_verified_builder",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents"
+      },
+      "builderEvidence": {
+        "state": "MEASURED",
+        "asOf": "2026-10-02T10:40:26.072Z",
+        "reason": "activity_shipping"
+      },
+      "repositories": {
+        "state": "MEASURED",
+        "reason": "own_repositories",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents"
+      },
+      "releases": {
+        "state": "MEASURED",
+        "reason": "no_release_recorded",
+        "detailUrl": "https://heyresearch.xyz/api/ships?project=priors-agents"
+      },
+      "marketCurrent": {
+        "state": "MEASURED",
+        "asOf": "2026-10-02T11:36:52.443Z",
+        "reason": "valuation_withheld_launch_pool_no_trades",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents/market"
+      },
+      "marketHistory": {
+        "state": "MEASURED",
+        "since": "2026-09-29T00:00:00.000Z",
+        "asOf": "2026-10-02T00:00:00.000Z",
+        "reason": "daily_index_valuations_withheld",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents/market?days=400"
+      },
+      "contractDeployment": {
+        "state": "MEASURED",
+        "since": "2026-09-29T10:52:32.000Z",
+        "asOf": "2026-10-02T06:13:18.365Z",
+        "reason": "creation_recorded",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents/market"
+      },
+      "contractActivity": {
+        "state": "MEASURED",
+        "since": "2026-09-29T00:00:00.000Z",
+        "asOf": "2026-09-30T00:00:00.000Z",
+        "reason": "events_read",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents/market"
+      },
+      "contractSource": {
+        "state": "MEASURED",
+        "asOf": "2026-09-30T03:03:09.098Z",
+        "reason": "source_verified_explorer_matched"
+      },
+      "contractInterface": {
+        "state": "MEASURED",
+        "asOf": "2026-09-30T03:03:09.098Z",
+        "reason": "changes_since_first_read",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents/timeline"
+      },
+      "distribution": {
+        "state": "MEASURED",
+        "asOf": "2026-10-01T00:00:00.000Z",
+        "reason": "mapped",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents/market"
+      },
+      "locks": {
+        "state": "MEASURED",
+        "asOf": "2026-10-02T06:44:18.948Z",
+        "reason": "hoodlock_only_none_found"
+      },
+      "marketIntegrity": {
+        "state": "MEASURED",
+        "reason": "published",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents/market-integrity"
+      },
+      "protocolEconomics": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_protocol_listing"
+      },
+      "timeline": {
+        "state": "MEASURED",
+        "since": "2026-09-29T11:04:38.577Z",
+        "reason": "complete_default_window",
+        "detailUrl": "https://heyresearch.xyz/api/projects/priors-agents/timeline"
+      },
+      "officialDocs": {
+        "state": "NO_SOURCE",
+        "asOf": "2026-09-30T01:37:45.524Z",
+        "reason": "no_docs_link_found"
+      },
+      "apiDocs": {
+        "state": "NOT_ENOUGH_YET",
+        "reason": "site_files_not_read_yet"
+      },
+      "sourceChanges": {
+        "state": "NOT_ENOUGH_YET",
+        "reason": "no_baseline_yet"
+      },
+      "gitHost": {
+        "state": "MEASURED",
+        "asOf": "2026-10-01T02:05:38.368Z",
+        "reason": "repository_metadata_read"
+      },
+      "package": {
+        "state": "NOT_ENOUGH_YET",
+        "asOf": "2026-10-02T11:13:26.677Z",
+        "reason": "claimed_package_links_only"
+      },
+      "securityContext": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_accepted_package"
+      }
+    },
+    "freshness": [
+      {
+        "source": "code",
+        "label": "Code",
+        "state": "fresh",
+        "observedAt": "2026-10-02T10:40:26.072Z",
+        "staleAfterHours": 72
+      },
+      {
+        "source": "market",
+        "label": "Market",
+        "state": "fresh",
+        "observedAt": "2026-10-02T11:36:52.443Z",
+        "staleAfterHours": 24
+      },
+      {
+        "source": "contracts",
+        "label": "Contracts",
+        "state": "fresh",
+        "observedAt": "2026-09-30T03:03:09.098Z",
+        "staleAfterHours": 252
+      },
+      {
+        "source": "locks",
+        "label": "Locks",
+        "state": "unknown",
+        "staleAfterHours": 48
+      },
+      {
+        "source": "score",
+        "label": "Scores",
+        "state": "fresh",
+        "observedAt": "2026-10-02T10:48:46.241Z",
+        "staleAfterHours": 24
+      }
+    ],
+    "computedAt": "2026-10-02T11:40:13.385Z",
+    "states": {
+      "MEASURED": "HEY read it; figures elsewhere are measurements, zeros included.",
+      "NO_SOURCE": "HEY holds nothing to read it from; a zero or an absence is not a finding.",
+      "NOT_ENOUGH_YET": "HEY has not read enough of it yet.",
+      "STALE": "HEY read it, and the reading is older than its freshness limit.",
+      "SOURCE_UNAVAILABLE": "The source HEY holds no longer answers.",
+      "NOT_APPLICABLE": "It does not apply to this project.",
+      "NOT_RESEARCHED": "HEY indexed the record and did not research it.",
+      "ERROR": "HEY's last read failed; earlier figures stand as they were.",
+      "WITHHELD": "HEY measures it and does not publish it on this surface."
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

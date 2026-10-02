@@ -1,0 +1,128 @@
+{
+  "path": "/api/changes?domain=research&limit=3",
+  "recordedAt": "2026-10-02T11:40:26.850Z",
+  "body": {
+    "query": {
+      "domain": "research",
+      "mode": "browse",
+      "limit": 3
+    },
+    "items": [
+      {
+        "id": "state:45e44760-2cb0-4bdc-a68b-e2a0073c4628:catalog_status:13178",
+        "revision": 1,
+        "op": "upsert",
+        "type": "research.published",
+        "domain": "research",
+        "origin": "live",
+        "project": {
+          "slug": "hunch-0976f3",
+          "name": "Hunch",
+          "url": "https://heyresearch.xyz/project/hunch-0976f3"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T11:14:01.681Z",
+        "recordedAt": "2026-10-02T11:15:22.569Z",
+        "summary": "Project page published",
+        "before": null,
+        "after": "QUALIFIED",
+        "evidence": [
+          {
+            "id": "state:45e44760-2cb0-4bdc-a68b-e2a0073c4628:catalog_status:13178",
+            "label": "HEY state record"
+          }
+        ],
+        "source": "hey_state",
+        "facts": {
+          "key": "catalog_status",
+          "scoringVersion": "hbm-v22"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/hunch-0976f3",
+          "evidence": "https://heyresearch.xyz/api/evidence/state%3A45e44760-2cb0-4bdc-a68b-e2a0073c4628%3Acatalog_status%3A13178",
+          "timeline": "https://heyresearch.xyz/api/projects/hunch-0976f3/timeline"
+        }
+      },
+      {
+        "id": "narrative:c09c7a1a-469c-4489-a791-43dda127084f:ai",
+        "revision": 1,
+        "op": "upsert",
+        "type": "research.narrative_assigned",
+        "domain": "research",
+        "origin": "live",
+        "project": {
+          "slug": "genie-ai",
+          "name": "GENIE AI",
+          "url": "https://heyresearch.xyz/project/genie-ai"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T11:08:41.658Z",
+        "recordedAt": "2026-10-02T11:13:50.113Z",
+        "summary": "Primary narrative: AI",
+        "evidence": [
+          {
+            "id": "narrative:c09c7a1a-469c-4489-a791-43dda127084f:ai",
+            "url": "https://heyresearch.xyz/narrative/ai",
+            "label": "Narrative"
+          }
+        ],
+        "source": "hey_rules",
+        "facts": {
+          "primary": true,
+          "narrative": "ai"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/genie-ai",
+          "evidence": "https://heyresearch.xyz/api/evidence/narrative%3Ac09c7a1a-469c-4489-a791-43dda127084f%3Aai",
+          "timeline": "https://heyresearch.xyz/api/projects/genie-ai/timeline"
+        }
+      },
+      {
+        "id": "narrative:c0588c81-9386-4a46-951b-8a5f22e205db:ai",
+        "revision": 1,
+        "op": "upsert",
+        "type": "research.narrative_assigned",
+        "domain": "research",
+        "origin": "live",
+        "project": {
+          "slug": "genie-ai-a9b5a5",
+          "name": "GENIE AI",
+          "url": "https://heyresearch.xyz/project/genie-ai-a9b5a5"
+        },
+        "occurredAt": null,
+        "precision": "OBSERVED",
+        "detectedAt": "2026-10-02T11:08:41.658Z",
+        "recordedAt": "2026-10-02T11:13:50.113Z",
+        "summary": "Primary narrative: AI",
+        "evidence": [
+          {
+            "id": "narrative:c0588c81-9386-4a46-951b-8a5f22e205db:ai",
+            "url": "https://heyresearch.xyz/narrative/ai",
+            "label": "Narrative"
+          }
+        ],
+        "source": "hey_rules",
+        "facts": {
+          "primary": true,
+          "narrative": "ai"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/genie-ai-a9b5a5",
+          "evidence": "https://heyresearch.xyz/api/evidence/narrative%3Ac0588c81-9386-4a46-951b-8a5f22e205db%3Aai",
+          "timeline": "https://heyresearch.xyz/api/projects/genie-ai-a9b5a5/timeline"
+        }
+      }
+    ],
+    "nextCursor": "YzEuNTQ4Njk",
+    "hasMore": true,
+    "ledger": {
+      "collectionStart": "2026-09-26T11:35:57.227Z",
+      "transitionsFrom": "2026-09-26T11:32:48.791Z",
+      "newestRecordedAt": "2026-10-02T11:40:02.246Z",
+      "projectorRanAt": "2026-10-02T11:40:02.246Z"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "path": "/api/projects?status=DORMANT&limit=2",
+  "recordedAt": "2026-10-02T11:40:03.955Z",
+  "body": {
+    "query": {
+      "limit": 2,
+      "offset": 0,
+      "status": "DORMANT",
+      "sort": "activity"
+    },
+    "total": 366,
+    "nextOffset": 2,
+    "items": [
+      {
+        "slug": "builder-thirteen-clubpengu",
+        "name": "ClubPengu",
+        "shortDescription": "Play at https://waddle.bet - please read the whitepaper, it will answer all questions. ETH: 0xcf83b446d4cf400b132538d7bb03e36bdbd3c8b8 - SOL: 9kdJA8Ahjyh7Yt8UDWpihznwTMtKJVEAmhsUFmeppump - BSC: soon",
+        "projectKind": "OTHER",
+        "activityStatus": "DORMANT",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-08-02T23:59:00.000Z",
+        "websiteUrl": "https://whitepaper.waddle.bet",
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-thirteen",
+        "url": "https://heyresearch.xyz/project/builder-thirteen-clubpengu"
+      },
+      {
+        "slug": "sherwood-exchange-sherwood",
+        "name": "sherwood",
+        "shortDescription": "Privacy-first exchange on Robinhood Chain — shielded ZK pool, multi-DEX aggregator, $SWOOD, and an autonomous trading agent live on Virtuals ACP",
+        "projectKind": "OTHER",
+        "activityStatus": "DORMANT",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-08-02T23:59:00.000Z",
+        "primaryNarrative": {
+          "slug": "ai-agents",
+          "name": "AI Agents"
+        },
+        "websiteUrl": "https://sherwood.spot",
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/sherwood-exchange",
+        "url": "https://heyresearch.xyz/project/sherwood-exchange-sherwood"
+      }
+    ],
+    "catalogue": {
+      "verifiedBuilders": 1871,
+      "stillBuilding": 4,
+      "underTheRadar": 9,
+      "verifiedBuildersOnChain": 907,
+      "published": 5032,
+      "chainId": 4663,
+      "asOf": "2026-10-02T11:39:49.577Z",
+      "listScope": "published",
+      "definitions": "https://heyresearch.xyz/methodology#counts"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

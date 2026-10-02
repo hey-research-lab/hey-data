@@ -1,0 +1,141 @@
+{
+  "path": "/api/projects/ophis-fi-ophis/coverage",
+  "recordedAt": "2026-10-02T11:40:10.637Z",
+  "body": {
+    "project": {
+      "slug": "ophis-fi-ophis",
+      "name": "ophis",
+      "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+    },
+    "dimensions": {
+      "identity": {
+        "state": "MEASURED",
+        "since": "2026-09-03T21:05:00.215Z",
+        "asOf": "2026-09-03T20:54:48.881Z",
+        "reason": "research_level_verified_builder",
+        "detailUrl": "https://heyresearch.xyz/api/projects/ophis-fi-ophis"
+      },
+      "builderEvidence": {
+        "state": "MEASURED",
+        "asOf": "2026-10-02T11:15:51.685Z",
+        "reason": "activity_shipping"
+      },
+      "repositories": {
+        "state": "MEASURED",
+        "reason": "own_repositories",
+        "detailUrl": "https://heyresearch.xyz/api/projects/ophis-fi-ophis"
+      },
+      "releases": {
+        "state": "MEASURED",
+        "since": "2026-08-05T00:00:00.000Z",
+        "asOf": "2026-09-27T00:00:00.000Z",
+        "reason": "releases_recorded",
+        "detailUrl": "https://heyresearch.xyz/api/ships?project=ophis-fi-ophis"
+      },
+      "marketCurrent": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "marketHistory": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "contractDeployment": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "contractActivity": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "contractSource": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "contractInterface": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "distribution": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "locks": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "marketIntegrity": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_token"
+      },
+      "protocolEconomics": {
+        "state": "NOT_APPLICABLE",
+        "reason": "no_protocol_listing"
+      },
+      "timeline": {
+        "state": "MEASURED",
+        "since": "2026-09-03T21:05:00.215Z",
+        "reason": "complete_default_window",
+        "detailUrl": "https://heyresearch.xyz/api/projects/ophis-fi-ophis/timeline"
+      },
+      "officialDocs": {
+        "state": "MEASURED",
+        "asOf": "2026-10-01T13:48:07.732Z",
+        "reason": "official_docs",
+        "detailUrl": "https://heyresearch.xyz/api/projects/ophis-fi-ophis"
+      },
+      "apiDocs": {
+        "state": "NOT_ENOUGH_YET",
+        "reason": "site_files_not_read_yet"
+      },
+      "sourceChanges": {
+        "state": "NOT_ENOUGH_YET",
+        "reason": "no_baseline_yet"
+      },
+      "gitHost": {
+        "state": "MEASURED",
+        "asOf": "2026-09-27T06:35:49.999Z",
+        "reason": "repository_metadata_read"
+      },
+      "package": {
+        "state": "MEASURED",
+        "asOf": "2026-10-02T11:13:26.677Z",
+        "reason": "accepted_package_links"
+      },
+      "securityContext": {
+        "state": "MEASURED",
+        "asOf": "2026-09-27T13:08:30.072Z",
+        "reason": "no_advisory_for_published_version"
+      }
+    },
+    "freshness": [
+      {
+        "source": "code",
+        "label": "Code",
+        "state": "fresh",
+        "observedAt": "2026-10-02T11:15:51.685Z",
+        "staleAfterHours": 72
+      },
+      {
+        "source": "score",
+        "label": "Scores",
+        "state": "fresh",
+        "observedAt": "2026-10-02T11:20:11.754Z",
+        "staleAfterHours": 24
+      }
+    ],
+    "computedAt": "2026-10-02T11:40:10.668Z",
+    "states": {
+      "MEASURED": "HEY read it; figures elsewhere are measurements, zeros included.",
+      "NO_SOURCE": "HEY holds nothing to read it from; a zero or an absence is not a finding.",
+      "NOT_ENOUGH_YET": "HEY has not read enough of it yet.",
+      "STALE": "HEY read it, and the reading is older than its freshness limit.",
+      "SOURCE_UNAVAILABLE": "The source HEY holds no longer answers.",
+      "NOT_APPLICABLE": "It does not apply to this project.",
+      "NOT_RESEARCHED": "HEY indexed the record and did not research it.",
+      "ERROR": "HEY's last read failed; earlier figures stand as they were.",
+      "WITHHELD": "HEY measures it and does not publish it on this surface."
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

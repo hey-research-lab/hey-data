@@ -1,0 +1,450 @@
+{
+  "path": "/api/projects/ophis-fi-ophis",
+  "recordedAt": "2026-10-02T11:40:09.281Z",
+  "body": {
+    "slug": "ophis-fi-ophis",
+    "name": "ophis",
+    "shortDescription": "Intent-based DEX aggregator",
+    "projectKind": "OTHER",
+    "activityStatus": "SHIPPING",
+    "researchLevel": "VERIFIED_BUILDER",
+    "catalogStatus": "VERIFIED_BUILDER",
+    "stillBuilding": false,
+    "stillBuildingState": "NOT_MEASURED",
+    "lastShippedAt": "2026-10-02T11:07:23.000Z",
+    "primaryNarrative": {
+      "slug": "dex",
+      "name": "DEX"
+    },
+    "websiteUrl": "https://ophis.fi",
+    "hasBuilderSource": true,
+    "logoUrl": "https://avatars.githubusercontent.com/ophis-fi",
+    "url": "https://heyresearch.xyz/project/ophis-fi-ophis",
+    "ships": [
+      {
+        "id": "f611159d-d129-4793-a202-28611f024c3e",
+        "title": "Active development: 100+ commits since 2026-09-17 across 2 contributors",
+        "summary": "16 active day(s) in ophis-fi/ophis since 2026-09-17; only the newest 100 commits were read.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-10-02T11:07:23.000Z",
+        "detectedAt": "2026-09-28T17:24:21.459Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:f611159d-d129-4793-a202-28611f024c3e",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/ophis-fi/ophis",
+        "codeSubstance": {
+          "verdict": "SUBSTANTIVE",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 37,
+          "commitsRead": 3,
+          "changedCode": 3,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 0,
+          "notRead": 34,
+          "files": {
+            "source": 72,
+            "test": 41,
+            "docs": 51,
+            "readme": 14,
+            "dependency": 1,
+            "config": 7,
+            "ci": 4,
+            "generated": 0,
+            "asset": 2,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 5,
+            "unknown": 2
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 0,
+          "sampled": true,
+          "basis": null,
+          "summary": "This week HEY looked inside 3 of 37 commits to see what changed: 3 changed code. In a burst week, enough of a sample has to change code for the week to count."
+        },
+        "project": {
+          "slug": "ophis-fi-ophis",
+          "name": "ophis",
+          "shortDescription": "Intent-based DEX aggregator",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T11:07:23.000Z",
+          "primaryNarrative": {
+            "slug": "dex",
+            "name": "DEX"
+          },
+          "websiteUrl": "https://ophis.fi",
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/ophis-fi",
+          "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+        },
+        "url": "https://heyresearch.xyz/project/ophis-fi-ophis#ship-f611159d-d129-4793-a202-28611f024c3e"
+      },
+      {
+        "id": "83f58055-c0fb-4256-ad5a-39d39ddda369",
+        "title": "Active development: 100+ commits since 2026-09-11 across 2 contributors",
+        "summary": "16 active day(s) in ophis-fi/ophis since 2026-09-11; only the newest 100 commits were read.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-09-27T22:05:41.000Z",
+        "detectedAt": "2026-09-21T19:24:28.240Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:83f58055-c0fb-4256-ad5a-39d39ddda369",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/ophis-fi/ophis",
+        "codeSubstance": {
+          "verdict": "UNKNOWN",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 44,
+          "commitsRead": 1,
+          "changedCode": 1,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 0,
+          "notRead": 43,
+          "files": {
+            "source": 1,
+            "test": 0,
+            "docs": 0,
+            "readme": 0,
+            "dependency": 0,
+            "config": 0,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 0
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 0,
+          "sampled": true,
+          "basis": null,
+          "summary": "A burst of 44 commits this week; HEY is looking inside a sample before it says what changed. So far, HEY looked inside 1 of 44 commits to see what changed: 1 changed code."
+        },
+        "project": {
+          "slug": "ophis-fi-ophis",
+          "name": "ophis",
+          "shortDescription": "Intent-based DEX aggregator",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T11:07:23.000Z",
+          "primaryNarrative": {
+            "slug": "dex",
+            "name": "DEX"
+          },
+          "websiteUrl": "https://ophis.fi",
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/ophis-fi",
+          "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+        },
+        "url": "https://heyresearch.xyz/project/ophis-fi-ophis#ship-83f58055-c0fb-4256-ad5a-39d39ddda369"
+      },
+      {
+        "id": "a2b107b0-3469-4e5d-9803-7423293acf96",
+        "title": "Swap on Arc: Ophis Is Live on Circle's Stablecoin Blockchain",
+        "summary": "Ophis is now live on Arc, Circle's stablecoin blockchain. Swap USDC, EURC and cirBTC, bring USDC over from five networks and trade with MEV protection.",
+        "eventType": "FEATURE_RELEASE",
+        "publishedAt": "2026-09-27T00:00:00.000Z",
+        "detectedAt": "2026-09-28T01:06:00.107Z",
+        "precision": "DATE",
+        "evidenceId": "ship:a2b107b0-3469-4e5d-9803-7423293acf96",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://ophis.fi/blog/swap-on-arc/",
+        "project": {
+          "slug": "ophis-fi-ophis",
+          "name": "ophis",
+          "shortDescription": "Intent-based DEX aggregator",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T11:07:23.000Z",
+          "primaryNarrative": {
+            "slug": "dex",
+            "name": "DEX"
+          },
+          "websiteUrl": "https://ophis.fi",
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/ophis-fi",
+          "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+        },
+        "url": "https://heyresearch.xyz/project/ophis-fi-ophis#ship-a2b107b0-3469-4e5d-9803-7423293acf96"
+      },
+      {
+        "id": "a88fa7ea-c985-4779-b5b9-ee8d2460fd6d",
+        "title": "Active development: 100+ commits since 2026-09-07 across 2 contributors",
+        "summary": "13 active day(s) in ophis-fi/ophis since 2026-09-07; only the newest 100 commits were read.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-09-20T23:20:43.000Z",
+        "detectedAt": "2026-09-17T16:59:52.803Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:a88fa7ea-c985-4779-b5b9-ee8d2460fd6d",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/ophis-fi/ophis",
+        "codeSubstance": {
+          "verdict": "UNKNOWN",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 40,
+          "commitsRead": 1,
+          "changedCode": 1,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 0,
+          "notRead": 39,
+          "files": {
+            "source": 7,
+            "test": 1,
+            "docs": 3,
+            "readme": 0,
+            "dependency": 0,
+            "config": 1,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 2,
+            "unknown": 4
+          },
+          "weekFullyListed": false,
+          "automatedCommits": 0,
+          "sampled": true,
+          "basis": null,
+          "summary": "A burst of 40 commits this week; HEY is looking inside a sample before it says what changed. So far, HEY looked inside 1 of 40 commits to see what changed: 1 changed code."
+        },
+        "project": {
+          "slug": "ophis-fi-ophis",
+          "name": "ophis",
+          "shortDescription": "Intent-based DEX aggregator",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T11:07:23.000Z",
+          "primaryNarrative": {
+            "slug": "dex",
+            "name": "DEX"
+          },
+          "websiteUrl": "https://ophis.fi",
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/ophis-fi",
+          "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+        },
+        "url": "https://heyresearch.xyz/project/ophis-fi-ophis#ship-a88fa7ea-c985-4779-b5b9-ee8d2460fd6d"
+      },
+      {
+        "id": "5a954ec8-3a37-4d73-a2ea-140c05b179e3",
+        "title": "Active development: 90 commits in the last 90 days across 2 contributors",
+        "summary": "11 active day(s) in ophis-fi/ophis.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-09-12T11:07:03.000Z",
+        "detectedAt": "2026-09-12T12:51:43.115Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:5a954ec8-3a37-4d73-a2ea-140c05b179e3",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/ophis-fi/ophis",
+        "codeSubstance": {
+          "verdict": "SUBSTANTIVE",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 16,
+          "commitsRead": 1,
+          "changedCode": 1,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 0,
+          "notRead": 15,
+          "files": {
+            "source": 1,
+            "test": 1,
+            "docs": 0,
+            "readme": 0,
+            "dependency": 0,
+            "config": 0,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 0
+          },
+          "weekFullyListed": false,
+          "automatedCommits": 0,
+          "sampled": false,
+          "basis": null,
+          "summary": "This week HEY looked inside 1 of 16 commits to see what changed: 1 changed code. One code change is enough for the week to count, so HEY stopped there."
+        },
+        "project": {
+          "slug": "ophis-fi-ophis",
+          "name": "ophis",
+          "shortDescription": "Intent-based DEX aggregator",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T11:07:23.000Z",
+          "primaryNarrative": {
+            "slug": "dex",
+            "name": "DEX"
+          },
+          "websiteUrl": "https://ophis.fi",
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/ophis-fi",
+          "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+        },
+        "url": "https://heyresearch.xyz/project/ophis-fi-ophis#ship-5a954ec8-3a37-4d73-a2ea-140c05b179e3"
+      }
+    ],
+    "firstSeenAt": "2026-09-03T20:54:48.881Z",
+    "firstRecordedByHeyAt": "2026-09-03T21:05:00.215Z",
+    "isClaimed": false,
+    "submitted": false,
+    "narratives": [
+      {
+        "slug": "dex",
+        "name": "DEX",
+        "isPrimary": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://ophis.fi",
+        "sourceType": "WEBSITE",
+        "isVerified": false,
+        "confidence": "DISCOVERED",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/affiliate",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/agent-swap-comparison/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/ai-agents",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/architecture/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/comparison/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/fees/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/getting-started/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/intent-api/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/networks-assets/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/partners",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/status",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://docs.ophis.fi/trade-rewards/",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://ophis.fi/rss.xml",
+        "sourceType": "RSS",
+        "isVerified": false,
+        "confidence": "DISCOVERED",
+        "contextOnly": false
+      },
+      {
+        "url": "https://github.com/ophis-fi/ophis",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      }
+    ],
+    "score": {
+      "buildMomentum": 61.9,
+      "discoveryGapWithheld": "no_token",
+      "stillBuilding": false,
+      "stillBuildingState": "NOT_MEASURED",
+      "stillBuildingWithheld": "no_token",
+      "calculatedAt": "2026-10-02T11:20:11.754Z",
+      "scoringVersion": "hbm-v22"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

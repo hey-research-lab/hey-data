@@ -1,0 +1,67 @@
+{
+  "path": "/api/projects?status=SHIPPING&limit=2",
+  "recordedAt": "2026-10-02T11:39:59.869Z",
+  "body": {
+    "query": {
+      "limit": 2,
+      "offset": 0,
+      "status": "SHIPPING",
+      "sort": "activity"
+    },
+    "total": 550,
+    "nextOffset": 2,
+    "items": [
+      {
+        "slug": "ophis-fi-ophis",
+        "name": "ophis",
+        "shortDescription": "Intent-based DEX aggregator",
+        "projectKind": "OTHER",
+        "activityStatus": "SHIPPING",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-10-02T11:07:23.000Z",
+        "primaryNarrative": {
+          "slug": "dex",
+          "name": "DEX"
+        },
+        "websiteUrl": "https://ophis.fi",
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/ophis-fi",
+        "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+      },
+      {
+        "slug": "builder-twenty-blockchain-rpc-nodes",
+        "name": "blockchain-rpc-nodes",
+        "shortDescription": "Self-hosted RPC & archive nodes for EVM chains — Docker Compose setups for BSC, Arbitrum, Optimism & Linea. More chains added regularly.",
+        "projectKind": "OTHER",
+        "activityStatus": "SHIPPING",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-10-02T11:03:36.000Z",
+        "primaryNarrative": {
+          "slug": "infrastructure",
+          "name": "Infrastructure"
+        },
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-twenty",
+        "url": "https://heyresearch.xyz/project/builder-twenty-blockchain-rpc-nodes"
+      }
+    ],
+    "catalogue": {
+      "verifiedBuilders": 1871,
+      "stillBuilding": 4,
+      "underTheRadar": 9,
+      "verifiedBuildersOnChain": 907,
+      "published": 5032,
+      "chainId": 4663,
+      "asOf": "2026-10-02T11:39:49.577Z",
+      "listScope": "published",
+      "definitions": "https://heyresearch.xyz/methodology#counts"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

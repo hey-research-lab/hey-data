@@ -1,0 +1,63 @@
+{
+  "path": "/api/projects?status=ACTIVE&limit=2",
+  "recordedAt": "2026-10-02T11:40:01.323Z",
+  "body": {
+    "query": {
+      "limit": 2,
+      "offset": 0,
+      "status": "ACTIVE",
+      "sort": "activity"
+    },
+    "total": 753,
+    "nextOffset": 2,
+    "items": [
+      {
+        "slug": "builder-seventeen-fomo-alert",
+        "name": "fomo-alert",
+        "shortDescription": "Read-only Fomo/Trenches alerts for Telegram on Robinhood Chain",
+        "projectKind": "OTHER",
+        "activityStatus": "ACTIVE",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-09-25T06:39:56.000Z",
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-seventeen",
+        "url": "https://heyresearch.xyz/project/builder-seventeen-fomo-alert"
+      },
+      {
+        "slug": "builder-eighteen-radian",
+        "name": "radian",
+        "shortDescription": "Radian — memecoin launchpad for Circle's Arc chain (Pons V2 port, native-USDC quoted)",
+        "projectKind": "OTHER",
+        "activityStatus": "ACTIVE",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-09-25T05:36:50.000Z",
+        "primaryNarrative": {
+          "slug": "launchpad",
+          "name": "Launchpad"
+        },
+        "websiteUrl": "https://web-ten-steel-zat2clos3t.vercel.app",
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-eighteen",
+        "url": "https://heyresearch.xyz/project/builder-eighteen-radian"
+      }
+    ],
+    "catalogue": {
+      "verifiedBuilders": 1871,
+      "stillBuilding": 4,
+      "underTheRadar": 9,
+      "verifiedBuildersOnChain": 907,
+      "published": 5032,
+      "chainId": 4663,
+      "asOf": "2026-10-02T11:39:49.577Z",
+      "listScope": "published",
+      "definitions": "https://heyresearch.xyz/methodology#counts"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

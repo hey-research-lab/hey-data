@@ -1,0 +1,66 @@
+{
+  "path": "/api/projects?status=QUIET&limit=2",
+  "recordedAt": "2026-10-02T11:40:02.627Z",
+  "body": {
+    "query": {
+      "limit": 2,
+      "offset": 0,
+      "status": "QUIET",
+      "sort": "activity"
+    },
+    "total": 257,
+    "nextOffset": 2,
+    "items": [
+      {
+        "slug": "builder-nineteen-rchain-stocks",
+        "name": "rchain-stocks",
+        "shortDescription": "Local offline dashboard for tokenized stocks and the memecoins launching against them on Robinhood Chain. Clone it and open dashboard.html — pools enumerated from chain events, not capped vendor listings.",
+        "projectKind": "OTHER",
+        "activityStatus": "QUIET",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-09-01T23:59:00.000Z",
+        "primaryNarrative": {
+          "slug": "stockfi",
+          "name": "StockFi"
+        },
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-nineteen",
+        "url": "https://heyresearch.xyz/project/builder-nineteen-rchain-stocks"
+      },
+      {
+        "slug": "builder-fifteen-robin-huge",
+        "name": "robin_huge",
+        "shortDescription": "Robinhood chain trading toolkit: GMGN analytics + Pons V2 DEX + monitoring/alerting",
+        "projectKind": "OTHER",
+        "activityStatus": "QUIET",
+        "researchLevel": "VERIFIED_BUILDER",
+        "catalogStatus": "VERIFIED_BUILDER",
+        "stillBuilding": false,
+        "stillBuildingState": "NOT_MEASURED",
+        "lastShippedAt": "2026-09-01T23:59:00.000Z",
+        "primaryNarrative": {
+          "slug": "devtools",
+          "name": "Dev Tools"
+        },
+        "hasBuilderSource": true,
+        "logoUrl": "https://avatars.githubusercontent.com/builder-fifteen",
+        "url": "https://heyresearch.xyz/project/builder-fifteen-robin-huge"
+      }
+    ],
+    "catalogue": {
+      "verifiedBuilders": 1871,
+      "stillBuilding": 4,
+      "underTheRadar": 9,
+      "verifiedBuildersOnChain": 907,
+      "published": 5032,
+      "chainId": 4663,
+      "asOf": "2026-10-02T11:39:49.577Z",
+      "listScope": "published",
+      "definitions": "https://heyresearch.xyz/methodology#counts"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

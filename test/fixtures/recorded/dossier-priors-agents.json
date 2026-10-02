@@ -1,0 +1,354 @@
+{
+  "path": "/api/projects/priors-agents",
+  "recordedAt": "2026-10-02T11:40:11.993Z",
+  "body": {
+    "slug": "priors-agents",
+    "name": "Priors Agents",
+    "symbol": "PRIORS",
+    "shortDescription": "The credit layer for AI agents. Unsecured USDG lines, repayment records on-chain, x402 payments. Built on Robinhood Chain.",
+    "projectKind": "OTHER",
+    "activityStatus": "SHIPPING",
+    "researchLevel": "VERIFIED_BUILDER",
+    "catalogStatus": "VERIFIED_BUILDER",
+    "stillBuilding": false,
+    "stillBuildingState": "NOT_MEASURED",
+    "lastShippedAt": "2026-10-02T10:39:03.000Z",
+    "primaryNarrative": {
+      "slug": "ai-agents",
+      "name": "AI Agents"
+    },
+    "token": {
+      "chainId": 4663,
+      "contractAddress": "0x7e7154eb9dd81084625a7a2e9e731cadfddb9ab7"
+    },
+    "websiteUrl": "https://www.priors.live/",
+    "officialX": {
+      "handle": "priors_agent",
+      "url": "https://x.com/priors_agent"
+    },
+    "valuationWithheld": "launch_pool_no_trades",
+    "liquidity": {
+      "usd": 1.8769,
+      "source": "geckoterminal",
+      "observedAt": "2026-10-02T11:36:52.443Z",
+      "kind": "launch_inventory"
+    },
+    "volume24h": {
+      "usd": 0,
+      "source": "geckoterminal",
+      "observedAt": "2026-10-02T11:36:52.443Z"
+    },
+    "launchStage": "DEX",
+    "tokenMarket": {
+      "status": "TRADING_INACTIVE",
+      "reason": "launch_pool_no_trades",
+      "evaluatedAt": "2026-10-02T11:36:52.105Z",
+      "liquidityUsd": 1.8769,
+      "liquidityKind": "launch_inventory",
+      "volume24hUsd": 0,
+      "peakLiquidityUsd": 1.99,
+      "pairCreatedAt": "2026-09-29T10:53:49.000Z"
+    },
+    "tokenVerification": {
+      "status": "UNVERIFIED",
+      "reason": "market_listing"
+    },
+    "venue": "Uniswap v2",
+    "trades24h": {
+      "buys": 0,
+      "sells": 0,
+      "source": "geckoterminal",
+      "observedAt": "2026-10-02T11:36:52.443Z"
+    },
+    "priceChange24hPct": 0,
+    "hasBuilderSource": true,
+    "logoUrl": "https://cdn.dexscreener.com/cms/images/ok_csxBkS9qtiMzl?width=64&height=64&fit=crop&quality=95&format=auto",
+    "url": "https://heyresearch.xyz/project/priors-agents",
+    "ships": [
+      {
+        "id": "3028def3-7c66-419a-ad59-071d97f90d8f",
+        "title": "Active development: 86 commits in the last 90 days across 1 contributor",
+        "summary": "12 active day(s) in priors-agents/priors.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-10-02T10:39:03.000Z",
+        "detectedAt": "2026-09-30T01:48:09.034Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:3028def3-7c66-419a-ad59-071d97f90d8f",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/priors-agents/priors",
+        "codeSubstance": {
+          "verdict": "SUBSTANTIVE",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 26,
+          "commitsRead": 4,
+          "changedCode": 3,
+          "documentationOrMaintenance": 1,
+          "substanceUnknown": 0,
+          "notRead": 22,
+          "files": {
+            "source": 6,
+            "test": 0,
+            "docs": 5,
+            "readme": 4,
+            "dependency": 1,
+            "config": 3,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 0
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 0,
+          "sampled": true,
+          "basis": null,
+          "summary": "This week HEY looked inside 4 of 26 commits to see what changed: 3 changed code, 1 documentation or maintenance only. In a burst week, enough of a sample has to change code for the week to count."
+        },
+        "project": {
+          "slug": "priors-agents",
+          "name": "Priors Agents",
+          "symbol": "PRIORS",
+          "shortDescription": "The credit layer for AI agents. Unsecured USDG lines, repayment records on-chain, x402 payments. Built on Robinhood Chain.",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T10:39:03.000Z",
+          "primaryNarrative": {
+            "slug": "ai-agents",
+            "name": "AI Agents"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x7e7154eb9dd81084625a7a2e9e731cadfddb9ab7"
+          },
+          "websiteUrl": "https://www.priors.live/",
+          "officialX": {
+            "handle": "priors_agent",
+            "url": "https://x.com/priors_agent"
+          },
+          "valuationWithheld": "launch_pool_no_trades",
+          "liquidity": {
+            "usd": 1.8769,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T11:36:52.443Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T11:36:52.443Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "TRADING_INACTIVE",
+            "reason": "launch_pool_no_trades"
+          },
+          "tokenVerification": {
+            "status": "UNVERIFIED",
+            "reason": "market_listing"
+          },
+          "venue": "Uniswap v2",
+          "trades24h": {
+            "buys": 0,
+            "sells": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T11:36:52.443Z"
+          },
+          "priceChange24hPct": 0,
+          "hasBuilderSource": true,
+          "logoUrl": "https://cdn.dexscreener.com/cms/images/ok_csxBkS9qtiMzl?width=64&height=64&fit=crop&quality=95&format=auto",
+          "url": "https://heyresearch.xyz/project/priors-agents"
+        },
+        "url": "https://heyresearch.xyz/project/priors-agents#ship-3028def3-7c66-419a-ad59-071d97f90d8f"
+      },
+      {
+        "id": "1a00de5c-4ad2-41fa-9bb5-568c4037e8f6",
+        "title": "Active development: 60 commits in the last 90 days across 1 contributor",
+        "summary": "7 active day(s) in priors-agents/priors.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-09-27T15:06:36.000Z",
+        "detectedAt": "2026-09-25T06:15:51.330Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:1a00de5c-4ad2-41fa-9bb5-568c4037e8f6",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/priors-agents/priors",
+        "codeSubstance": {
+          "verdict": "UNKNOWN",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 32,
+          "commitsRead": 1,
+          "changedCode": 1,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 0,
+          "notRead": 31,
+          "files": {
+            "source": 2,
+            "test": 0,
+            "docs": 1,
+            "readme": 0,
+            "dependency": 0,
+            "config": 0,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 0
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 0,
+          "sampled": true,
+          "basis": null,
+          "summary": "A burst of 32 commits this week; HEY is looking inside a sample before it says what changed. So far, HEY looked inside 1 of 32 commits to see what changed: 1 changed code."
+        },
+        "project": {
+          "slug": "priors-agents",
+          "name": "Priors Agents",
+          "symbol": "PRIORS",
+          "shortDescription": "The credit layer for AI agents. Unsecured USDG lines, repayment records on-chain, x402 payments. Built on Robinhood Chain.",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-02T10:39:03.000Z",
+          "primaryNarrative": {
+            "slug": "ai-agents",
+            "name": "AI Agents"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x7e7154eb9dd81084625a7a2e9e731cadfddb9ab7"
+          },
+          "websiteUrl": "https://www.priors.live/",
+          "officialX": {
+            "handle": "priors_agent",
+            "url": "https://x.com/priors_agent"
+          },
+          "valuationWithheld": "launch_pool_no_trades",
+          "liquidity": {
+            "usd": 1.8769,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T11:36:52.443Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T11:36:52.443Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "TRADING_INACTIVE",
+            "reason": "launch_pool_no_trades"
+          },
+          "tokenVerification": {
+            "status": "UNVERIFIED",
+            "reason": "market_listing"
+          },
+          "venue": "Uniswap v2",
+          "trades24h": {
+            "buys": 0,
+            "sells": 0,
+            "source": "geckoterminal",
+            "observedAt": "2026-10-02T11:36:52.443Z"
+          },
+          "priceChange24hPct": 0,
+          "hasBuilderSource": true,
+          "logoUrl": "https://cdn.dexscreener.com/cms/images/ok_csxBkS9qtiMzl?width=64&height=64&fit=crop&quality=95&format=auto",
+          "url": "https://heyresearch.xyz/project/priors-agents"
+        },
+        "url": "https://heyresearch.xyz/project/priors-agents#ship-1a00de5c-4ad2-41fa-9bb5-568c4037e8f6"
+      }
+    ],
+    "firstSeenAt": "2026-09-29T11:03:48.092Z",
+    "firstRecordedByHeyAt": "2026-09-29T11:04:38.577Z",
+    "isClaimed": false,
+    "submitted": false,
+    "narratives": [
+      {
+        "slug": "ai-agents",
+        "name": "AI Agents",
+        "isPrimary": true
+      },
+      {
+        "slug": "payments",
+        "name": "Payments",
+        "isPrimary": false
+      },
+      {
+        "slug": "agentic-finance",
+        "name": "Agentic Finance",
+        "isPrimary": false
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.priors.live/",
+        "sourceType": "WEBSITE",
+        "isVerified": false,
+        "confidence": "DISCOVERED",
+        "contextOnly": false
+      },
+      {
+        "url": "https://github.com/priors-agents/priors",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://x.com/priors_agent",
+        "sourceType": "X",
+        "isVerified": false,
+        "confidence": "DISCOVERED",
+        "contextOnly": false
+      }
+    ],
+    "market": {
+      "valuationWithheld": "launch_pool_no_trades",
+      "liquidityUsd": 1.8769,
+      "liquidityKind": "launch_inventory",
+      "volume24hUsd": 0,
+      "priceUsd": 2.670975828e-9,
+      "buys24h": 0,
+      "sells24h": 0,
+      "priceChange1hPct": 0,
+      "priceChange6hPct": 0,
+      "priceChange24hPct": 0,
+      "venue": "Uniswap v2",
+      "pairAddress": "0xa34e87aeb1cc804d555f2a86cde2920063038190",
+      "observedAt": "2026-10-02T11:36:52.443Z",
+      "source": "geckoterminal"
+    },
+    "score": {
+      "buildMomentum": 33.1,
+      "discoveryGapWithheld": "market_not_live",
+      "stillBuilding": false,
+      "stillBuildingState": "NOT_MEASURED",
+      "stillBuildingWithheld": "market_not_live",
+      "calculatedAt": "2026-10-02T10:48:46.241Z",
+      "scoringVersion": "hbm-v22"
+    },
+    "onchainActivity": {
+      "events24h": 6984,
+      "events7d": 13968,
+      "daysCovered": 2,
+      "daysMeasured": 2,
+      "truncated": false,
+      "observedAt": "2026-09-30T03:25:19.555Z",
+      "methods": 7,
+      "eventKinds": 4
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "path": "/api/evidence/ship%3A9b0eb53a-3693-4db4-815a-9c606aa47d4c",
+  "recordedAt": "2026-10-02T11:40:30.841Z",
+  "body": {
+    "id": "ship:9b0eb53a-3693-4db4-815a-9c606aa47d4c",
+    "withdrawn": false,
+    "project": {
+      "slug": "gitlawb-contracts",
+      "name": "Gitlawb",
+      "url": "https://heyresearch.xyz/project/gitlawb-contracts"
+    },
+    "domain": "build",
+    "claimType": "CODE_ACTIVITY",
+    "summary": "Active development: 1 commit in the last 90 days across 1 contributor",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/builder-twentyone/contracts",
+    "publishedAt": "2026-07-17T10:10:53.000Z",
+    "detectedAt": "2026-10-02T09:12:46.267Z",
+    "precision": "WEEK",
+    "window": {
+      "isoWeek": "2026-W29",
+      "start": "2026-07-13T00:00:00.000Z",
+      "end": "2026-07-20T00:00:00.000Z",
+      "firstDay": "2026-07-13",
+      "lastDay": "2026-07-19",
+      "sourceUrl": "https://github.com/builder-twentyone/contracts/commits?since=2026-07-13T00%3A00%3A00.000Z&until=2026-07-20T00%3A00%3A00.000Z"
+    },
+    "codeWeek": {
+      "isoWeek": "2026-w29",
+      "start": "2026-07-13T00:00:00.000Z",
+      "end": "2026-07-20T00:00:00.000Z",
+      "repository": "builder-twentyone/contracts",
+      "commits": 1,
+      "commitsAtLeast": false,
+      "commitsUrl": "https://github.com/builder-twentyone/contracts/commits?since=2026-07-13T00%3A00%3A00.000Z&until=2026-07-20T00%3A00%3A00.000Z",
+      "highlights": [
+        {
+          "subject": "feat: value-routing contracts — BuybackVault (mainnet), BurnJackpot, Incinerator",
+          "sha": "b60de4973c568b34975c20f18cde1afd71a59f1b",
+          "committedAt": "2026-07-17T10:10:53.000Z",
+          "readAsCode": false,
+          "url": "https://github.com/builder-twentyone/contracts/commit/b60de4973c568b34975c20f18cde1afd71a59f1b"
+        }
+      ],
+      "title": "Code changes, week of 2026-07-13 – 2026-07-19 · 1 commit"
+    },
+    "verification": "SOURCE_LINKED",
+    "recordedAt": "2026-10-02T09:12:46.267Z",
+    "metadata": {
+      "summary": "1 active day(s) in builder-twentyone/contracts.",
+      "prerelease": false
+    },
+    "sources": [
+      {
+        "evidenceRowId": "a5deaa9d-829a-42cd-bcb0-2bebffca0fce",
+        "sourceType": "GITHUB_REPO",
+        "sourceUrl": "https://github.com/builder-twentyone/contracts",
+        "observedAt": "2026-10-02T09:12:46.267Z",
+        "metadata": {
+          "truncated": false,
+          "windowEnd": "2026-10-02T11:29:31.903Z",
+          "activeDays": 1,
+          "commitCount": 1,
+          "windowStart": "2026-07-04T11:29:31.903Z",
+          "weekFullyListed": true,
+          "contributorCount": 1
+        }
+      }
+    ],
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}
