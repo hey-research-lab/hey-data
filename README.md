@@ -246,12 +246,12 @@ product decision, not a refactor.
 
 - **Code:** MIT — see [LICENSE](LICENSE).
 - **Data** (snapshot files produced by this generator): Creative Commons Attribution 4.0
-  International (CC BY 4.0) — see [LICENSE-DATA](LICENSE-DATA). Attribution: **Hey Research Lab,
+  International (CC BY 4.0) — see [LICENSE-DATA](LICENSE-DATA). Attribution: **HEY Research Lab,
   https://heyresearch.xyz**.
 
 ### How to cite
 
-> Hey Research Lab, https://heyresearch.xyz. _HEY data snapshot_ (generated &lt;generatedAt from
+> HEY Research Lab, https://heyresearch.xyz. _HEY data snapshot_ (generated &lt;generatedAt from
 > metadata.json&gt;). Licensed under CC BY 4.0.
 
 Keep the snapshot's `generatedAt`, link `https://heyresearch.xyz`, say whether you changed the

@@ -125,7 +125,7 @@ jobs:
             echo "Record counts:"
             jq -r '.recordCount | to_entries[] | "- \(.key): \(.value)"' metadata.json
             echo
-            echo "Data licence: CC BY 4.0. Attribution: Hey Research Lab, https://heyresearch.xyz"
+            echo "Data licence: CC BY 4.0. Attribution: HEY Research Lab, https://heyresearch.xyz"
             echo
             jq -r '.disclaimer' metadata.json
             echo

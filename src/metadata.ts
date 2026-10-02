@@ -4,7 +4,7 @@ export const SCHEMA_VERSION = 1;
 export const SOURCE = 'https://heyresearch.xyz';
 export const DATA_LICENSE = 'CC-BY-4.0';
 export const DATA_LICENSE_URL = 'https://creativecommons.org/licenses/by/4.0/';
-export const ATTRIBUTION = 'Hey Research Lab, https://heyresearch.xyz';
+export const ATTRIBUTION = 'HEY Research Lab, https://heyresearch.xyz';
 export const CODE_LICENSE = 'MIT';
 
 /** The README's "What it does NOT prove" block, carried in every snapshot. */

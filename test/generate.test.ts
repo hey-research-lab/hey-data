@@ -175,7 +175,7 @@ describe('a full run over recorded fixtures', () => {
     expect(meta['chainId']).toBe(4663);
     expect(meta['source']).toBe('https://heyresearch.xyz');
     expect(meta['license']).toBe('CC-BY-4.0');
-    expect(meta['attribution']).toBe('Hey Research Lab, https://heyresearch.xyz');
+    expect(meta['attribution']).toBe('HEY Research Lab, https://heyresearch.xyz');
     expect(meta['codeLicense']).toBe('MIT');
     expect(meta['apiVersion']).toBe('1');
     expect(typeof meta['generatedAt']).toBe('string');

@@ -24,5 +24,5 @@ Initial release.
 - Resume from `<out>/.work` after any stop; atomic final writes.
 - `ci.yml` (scan, lint, typecheck, offline tests, build) and a manual-only `snapshot.yml` that
   uploads the snapshot as an artifact and, when asked, attaches it to a GitHub Release.
-- Data licensed CC BY 4.0 (attribution "Hey Research Lab, https://heyresearch.xyz"); code MIT.
+- Data licensed CC BY 4.0 (attribution "HEY Research Lab, https://heyresearch.xyz"); code MIT.
 - Examples for DuckDB, Python (pandas and DuckDB), Node.js and curl + jq.
