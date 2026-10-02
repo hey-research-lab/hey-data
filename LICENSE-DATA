@@ -1,0 +1,32 @@
+Data licence: Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The dataset files produced by this repository's generator — projects.ndjson,
+ships.ndjson, changes.ndjson, evidence.ndjson and metadata.json, wherever they
+are distributed (workflow artifacts, GitHub Release assets, or a copy you made)
+— are licensed under the Creative Commons Attribution 4.0 International licence.
+
+  Legal code:  https://creativecommons.org/licenses/by/4.0/legalcode
+  Summary:     https://creativecommons.org/licenses/by/4.0/
+  SPDX:        CC-BY-4.0
+
+Licensor and required attribution:
+
+  Hey Research Lab, https://heyresearch.xyz
+
+When you share or adapt the data, give that attribution, link the licence,
+and indicate whether you changed the data. Keep the snapshot's generatedAt
+(metadata.json) with it, and keep each record's HEY url or evidence id with
+anything you republish from that record.
+
+Scope. The licence covers HEY Research Lab's own records as they appear in the
+snapshot. Some fields restate text HEY recorded from public sources (project
+names and descriptions, release titles, links); those words remain their
+authors' words and are included as facts about what the source said. The
+snapshots deliberately exclude third-party market data.
+
+No warranty. The data is provided as is, as of the snapshot time. It is not
+investment advice and carries no safety verdict; an absent field means HEY does
+not know it.
+
+The generator's source code is licensed separately under the MIT licence
+(see LICENSE).
