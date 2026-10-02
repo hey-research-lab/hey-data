@@ -1,0 +1,12 @@
+node_modules/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+# Generated snapshots are never committed (data licence pending).
+snapshot/
+snapshots/
+*.ndjson
+!test/fixtures/**/*.ndjson
+.work/

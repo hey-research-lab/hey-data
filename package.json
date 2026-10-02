@@ -1,0 +1,71 @@
+{
+  "name": "hey-data",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Research snapshots of HEY Research Lab's public builder records on Robinhood Chain (projects, ships, changes, evidence) as NDJSON, generated from the public API.",
+  "license": "MIT",
+  "author": "HEY Research Lab",
+  "type": "module",
+  "homepage": "https://heyresearch.xyz/developers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hey-research-lab/hey-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hey-research-lab/hey-data/issues"
+  },
+  "keywords": [
+    "hey-research",
+    "robinhood-chain",
+    "dataset",
+    "ndjson",
+    "duckdb",
+    "developer-tools"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "hey-data": "./dist/bin.js"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "packageManager": "pnpm@9.15.1",
+  "scripts": {
+    "build": "tsup",
+    "generate": "node dist/bin.js generate",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "scan": "node scripts/scan.mjs .",
+    "format:check": "prettier --check .",
+    "format": "prettier --write .",
+    "record-fixtures": "node scripts/record-fixtures.mjs"
+  },
+  "dependencies": {
+    "@hey-research-lab/sdk": "^0.1.1",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.0",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.4.2",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.18.0",
+    "vitest": "^2.1.8"
+  }
+}
