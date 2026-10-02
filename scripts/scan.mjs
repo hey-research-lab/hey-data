@@ -19,7 +19,7 @@ const SECRETS = [
   'postgres(ql)?://(?![^\\s\'"]*(change|replace|example|password|<))[^\\s\'"]*:[^\\s\'"@]+@(?!localhost)',
   '(?:DATABASE_URL|BITQUERY_[A-Z_]*KEY|UNISWAP_API_KEY|TELEGRAM_BOT_TOKEN|GITHUB_TOKEN|NPM_TOKEN)\\s*=\\s*[^\\s#<$]{8,}',
   'proapi_[A-Za-z0-9]{8,}',
-  '/Users/[A-Za-z0-9_.-]+/', '/home/[a-z0-9_.-]+/(?!runner/)', 'C:\\\\Users\\\\',
+  '/Users/[A-Za-z0-9_.-]+/', '/home/(?!runner/)[a-z0-9_.-]+/', 'C:\\\\Users\\\\',
 ];
 // Private HEY internals that must never be copied (table and module names, split so this file is clean).
 const PRIVATE = [
