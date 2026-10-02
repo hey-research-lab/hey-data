@@ -18,7 +18,7 @@ Node 22 or newer, pnpm 9.15.1.
 
 - Tests never touch the network: `vitest.setup.ts` replaces `fetch` with one that throws, and the
   generator is driven through an injected `fetchImpl` over `test/mock-api.ts`.
-- `test/fixtures/recorded/` holds real answers recorded read-only from `https://heyresearch.xyz`.
+- `test/fixtures/recorded/` holds answers recorded read-only from `https://heyresearch.xyz`.
   The mock API serves those records and recomputes the paging envelopes (totals, offsets,
   cursors) over them so a whole walk fits in a test.
 - To re-record (maintainers, rarely): `HEY_LIVE=1 pnpm record-fixtures`. It sends about 25 GET
