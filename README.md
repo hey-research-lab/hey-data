@@ -232,7 +232,8 @@ partnered with Robinhood Markets, Inc. or Robinhood Chain.
 See [SECURITY.md](SECURITY.md). hey-data makes HTTPS GET requests to `https://heyresearch.xyz`
 only (`HEY_BASE_URL` exists for local tests: an https origin, or http on localhost), never follows
 redirects, caps response bodies, treats every API text as data (bidirectional-override and
-zero-width characters are removed), reads only allowlisted keys (so `__proto__` and friends are
+zero-width characters are removed; links are kept exactly as HEY recorded them, so check a
+link's scheme before rendering it), reads only allowlisted keys (so `__proto__` and friends are
 never copied), and writes only fixed file names inside `--out`, refusing symbolic links.
 
 ## Contributing

@@ -57,7 +57,6 @@ export class ForbiddenFieldError extends Error {
 }
 
 const ISO = /^\d{4}-\d{2}-\d{2}(T\d{2}:\d{2}(:\d{2}(\.\d+)?)?(Z|[+-]\d{2}:\d{2}))?$/;
-const URL_RE = /^https?:\/\/[^\s]+$/;
 
 const typeName = (value: unknown): string =>
   value === null ? 'null' : Array.isArray(value) ? 'array' : typeof value;
@@ -76,9 +75,9 @@ function readLeaf(leaf: Leaf, value: unknown, path: string): unknown {
     case 'text':
       return typeof value === 'string' ? cleanText(value) : fail();
     case 'url':
-      return typeof value === 'string' && URL_RE.test(value) && value.length <= 2_000
-        ? value
-        : fail();
+      // Kept exactly as HEY recorded it (a trailing space included): a link is data, and
+      // a reader validates its scheme before rendering it.
+      return typeof value === 'string' && value.length <= 2_000 ? value : fail();
     case 'datetime':
     case 'datetime|null':
       return typeof value === 'string' && ISO.test(value) ? value : fail();

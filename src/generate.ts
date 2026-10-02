@@ -230,7 +230,9 @@ class Run {
       baseUrl: deps.baseUrl,
       fetchImpl: polite.fetch,
       userAgent: USER_AGENT,
-      timeoutMs: 30_000,
+      // hey-data times each attempt itself (http.ts); the SDK's timer would also
+      // run through pacing and retry-after waits, so it is set out of the way.
+      timeoutMs: 2_000_000_000,
     });
   }
 

@@ -108,6 +108,14 @@ describe('allowlists', () => {
     }
   });
 
+  it('keeps a link exactly as HEY recorded it', () => {
+    // Seen live on 2026-10-02: a website URL with a trailing space.
+    expect(pick({ websiteUrl: 'https://example.org ' }, LISTING_INPUT)).toEqual({
+      websiteUrl: 'https://example.org ',
+    });
+    expect(() => pick({ websiteUrl: 42 }, LISTING_INPUT)).toThrow(SchemaDriftError);
+  });
+
   it('strips bidirectional and zero-width characters from external text only', () => {
     expect(pick({ name: 'ab\u202Ec\u200Bd\nx' }, LISTING_INPUT)).toEqual({ name: 'abcd\nx' });
   });

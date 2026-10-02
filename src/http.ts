@@ -58,6 +58,8 @@ export type PoliteFetchOptions = {
   /** A server asking for a longer wait than this ends the run instead (resume later). */
   maxRetryAfterSeconds?: number;
   maxBodyBytes?: number;
+  /** Per attempt, in milliseconds (default 30 000). */
+  timeoutMs?: number;
   log?: (line: string) => void;
 };
 
@@ -103,43 +105,68 @@ export function politeFetch(options: PoliteFetchOptions): {
   const stats: RequestStats = { requests: 0, retries: 0, waitedForServerMs: 0 };
   let nextSlot = 0;
 
-  const paced = async (input: string, init?: RequestInit): Promise<Response> => {
+  const timeoutMs = options.timeoutMs ?? 30_000;
+
+  /**
+   * One attempt under its own timeout. The caller's signal is not forwarded:
+   * the SDK's timer would also run through hey-data's pacing and retry-after
+   * waits, so each attempt carries its own instead.
+   */
+  const attempt = async (input: string, init: RequestInit | undefined, mayRetry: boolean) => {
     const wait = nextSlot - now();
     if (wait > 0) await sleep(wait);
     nextSlot = now() + options.delayMs;
     stats.requests += 1;
-    return options.fetchImpl(input, { ...init, redirect: 'manual' });
-  };
-
-  const fetchImpl: FetchLike = async (input, init) => {
-    let attempt = 0;
-    for (;;) {
-      const response = await paced(input, init);
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const { signal: _ignored, ...rest } = init ?? {};
+      const response = await options.fetchImpl(input, {
+        ...rest,
+        signal: controller.signal,
+        redirect: 'manual',
+      });
       const version = response.headers.get('x-hey-api-version');
       if (version) stats.apiVersion = version;
       const requestId = response.headers.get('x-request-id');
       if (requestId) stats.lastRequestId = requestId;
+      if (mayRetry && RETRYABLE.has(response.status)) {
+        await response.body?.cancel().catch(() => undefined);
+        return { response, body: undefined };
+      }
+      return { response, body: await readCapped(response, maxBody) };
+    } catch (error) {
+      if (controller.signal.aborted) {
+        throw new Error(`HEY did not answer within ${timeoutMs} ms.`, { cause: error });
+      }
+      throw error;
+    } finally {
+      clearTimeout(timer);
+    }
+  };
 
-      if (RETRYABLE.has(response.status) && attempt < maxRetries) {
+  const fetchImpl: FetchLike = async (input, init) => {
+    let retries = 0;
+    for (;;) {
+      const { response, body } = await attempt(input, init, retries < maxRetries);
+      if (body === undefined) {
         const told = retryAfterSeconds(response.headers.get('retry-after'));
         const seconds =
           told ??
           (response.status === 429 ? DEFAULT_BACKOFF_SECONDS[429] : DEFAULT_BACKOFF_SECONDS.other);
         if (seconds <= maxRetryAfter) {
-          attempt += 1;
+          retries += 1;
           stats.retries += 1;
           stats.waitedForServerMs += seconds * 1000;
           options.log?.(
-            `HEY answered ${response.status}; waiting ${seconds}s as asked, then retrying once more (attempt ${attempt} of ${maxRetries}).`,
+            `HEY answered ${response.status}; waiting ${seconds}s as asked, then retrying (retry ${retries} of ${maxRetries}).`,
           );
-          await response.body?.cancel().catch(() => undefined);
           await sleep(seconds * 1000);
           nextSlot = now() + options.delayMs;
           continue;
         }
       }
-      const body = await readCapped(response, maxBody);
-      const nullBody = [101, 204, 205, 304].includes(response.status);
+      const nullBody = body === undefined || [101, 204, 205, 304].includes(response.status);
       return new Response(nullBody ? null : body, {
         status: response.status,
         headers: response.headers,
