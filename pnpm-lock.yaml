@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@hey-research-lab/sdk':
-        specifier: ^0.1.1
-        version: 0.1.1
+        specifier: ^0.2.0
+        version: 0.2.0
       zod:
         specifier: ^3.24.1
         version: 3.25.76
@@ -377,8 +377,8 @@ packages:
     resolution: {integrity: sha512-43/qtrDUokr7LJqoF2c3+RInu/t4zfrpYdoSDfYyhg52rwLV6TnOvdG4fXm7IkSB3wErkcmJS9iEhjVtOSEjjA==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  '@hey-research-lab/sdk@0.1.1':
-    resolution: {integrity: sha512-xrG9EEUZzh51PJR2Kzl+VNUCnUq8eFpVvwO8QutmGuU2fe/x32fsYVt9KEVnQhpO5v7CVM+UdgGw4rp2OCITPw==}
+  '@hey-research-lab/sdk@0.2.0':
+    resolution: {integrity: sha512-5PyePfQb2vg+QAAf+yi/4+hJWXrGPcNtNgvR/5iZKIxJgQhfRmDIqfBjURIL+gP4Mt2epylrdKMjzJey48YUHA==}
     engines: {node: '>=18'}
 
   '@humanfs/core@0.19.2':
@@ -1493,7 +1493,7 @@ snapshots:
       '@eslint/core': 0.17.0
       levn: 0.4.1
 
-  '@hey-research-lab/sdk@0.1.1': {}
+  '@hey-research-lab/sdk@0.2.0': {}
 
   '@humanfs/core@0.19.2':
     dependencies:
