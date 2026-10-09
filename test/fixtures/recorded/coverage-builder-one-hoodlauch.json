@@ -1,34 +1,34 @@
 {
-  "path": "/api/projects/builder-thirteen-clubpengu/coverage",
-  "recordedAt": "2026-10-02T11:40:15.977Z",
+  "path": "/api/projects/builder-one-hoodlauch/coverage",
+  "recordedAt": "2026-10-09T04:24:02.020Z",
   "body": {
     "project": {
-      "slug": "builder-thirteen-clubpengu",
-      "name": "ClubPengu",
-      "url": "https://heyresearch.xyz/project/builder-thirteen-clubpengu"
+      "slug": "builder-one-hoodlauch",
+      "name": "HOODLAUCH",
+      "url": "https://heyresearch.xyz/project/builder-one-hoodlauch"
     },
     "dimensions": {
       "identity": {
         "state": "MEASURED",
-        "since": "2026-09-03T21:05:05.180Z",
+        "since": "2026-09-03T20:56:47.670Z",
         "asOf": "2026-09-03T20:54:48.881Z",
         "reason": "research_level_verified_builder",
-        "detailUrl": "https://heyresearch.xyz/api/projects/builder-thirteen-clubpengu"
+        "detailUrl": "https://heyresearch.xyz/api/projects/builder-one-hoodlauch"
       },
       "builderEvidence": {
         "state": "MEASURED",
-        "asOf": "2026-10-01T21:37:40.491Z",
-        "reason": "activity_dormant"
+        "asOf": "2026-10-09T04:17:35.162Z",
+        "reason": "activity_shipping"
       },
       "repositories": {
         "state": "MEASURED",
         "reason": "own_repositories",
-        "detailUrl": "https://heyresearch.xyz/api/projects/builder-thirteen-clubpengu"
+        "detailUrl": "https://heyresearch.xyz/api/projects/builder-one-hoodlauch"
       },
       "releases": {
         "state": "MEASURED",
         "reason": "no_release_recorded",
-        "detailUrl": "https://heyresearch.xyz/api/ships?project=builder-thirteen-clubpengu"
+        "detailUrl": "https://heyresearch.xyz/api/ships?project=builder-one-hoodlauch"
       },
       "marketCurrent": {
         "state": "NOT_APPLICABLE",
@@ -72,31 +72,30 @@
       },
       "timeline": {
         "state": "MEASURED",
-        "since": "2026-09-03T21:05:05.180Z",
+        "since": "2026-09-03T20:56:47.670Z",
         "reason": "complete_default_window",
-        "detailUrl": "https://heyresearch.xyz/api/projects/builder-thirteen-clubpengu/timeline"
+        "detailUrl": "https://heyresearch.xyz/api/projects/builder-one-hoodlauch/timeline"
       },
       "officialDocs": {
         "state": "NO_SOURCE",
-        "asOf": "2026-09-26T22:00:05.401Z",
-        "reason": "no_docs_link_found"
+        "reason": "no_official_site"
       },
       "apiDocs": {
-        "state": "NOT_ENOUGH_YET",
-        "reason": "site_files_not_read_yet"
+        "state": "NO_SOURCE",
+        "reason": "no_official_site"
       },
       "sourceChanges": {
-        "state": "NOT_ENOUGH_YET",
-        "reason": "no_baseline_yet"
+        "state": "NO_SOURCE",
+        "reason": "no_official_site"
       },
       "gitHost": {
         "state": "MEASURED",
-        "asOf": "2026-09-28T00:37:59.665Z",
+        "asOf": "2026-10-04T06:22:26.915Z",
         "reason": "repository_metadata_read"
       },
       "package": {
         "state": "MEASURED",
-        "asOf": "2026-09-28T00:37:59.665Z",
+        "asOf": "2026-10-04T06:22:26.915Z",
         "reason": "none_found_in_package_index"
       },
       "securityContext": {
@@ -109,18 +108,18 @@
         "source": "code",
         "label": "Code",
         "state": "fresh",
-        "observedAt": "2026-10-01T21:37:40.491Z",
-        "staleAfterHours": 108
+        "observedAt": "2026-10-09T04:17:35.162Z",
+        "staleAfterHours": 72
       },
       {
         "source": "score",
         "label": "Scores",
         "state": "fresh",
-        "observedAt": "2026-10-02T06:54:34.140Z",
+        "observedAt": "2026-10-09T00:29:44.854Z",
         "staleAfterHours": 24
       }
     ],
-    "computedAt": "2026-10-02T11:40:16.005Z",
+    "computedAt": "2026-10-09T04:23:12.136Z",
     "states": {
       "MEASURED": "HEY read it; figures elsewhere are measurements, zeros included.",
       "NO_SOURCE": "HEY holds nothing to read it from; a zero or an absence is not a finding.",

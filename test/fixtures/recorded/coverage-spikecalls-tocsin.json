@@ -1,19 +1,19 @@
 {
-  "path": "/api/projects/builder-twelve-robinxbt/coverage",
-  "recordedAt": "2026-10-02T11:40:18.607Z",
+  "path": "/api/projects/spikecalls-tocsin/coverage",
+  "recordedAt": "2026-10-09T04:24:10.145Z",
   "body": {
     "project": {
-      "slug": "builder-twelve-robinxbt",
-      "name": "builder-twelve",
-      "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt"
+      "slug": "spikecalls-tocsin",
+      "name": "SpikeCalls",
+      "url": "https://heyresearch.xyz/project/spikecalls-tocsin"
     },
     "dimensions": {
       "identity": {
         "state": "MEASURED",
-        "since": "2026-09-03T21:05:05.374Z",
-        "asOf": "2026-09-03T20:54:48.881Z",
+        "since": "2026-09-06T00:13:17.375Z",
+        "asOf": "2026-09-06T00:02:28.260Z",
         "reason": "research_level_verified_builder",
-        "detailUrl": "https://heyresearch.xyz/api/projects/builder-twelve-robinxbt"
+        "detailUrl": "https://heyresearch.xyz/api/projects/spikecalls-tocsin"
       },
       "builderEvidence": {
         "state": "NOT_ENOUGH_YET",
@@ -21,7 +21,8 @@
       },
       "repositories": {
         "state": "SOURCE_UNAVAILABLE",
-        "reason": "every_repository_unavailable"
+        "reason": "every_repository_unavailable",
+        "cause": "own_source_unreachable"
       },
       "releases": {
         "state": "NOT_ENOUGH_YET",
@@ -69,9 +70,9 @@
       },
       "timeline": {
         "state": "MEASURED",
-        "since": "2026-09-03T21:05:05.374Z",
+        "since": "2026-09-06T00:13:17.375Z",
         "reason": "complete_default_window",
-        "detailUrl": "https://heyresearch.xyz/api/projects/builder-twelve-robinxbt/timeline"
+        "detailUrl": "https://heyresearch.xyz/api/projects/spikecalls-tocsin/timeline"
       },
       "officialDocs": {
         "state": "NO_SOURCE",
@@ -109,11 +110,11 @@
         "source": "score",
         "label": "Scores",
         "state": "fresh",
-        "observedAt": "2026-10-02T06:06:23.269Z",
+        "observedAt": "2026-10-09T03:48:24.653Z",
         "staleAfterHours": 24
       }
     ],
-    "computedAt": "2026-10-02T11:40:18.665Z",
+    "computedAt": "2026-10-09T04:24:10.193Z",
     "states": {
       "MEASURED": "HEY read it; figures elsewhere are measurements, zeros included.",
       "NO_SOURCE": "HEY holds nothing to read it from; a zero or an absence is not a finding.",

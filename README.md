@@ -84,8 +84,8 @@ field. Field names and state words are the API's own.
   `narratives[]`, `token {chainId, contractAddress}`, `tokenVerification {status, reason}`,
   `websiteUrl`, `officialX`, `logoUrl`, `hasBuilderSource`, `firstRecordedByHeyAt`,
   `latestShip {evidenceId, eventType, publishedAt, detectedAt, precision, verification}` (the newest
-  meaningful ship HEY lists), `scoringVersion`, `scoredAt`, `coverage {<dimension>: {state, reason,
-since, asOf}}`, `coverageComputedAt`, and `detailRead` (`read`, `dossier_only`, `not_found` when
+  meaningful ship HEY lists), `scoringVersion`, `scoredAt`, `coverage {<dimension>: {state,
+stateDetail, reason, cause, since, asOf}}`, `coverageComputedAt`, and `detailRead` (`read`, `dossier_only`, `not_found` when
   the project was unpublished between the listing and its detail read, or `skipped` with
   `--no-details`).
   Coverage dimensions kept: identity, builderEvidence, repositories, releases, timeline,
@@ -128,6 +128,10 @@ documented meaning (`occurredAt: null` with `precision: "OBSERVED"` for a change
 source dated). Coverage states (`MEASURED`, `NO_SOURCE`, `NOT_ENOUGH_YET`, `STALE`,
 `SOURCE_UNAVAILABLE`, `NOT_APPLICABLE`, `NOT_RESEARCHED`, `ERROR`, `WITHHELD`) and activity states
 (`SHIPPING`, `ACTIVE`, `QUIET`, `DORMANT`, `RESUMED`, `UNKNOWN`) are copied as the API words them.
+A coverage entry also keeps HEY's additive `stateDetail` — `MAPPING_BLOCKED` under `NO_SOURCE` (HEY
+holds a candidate source and nothing yet ties it to the project) or `PARTIAL` under `MEASURED` — and
+`cause` on an unavailable or deferred read (`own_source_unreachable`, `provider_unavailable`,
+`budget_deferred`) when HEY sends them; `state` keeps its meaning either way.
 
 ### metadata.json
 

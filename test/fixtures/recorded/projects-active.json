@@ -1,6 +1,6 @@
 {
   "path": "/api/projects?status=ACTIVE&limit=2",
-  "recordedAt": "2026-10-02T11:40:01.323Z",
+  "recordedAt": "2026-10-09T04:23:52.745Z",
   "body": {
     "query": {
       "limit": 2,
@@ -8,53 +8,47 @@
       "status": "ACTIVE",
       "sort": "activity"
     },
-    "total": 753,
+    "total": 702,
     "nextOffset": 2,
     "items": [
       {
-        "slug": "builder-seventeen-fomo-alert",
-        "name": "fomo-alert",
-        "shortDescription": "Read-only Fomo/Trenches alerts for Telegram on Robinhood Chain",
+        "slug": "builder-seven-shared-crates",
+        "name": "shared-crates",
+        "shortDescription": "A series of shared helper crates that are used across projects",
         "projectKind": "OTHER",
         "activityStatus": "ACTIVE",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-09-25T06:39:56.000Z",
+        "lastShippedAt": "2026-10-01T22:13:02.000Z",
         "hasBuilderSource": true,
-        "logoUrl": "https://avatars.githubusercontent.com/builder-seventeen",
-        "url": "https://heyresearch.xyz/project/builder-seventeen-fomo-alert"
+        "logoUrl": "https://avatars.githubusercontent.com/builder-seven",
+        "url": "https://heyresearch.xyz/project/builder-seven-shared-crates"
       },
       {
-        "slug": "builder-eighteen-radian",
-        "name": "radian",
-        "shortDescription": "Radian — memecoin launchpad for Circle's Arc chain (Pons V2 port, native-USDC quoted)",
+        "slug": "builder-three-arb-radar",
+        "name": "arb-radar",
         "projectKind": "OTHER",
         "activityStatus": "ACTIVE",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-09-25T05:36:50.000Z",
-        "primaryNarrative": {
-          "slug": "launchpad",
-          "name": "Launchpad"
-        },
-        "websiteUrl": "https://web-ten-steel-zat2clos3t.vercel.app",
+        "lastShippedAt": "2026-10-01T21:47:23.000Z",
         "hasBuilderSource": true,
-        "logoUrl": "https://avatars.githubusercontent.com/builder-eighteen",
-        "url": "https://heyresearch.xyz/project/builder-eighteen-radian"
+        "logoUrl": "https://avatars.githubusercontent.com/builder-three",
+        "url": "https://heyresearch.xyz/project/builder-three-arb-radar"
       }
     ],
     "catalogue": {
-      "verifiedBuilders": 1871,
-      "stillBuilding": 4,
-      "underTheRadar": 9,
-      "verifiedBuildersOnChain": 907,
+      "verifiedBuilders": 1787,
+      "stillBuilding": 1,
+      "underTheRadar": 1,
+      "verifiedBuildersOnChain": 990,
       "published": 5032,
       "chainId": 4663,
-      "asOf": "2026-10-02T11:39:49.577Z",
+      "asOf": "2026-10-09T04:23:48.025Z",
       "listScope": "published",
       "definitions": "https://heyresearch.xyz/methodology#counts"
     },

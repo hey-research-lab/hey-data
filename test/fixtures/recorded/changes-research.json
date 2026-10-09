@@ -1,6 +1,6 @@
 {
   "path": "/api/changes?domain=research&limit=3",
-  "recordedAt": "2026-10-02T11:40:26.850Z",
+  "recordedAt": "2026-10-09T04:24:18.261Z",
   "body": {
     "query": {
       "domain": "research",
@@ -9,119 +9,115 @@
     },
     "items": [
       {
-        "id": "state:45e44760-2cb0-4bdc-a68b-e2a0073c4628:catalog_status:13178",
+        "id": "source:3939170b-71cf-46af-91a3-d3926de36a2a:added",
         "revision": 1,
         "op": "upsert",
-        "type": "research.published",
+        "type": "research.source_added",
         "domain": "research",
         "origin": "live",
         "project": {
-          "slug": "hunch-0976f3",
-          "name": "Hunch",
-          "url": "https://heyresearch.xyz/project/hunch-0976f3"
+          "slug": "priviet-stock-rewards",
+          "name": "Priviet Stock Rewards",
+          "url": "https://heyresearch.xyz/project/priviet-stock-rewards"
         },
         "occurredAt": null,
         "precision": "OBSERVED",
-        "detectedAt": "2026-10-02T11:14:01.681Z",
-        "recordedAt": "2026-10-02T11:15:22.569Z",
-        "summary": "Project page published",
-        "before": null,
-        "after": "QUALIFIED",
+        "detectedAt": "2026-10-09T04:08:27.603Z",
+        "recordedAt": "2026-10-09T04:10:05.043Z",
+        "summary": "Official source added: contract",
         "evidence": [
           {
-            "id": "state:45e44760-2cb0-4bdc-a68b-e2a0073c4628:catalog_status:13178",
-            "label": "HEY state record"
+            "id": "source:3939170b-71cf-46af-91a3-d3926de36a2a",
+            "url": "https://robinhoodchain.blockscout.com/address/0x16d10bbc5b262e6709c249323276ed6b1c9aef17",
+            "label": "Contract"
           }
         ],
-        "source": "hey_state",
+        "source": "website_crawl",
         "facts": {
-          "key": "catalog_status",
-          "scoringVersion": "hbm-v22"
+          "sourceType": "CONTRACT"
         },
         "links": {
-          "project": "https://heyresearch.xyz/project/hunch-0976f3",
-          "evidence": "https://heyresearch.xyz/api/evidence/state%3A45e44760-2cb0-4bdc-a68b-e2a0073c4628%3Acatalog_status%3A13178",
-          "timeline": "https://heyresearch.xyz/api/projects/hunch-0976f3/timeline"
+          "project": "https://heyresearch.xyz/project/priviet-stock-rewards",
+          "evidence": "https://heyresearch.xyz/api/evidence/source%3A3939170b-71cf-46af-91a3-d3926de36a2a",
+          "timeline": "https://heyresearch.xyz/api/projects/priviet-stock-rewards/timeline"
         }
       },
       {
-        "id": "narrative:c09c7a1a-469c-4489-a791-43dda127084f:ai",
+        "id": "source:1f0a4851-6d3e-48a4-8825-db831c7302e7:added",
         "revision": 1,
         "op": "upsert",
-        "type": "research.narrative_assigned",
+        "type": "research.source_added",
         "domain": "research",
         "origin": "live",
         "project": {
-          "slug": "genie-ai",
-          "name": "GENIE AI",
-          "url": "https://heyresearch.xyz/project/genie-ai"
+          "slug": "priviet-stock-rewards",
+          "name": "Priviet Stock Rewards",
+          "url": "https://heyresearch.xyz/project/priviet-stock-rewards"
         },
         "occurredAt": null,
         "precision": "OBSERVED",
-        "detectedAt": "2026-10-02T11:08:41.658Z",
-        "recordedAt": "2026-10-02T11:13:50.113Z",
-        "summary": "Primary narrative: AI",
+        "detectedAt": "2026-10-09T04:08:27.596Z",
+        "recordedAt": "2026-10-09T04:10:05.043Z",
+        "summary": "Official source added: contract",
         "evidence": [
           {
-            "id": "narrative:c09c7a1a-469c-4489-a791-43dda127084f:ai",
-            "url": "https://heyresearch.xyz/narrative/ai",
-            "label": "Narrative"
+            "id": "source:1f0a4851-6d3e-48a4-8825-db831c7302e7",
+            "url": "https://robinhoodchain.blockscout.com/address/0xba8f87c12f366ef7a3837049eb0c67e647c65472",
+            "label": "Contract"
           }
         ],
-        "source": "hey_rules",
+        "source": "website_crawl",
         "facts": {
-          "primary": true,
-          "narrative": "ai"
+          "sourceType": "CONTRACT"
         },
         "links": {
-          "project": "https://heyresearch.xyz/project/genie-ai",
-          "evidence": "https://heyresearch.xyz/api/evidence/narrative%3Ac09c7a1a-469c-4489-a791-43dda127084f%3Aai",
-          "timeline": "https://heyresearch.xyz/api/projects/genie-ai/timeline"
+          "project": "https://heyresearch.xyz/project/priviet-stock-rewards",
+          "evidence": "https://heyresearch.xyz/api/evidence/source%3A1f0a4851-6d3e-48a4-8825-db831c7302e7",
+          "timeline": "https://heyresearch.xyz/api/projects/priviet-stock-rewards/timeline"
         }
       },
       {
-        "id": "narrative:c0588c81-9386-4a46-951b-8a5f22e205db:ai",
+        "id": "source:8b52ed60-a125-4012-9dfa-95049ea78030:added",
         "revision": 1,
         "op": "upsert",
-        "type": "research.narrative_assigned",
+        "type": "research.source_added",
         "domain": "research",
         "origin": "live",
         "project": {
-          "slug": "genie-ai-a9b5a5",
-          "name": "GENIE AI",
-          "url": "https://heyresearch.xyz/project/genie-ai-a9b5a5"
+          "slug": "priviet-stock-rewards",
+          "name": "Priviet Stock Rewards",
+          "url": "https://heyresearch.xyz/project/priviet-stock-rewards"
         },
         "occurredAt": null,
         "precision": "OBSERVED",
-        "detectedAt": "2026-10-02T11:08:41.658Z",
-        "recordedAt": "2026-10-02T11:13:50.113Z",
-        "summary": "Primary narrative: AI",
+        "detectedAt": "2026-10-09T04:08:27.581Z",
+        "recordedAt": "2026-10-09T04:10:05.043Z",
+        "summary": "Official source added: contract",
         "evidence": [
           {
-            "id": "narrative:c0588c81-9386-4a46-951b-8a5f22e205db:ai",
-            "url": "https://heyresearch.xyz/narrative/ai",
-            "label": "Narrative"
+            "id": "source:8b52ed60-a125-4012-9dfa-95049ea78030",
+            "url": "https://robinhoodchain.blockscout.com/address/0x6312dc667e7c7f895b6fdb34fdfab3e613de042c",
+            "label": "Contract"
           }
         ],
-        "source": "hey_rules",
+        "source": "website_crawl",
         "facts": {
-          "primary": true,
-          "narrative": "ai"
+          "sourceType": "CONTRACT"
         },
         "links": {
-          "project": "https://heyresearch.xyz/project/genie-ai-a9b5a5",
-          "evidence": "https://heyresearch.xyz/api/evidence/narrative%3Ac0588c81-9386-4a46-951b-8a5f22e205db%3Aai",
-          "timeline": "https://heyresearch.xyz/api/projects/genie-ai-a9b5a5/timeline"
+          "project": "https://heyresearch.xyz/project/priviet-stock-rewards",
+          "evidence": "https://heyresearch.xyz/api/evidence/source%3A8b52ed60-a125-4012-9dfa-95049ea78030",
+          "timeline": "https://heyresearch.xyz/api/projects/priviet-stock-rewards/timeline"
         }
       }
     ],
-    "nextCursor": "YzEuNTQ4Njk",
+    "nextCursor": "YzEuODQzNDQ",
     "hasMore": true,
     "ledger": {
       "collectionStart": "2026-09-26T11:35:57.227Z",
       "transitionsFrom": "2026-09-26T11:32:48.791Z",
-      "newestRecordedAt": "2026-10-02T11:40:02.246Z",
-      "projectorRanAt": "2026-10-02T11:40:02.246Z"
+      "newestRecordedAt": "2026-10-09T04:20:00.249Z",
+      "projectorRanAt": "2026-10-09T04:20:00.249Z"
     },
     "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
   }

@@ -1,0 +1,254 @@
+{
+  "path": "/api/projects/rebateprotocol-pons-fork",
+  "recordedAt": "2026-10-09T04:24:05.908Z",
+  "body": {
+    "slug": "rebateprotocol-pons-fork",
+    "name": "pons_fork",
+    "shortDescription": "Pons Fork — automated creator-fee engine on Robinhood Chain (buyback & burn, cashback, charity, RWA, LP). EVM deployment of the Rebate ecosystem. Monorepo of 12 services + site + backend.",
+    "projectKind": "OTHER",
+    "activityStatus": "DORMANT",
+    "researchLevel": "VERIFIED_BUILDER",
+    "catalogStatus": "VERIFIED_BUILDER",
+    "stillBuilding": false,
+    "stillBuildingState": "NOT_MEASURED",
+    "lastShippedAt": "2026-08-09T23:59:00.000Z",
+    "primaryNarrative": {
+      "slug": "rwa",
+      "name": "RWA"
+    },
+    "hasBuilderSource": true,
+    "logoUrl": "https://avatars.githubusercontent.com/rebateprotocol",
+    "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork",
+    "ships": [
+      {
+        "id": "ae8553be-1c56-4afc-93ff-481ed2942b21",
+        "title": "Code changes, week of 2026-08-03 – 2026-08-09",
+        "summary": "5 active days in rebateprotocol/pons_fork since 2026-07-25; only the newest 100 commits were read.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-08-09T23:59:00.000Z",
+        "detectedAt": "2026-09-18T17:14:36.031Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:ae8553be-1c56-4afc-93ff-481ed2942b21",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/rebateprotocol/pons_fork",
+        "codeSubstance": {
+          "verdict": "SUBSTANTIVE",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 4,
+          "commitsRead": 2,
+          "changedCode": 1,
+          "documentationOrMaintenance": 0,
+          "substanceUnknown": 1,
+          "notRead": 2,
+          "files": {
+            "source": 10,
+            "test": 0,
+            "docs": 0,
+            "readme": 0,
+            "dependency": 1,
+            "config": 3,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 11
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 0,
+          "sampled": false,
+          "basis": null,
+          "summary": "This week HEY looked inside 2 of 4 commits to see what changed: 1 changed code, 1 could not be classified. One code change is enough for the week to count, so HEY stopped there."
+        },
+        "project": {
+          "slug": "rebateprotocol-pons-fork",
+          "name": "pons_fork",
+          "shortDescription": "Pons Fork — automated creator-fee engine on Robinhood Chain (buyback & burn, cashback, charity, RWA, LP). EVM deployment of the Rebate ecosystem. Monorepo of 12 services + site + backend.",
+          "projectKind": "OTHER",
+          "activityStatus": "DORMANT",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-08-09T23:59:00.000Z",
+          "primaryNarrative": {
+            "slug": "rwa",
+            "name": "RWA"
+          },
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/rebateprotocol",
+          "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork"
+        },
+        "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork#ship-ae8553be-1c56-4afc-93ff-481ed2942b21"
+      },
+      {
+        "id": "96cb2c32-efe0-4612-b9a0-bc4e265d3379",
+        "title": "v0.5.0 — RWA Cashback and Fees to LP",
+        "summary": "**2026-07-28.** Protocols four and five. - **RWA Cashback** — swap fees into Robinhood tokenized stocks and pay holders the basket the deployer picked. - **Fees to LP** — add fees as liquidity, route the LP fees to the treasury. Also: the charity registry expanded to 27 verified organisations, and the holders API hardened for scale. *Historical tag — the last pre-consolidation commit.*",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-08-09T03:07:04.000Z",
+        "detectedAt": "2026-09-03T21:46:33.018Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:96cb2c32-efe0-4612-b9a0-bc4e265d3379",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/rebateprotocol/pons_fork/releases/tag/v0.5.0",
+        "project": {
+          "slug": "rebateprotocol-pons-fork",
+          "name": "pons_fork",
+          "shortDescription": "Pons Fork — automated creator-fee engine on Robinhood Chain (buyback & burn, cashback, charity, RWA, LP). EVM deployment of the Rebate ecosystem. Monorepo of 12 services + site + backend.",
+          "projectKind": "OTHER",
+          "activityStatus": "DORMANT",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-08-09T23:59:00.000Z",
+          "primaryNarrative": {
+            "slug": "rwa",
+            "name": "RWA"
+          },
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/rebateprotocol",
+          "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork"
+        },
+        "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork#ship-96cb2c32-efe0-4612-b9a0-bc4e265d3379"
+      },
+      {
+        "id": "4153faa7-dee2-41d8-9ff8-bef41ea76562",
+        "title": "v0.4.0 — the v2-ready port",
+        "summary": "**2026-07-27.** All three protocols re-implemented against the Pons v2 design — pull-based fee escrow, bonding curve to Uniswap v4 graduation — built and left dormant until v2 activates on mainnet. *Historical tag, v2 lineage only.*",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-08-09T03:07:03.000Z",
+        "detectedAt": "2026-09-03T21:46:33.022Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:4153faa7-dee2-41d8-9ff8-bef41ea76562",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/rebateprotocol/pons_fork/releases/tag/v0.4.0",
+        "project": {
+          "slug": "rebateprotocol-pons-fork",
+          "name": "pons_fork",
+          "shortDescription": "Pons Fork — automated creator-fee engine on Robinhood Chain (buyback & burn, cashback, charity, RWA, LP). EVM deployment of the Rebate ecosystem. Monorepo of 12 services + site + backend.",
+          "projectKind": "OTHER",
+          "activityStatus": "DORMANT",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-08-09T23:59:00.000Z",
+          "primaryNarrative": {
+            "slug": "rwa",
+            "name": "RWA"
+          },
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/rebateprotocol",
+          "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork"
+        },
+        "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork#ship-4153faa7-dee2-41d8-9ff8-bef41ea76562"
+      },
+      {
+        "id": "ff98656e-25dc-4a91-a282-118fc98f201a",
+        "title": "v0.2.0 — ponsfork.com goes live",
+        "summary": "The public site, **2026-07-25**: landing page, live token list read straight off Robinhood Chain, per-token pages with mode badges. Hand-written static HTML, no bundler, no build step. *Historical tag, site lineage only.*",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-08-09T03:07:02.000Z",
+        "detectedAt": "2026-09-03T21:46:33.030Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:ff98656e-25dc-4a91-a282-118fc98f201a",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/rebateprotocol/pons_fork/releases/tag/v0.2.0",
+        "project": {
+          "slug": "rebateprotocol-pons-fork",
+          "name": "pons_fork",
+          "shortDescription": "Pons Fork — automated creator-fee engine on Robinhood Chain (buyback & burn, cashback, charity, RWA, LP). EVM deployment of the Rebate ecosystem. Monorepo of 12 services + site + backend.",
+          "projectKind": "OTHER",
+          "activityStatus": "DORMANT",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-08-09T23:59:00.000Z",
+          "primaryNarrative": {
+            "slug": "rwa",
+            "name": "RWA"
+          },
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/rebateprotocol",
+          "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork"
+        },
+        "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork#ship-ff98656e-25dc-4a91-a282-118fc98f201a"
+      },
+      {
+        "id": "19046073-ff10-42aa-89da-655f4495d110",
+        "title": "v0.3.0 — Charity, the third protocol",
+        "summary": "**2026-07-26.** Fees routed to real charities at a **0% service fee**, with the deployer choosing the split via an on-chain memo transaction. Shipped alongside the **Disperse** batch-payout contract that makes paying hundreds of holders affordable. *Historical tag, disperse lineage; the charity engine shipped the same day in its own repo.*",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-08-09T03:07:02.000Z",
+        "detectedAt": "2026-09-03T21:46:33.026Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:19046073-ff10-42aa-89da-655f4495d110",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/rebateprotocol/pons_fork/releases/tag/v0.3.0",
+        "project": {
+          "slug": "rebateprotocol-pons-fork",
+          "name": "pons_fork",
+          "shortDescription": "Pons Fork — automated creator-fee engine on Robinhood Chain (buyback & burn, cashback, charity, RWA, LP). EVM deployment of the Rebate ecosystem. Monorepo of 12 services + site + backend.",
+          "projectKind": "OTHER",
+          "activityStatus": "DORMANT",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-08-09T23:59:00.000Z",
+          "primaryNarrative": {
+            "slug": "rwa",
+            "name": "RWA"
+          },
+          "hasBuilderSource": true,
+          "logoUrl": "https://avatars.githubusercontent.com/rebateprotocol",
+          "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork"
+        },
+        "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork#ship-19046073-ff10-42aa-89da-655f4495d110"
+      }
+    ],
+    "firstSeenAt": "2026-09-03T21:25:04.199Z",
+    "firstRecordedByHeyAt": "2026-09-03T21:30:52.152Z",
+    "isClaimed": false,
+    "submitted": false,
+    "narratives": [
+      {
+        "slug": "rwa",
+        "name": "RWA",
+        "isPrimary": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://github.com/rebateprotocol/pons-fork-v2",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "DISCOVERED",
+        "contextOnly": true,
+        "contextReason": "owner_identity_not_corroborated"
+      },
+      {
+        "url": "https://github.com/rebateprotocol/pons_fork",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      }
+    ],
+    "score": {
+      "buildMomentum": 0,
+      "discoveryGapWithheld": "no_token",
+      "stillBuilding": false,
+      "stillBuildingState": "NOT_MEASURED",
+      "stillBuildingWithheld": "no_token",
+      "calculatedAt": "2026-10-09T04:10:30.011Z",
+      "scoringVersion": "hbm-v26"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

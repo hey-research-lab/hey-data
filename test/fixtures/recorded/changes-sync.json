@@ -1,6 +1,6 @@
 {
   "path": "/api/changes?after=c1.0&limit=12",
-  "recordedAt": "2026-10-02T11:40:21.415Z",
+  "recordedAt": "2026-10-09T04:24:12.997Z",
   "body": {
     "query": {
       "after": "c1.0",
@@ -8,42 +8,6 @@
       "limit": 12
     },
     "items": [
-      {
-        "id": "ship:b455fb13-e74b-412c-90d5-69dc197c9f66",
-        "revision": 1,
-        "op": "upsert",
-        "type": "build.code_activity",
-        "domain": "build",
-        "origin": "bootstrap",
-        "project": {
-          "slug": "ledgerhq-ledger-live",
-          "name": "LedgerHQ",
-          "url": "https://heyresearch.xyz/project/ledgerhq-ledger-live"
-        },
-        "occurredAt": "2026-09-19T11:56:21.000Z",
-        "precision": "WEEK",
-        "detectedAt": "2026-09-18T01:33:50.145Z",
-        "recordedAt": "2026-09-26T11:35:57.227Z",
-        "summary": "Active development: 100+ commits since 2026-09-11 across 23 contributors",
-        "evidence": [
-          {
-            "id": "ship:b455fb13-e74b-412c-90d5-69dc197c9f66",
-            "url": "https://github.com/ledgerhq/ledger-live",
-            "label": "GitHub"
-          }
-        ],
-        "source": "github",
-        "countsAsBuilding": true,
-        "facts": {
-          "eventType": "CODE_ACTIVITY",
-          "verification": "SOURCE_LINKED"
-        },
-        "links": {
-          "project": "https://heyresearch.xyz/project/ledgerhq-ledger-live",
-          "evidence": "https://heyresearch.xyz/api/evidence/ship%3Ab455fb13-e74b-412c-90d5-69dc197c9f66",
-          "timeline": "https://heyresearch.xyz/api/projects/ledgerhq-ledger-live/timeline"
-        }
-      },
       {
         "id": "ship:87a92447-e637-4801-b6d2-b5692efc8ca0",
         "revision": 1,
@@ -450,15 +414,52 @@
           "evidence": "https://heyresearch.xyz/api/evidence/ship%3A29968c07-9f3f-4cda-ba91-33fbc7c23376",
           "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
         }
+      },
+      {
+        "id": "ship:258e025b-a9dd-431d-bfe2-83b9f52fccd5",
+        "revision": 1,
+        "op": "upsert",
+        "type": "build.release",
+        "domain": "build",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "projectopensea-tool-sdk",
+          "name": "tool-sdk",
+          "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+        },
+        "occurredAt": "2026-06-19T00:06:40.000Z",
+        "precision": "EXACT",
+        "detectedAt": "2026-09-03T21:07:35.897Z",
+        "recordedAt": "2026-09-26T11:35:57.227Z",
+        "summary": "v0.24.0",
+        "evidence": [
+          {
+            "id": "ship:258e025b-a9dd-431d-bfe2-83b9f52fccd5",
+            "url": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.24.0",
+            "label": "GitHub"
+          }
+        ],
+        "source": "github",
+        "countsAsBuilding": true,
+        "facts": {
+          "eventType": "GITHUB_RELEASE",
+          "verification": "PUBLICLY_VERIFIED",
+          "releaseVersion": "v0.24.0"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/projectopensea-tool-sdk",
+          "evidence": "https://heyresearch.xyz/api/evidence/ship%3A258e025b-a9dd-431d-bfe2-83b9f52fccd5",
+          "timeline": "https://heyresearch.xyz/api/projects/projectopensea-tool-sdk/timeline"
+        }
       }
     ],
-    "nextCursor": "YzEuMTM",
+    "nextCursor": "YzEuMTQ",
     "hasMore": true,
     "ledger": {
       "collectionStart": "2026-09-26T11:35:57.227Z",
       "transitionsFrom": "2026-09-26T11:32:48.791Z",
-      "newestRecordedAt": "2026-10-02T11:40:02.246Z",
-      "projectorRanAt": "2026-10-02T11:40:02.246Z"
+      "newestRecordedAt": "2026-10-09T04:20:00.249Z",
+      "projectorRanAt": "2026-10-09T04:20:00.249Z"
     },
     "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
   }

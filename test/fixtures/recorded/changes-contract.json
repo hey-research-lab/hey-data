@@ -1,6 +1,6 @@
 {
   "path": "/api/changes?domain=contract&limit=3",
-  "recordedAt": "2026-10-02T11:40:24.125Z",
+  "recordedAt": "2026-10-09T04:24:15.682Z",
   "body": {
     "query": {
       "domain": "contract",
@@ -9,31 +9,31 @@
     },
     "items": [
       {
-        "id": "ship:e397e80a-50dc-454d-ac4f-7ad2848c87b2",
+        "id": "ship:c2e8234b-ad51-4a5e-a2d6-a27989ab3d67",
         "revision": 2,
         "op": "retract",
-        "recordedAt": "2026-10-02T09:15:04.477Z"
+        "recordedAt": "2026-10-09T03:55:35.423Z"
       },
       {
-        "id": "ship:a76f5c35-96f3-4a8e-8be4-fed6fb430c68",
+        "id": "ship:14f90f5a-4c1f-493a-98a5-078579edb271",
         "revision": 2,
         "op": "retract",
-        "recordedAt": "2026-10-02T08:25:03.218Z"
+        "recordedAt": "2026-10-09T03:55:35.423Z"
       },
       {
-        "id": "ship:244f3865-13ee-4887-a490-7da492d987fa",
+        "id": "ship:8847eb84-a9ed-42ab-8cf4-bed59d43e8e2",
         "revision": 2,
         "op": "retract",
-        "recordedAt": "2026-10-02T08:20:03.607Z"
+        "recordedAt": "2026-10-09T03:55:35.423Z"
       }
     ],
-    "nextCursor": "YzEuNTM3MTY",
+    "nextCursor": "YzEuODQzMTU",
     "hasMore": true,
     "ledger": {
       "collectionStart": "2026-09-26T11:35:57.227Z",
       "transitionsFrom": "2026-09-26T11:32:48.791Z",
-      "newestRecordedAt": "2026-10-02T11:40:02.246Z",
-      "projectorRanAt": "2026-10-02T11:40:02.246Z"
+      "newestRecordedAt": "2026-10-09T04:20:00.249Z",
+      "projectorRanAt": "2026-10-09T04:20:00.249Z"
     },
     "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
   }

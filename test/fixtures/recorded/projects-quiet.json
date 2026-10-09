@@ -1,6 +1,6 @@
 {
   "path": "/api/projects?status=QUIET&limit=2",
-  "recordedAt": "2026-10-02T11:40:02.627Z",
+  "recordedAt": "2026-10-09T04:23:54.118Z",
   "body": {
     "query": {
       "limit": 2,
@@ -8,56 +8,48 @@
       "status": "QUIET",
       "sort": "activity"
     },
-    "total": 257,
+    "total": 347,
     "nextOffset": 2,
     "items": [
       {
-        "slug": "builder-nineteen-rchain-stocks",
-        "name": "rchain-stocks",
-        "shortDescription": "Local offline dashboard for tokenized stocks and the memecoins launching against them on Robinhood Chain. Clone it and open dashboard.html — pools enumerated from chain events, not capped vendor listings.",
+        "slug": "builder-five-dames",
+        "name": "DAMES",
+        "shortDescription": "DAMES — mint with ETH, stake DAMES/ETH LP, earn ETH from minting rewards on Robinhood Chain.",
         "projectKind": "OTHER",
         "activityStatus": "QUIET",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-09-01T23:59:00.000Z",
-        "primaryNarrative": {
-          "slug": "stockfi",
-          "name": "StockFi"
-        },
+        "lastShippedAt": "2026-09-08T23:59:00.000Z",
         "hasBuilderSource": true,
-        "logoUrl": "https://avatars.githubusercontent.com/builder-nineteen",
-        "url": "https://heyresearch.xyz/project/builder-nineteen-rchain-stocks"
+        "logoUrl": "https://avatars.githubusercontent.com/builder-five",
+        "url": "https://heyresearch.xyz/project/builder-five-dames"
       },
       {
-        "slug": "builder-fifteen-robin-huge",
-        "name": "robin_huge",
-        "shortDescription": "Robinhood chain trading toolkit: GMGN analytics + Pons V2 DEX + monitoring/alerting",
+        "slug": "builder-six-banana",
+        "name": "banana",
+        "shortDescription": "Local desktop sniper terminal and strategy backtester for pons v2 on Robinhood Chain. Everything runs on your machine.",
         "projectKind": "OTHER",
         "activityStatus": "QUIET",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-09-01T23:59:00.000Z",
-        "primaryNarrative": {
-          "slug": "devtools",
-          "name": "Dev Tools"
-        },
+        "lastShippedAt": "2026-09-08T23:59:00.000Z",
         "hasBuilderSource": true,
-        "logoUrl": "https://avatars.githubusercontent.com/builder-fifteen",
-        "url": "https://heyresearch.xyz/project/builder-fifteen-robin-huge"
+        "logoUrl": "https://avatars.githubusercontent.com/builder-six",
+        "url": "https://heyresearch.xyz/project/builder-six-banana"
       }
     ],
     "catalogue": {
-      "verifiedBuilders": 1871,
-      "stillBuilding": 4,
-      "underTheRadar": 9,
-      "verifiedBuildersOnChain": 907,
+      "verifiedBuilders": 1787,
+      "stillBuilding": 1,
+      "underTheRadar": 1,
+      "verifiedBuildersOnChain": 990,
       "published": 5032,
       "chainId": 4663,
-      "asOf": "2026-10-02T11:39:49.577Z",
+      "asOf": "2026-10-09T04:23:48.025Z",
       "listScope": "published",
       "definitions": "https://heyresearch.xyz/methodology#counts"
     },

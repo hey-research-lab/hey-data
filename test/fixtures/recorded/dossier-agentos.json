@@ -1,0 +1,636 @@
+{
+  "path": "/api/projects/agentos",
+  "recordedAt": "2026-10-09T04:24:03.271Z",
+  "body": {
+    "slug": "agentos",
+    "name": "AgentOS",
+    "symbol": "agentos",
+    "projectKind": "OTHER",
+    "activityStatus": "SHIPPING",
+    "researchLevel": "VERIFIED_BUILDER",
+    "catalogStatus": "VERIFIED_BUILDER",
+    "stillBuilding": false,
+    "stillBuildingState": "NOT_MEASURED",
+    "lastShippedAt": "2026-10-09T03:43:12.000Z",
+    "primaryNarrative": {
+      "slug": "ai",
+      "name": "AI"
+    },
+    "token": {
+      "chainId": 4663,
+      "contractAddress": "0x6eda83fc299c10d474068a7e69771c809bcbbba3"
+    },
+    "websiteUrl": "https://useagentos.dev/",
+    "officialX": {
+      "handle": "useAgentOS",
+      "url": "https://x.com/useAgentOS"
+    },
+    "marketCap": {
+      "usd": 507590,
+      "source": "dexscreener",
+      "kind": "fdv",
+      "observedAt": "2026-10-09T04:15:35.833Z"
+    },
+    "liquidity": {
+      "usd": 350713.43,
+      "source": "dexscreener",
+      "observedAt": "2026-10-09T04:15:35.833Z",
+      "kind": "launch_inventory"
+    },
+    "volume24h": {
+      "usd": 471.34,
+      "source": "dexscreener",
+      "observedAt": "2026-10-09T04:15:35.833Z"
+    },
+    "launchStage": "DEX",
+    "tokenMarket": {
+      "status": "ACTIVE_MARKET",
+      "reason": "launch_pool_trading",
+      "evaluatedAt": "2026-10-09T04:15:35.091Z",
+      "liquidityUsd": 350713.43,
+      "liquidityKind": "launch_inventory",
+      "volume24hUsd": 471.34,
+      "peakLiquidityUsd": 387441.02,
+      "pairCreatedAt": "2026-07-14T15:37:31.000Z",
+      "readingObservedAt": "2026-10-09T04:15:35.833Z",
+      "figuresScope": "reading_pool"
+    },
+    "tokenVerification": {
+      "status": "VERIFIED",
+      "reason": "site_names_contract",
+      "verifiedAt": "2026-09-12T16:39:28.082Z"
+    },
+    "venue": "DEX",
+    "trades24h": {
+      "buys": 18,
+      "sells": 28,
+      "source": "dexscreener",
+      "observedAt": "2026-10-09T04:15:35.833Z"
+    },
+    "priceChange24hPct": -2.99,
+    "hasBuilderSource": true,
+    "logoUrl": "https://coin-images.coingecko.com/coins/images/102174570/small/b6b5ojnnrpnx7zs0zm302gumiizv.?1784093688",
+    "url": "https://heyresearch.xyz/project/agentos",
+    "ships": [
+      {
+        "id": "74c59f0e-6b30-446f-9058-757632b3c056",
+        "title": "AgentOS 2026.10.9",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-10-09T03:43:12.000Z",
+        "detectedAt": "2026-10-09T03:49:41.463Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:74c59f0e-6b30-446f-9058-757632b3c056",
+        "verification": "PUBLICLY_VERIFIED",
+        "sourceUrl": "https://github.com/use-agent-os/agent-os/releases/tag/v2026.10.9",
+        "project": {
+          "slug": "agentos",
+          "name": "AgentOS",
+          "symbol": "agentos",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-09T03:43:12.000Z",
+          "primaryNarrative": {
+            "slug": "ai",
+            "name": "AI"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x6eda83fc299c10d474068a7e69771c809bcbbba3"
+          },
+          "websiteUrl": "https://useagentos.dev/",
+          "officialX": {
+            "handle": "useAgentOS",
+            "url": "https://x.com/useAgentOS"
+          },
+          "marketCap": {
+            "usd": 507590,
+            "source": "dexscreener",
+            "kind": "fdv",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "liquidity": {
+            "usd": 350713.43,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 471.34,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "ACTIVE_MARKET",
+            "reason": "launch_pool_trading"
+          },
+          "tokenVerification": {
+            "status": "VERIFIED",
+            "reason": "site_names_contract"
+          },
+          "venue": "DEX",
+          "trades24h": {
+            "buys": 18,
+            "sells": 28,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "priceChange24hPct": -2.99,
+          "hasBuilderSource": true,
+          "logoUrl": "https://coin-images.coingecko.com/coins/images/102174570/small/b6b5ojnnrpnx7zs0zm302gumiizv.?1784093688",
+          "url": "https://heyresearch.xyz/project/agentos"
+        },
+        "url": "https://heyresearch.xyz/project/agentos#ship-74c59f0e-6b30-446f-9058-757632b3c056"
+      },
+      {
+        "id": "31ecea7f-01b7-4d7d-ae89-a41b20dc7b92",
+        "title": "Code changes, week of 2026-10-05 – 2026-10-11",
+        "summary": "7 active days in use-agent-os/agent-os since 2026-10-01; only the newest 100 commits were read.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-10-09T03:36:56.000Z",
+        "detectedAt": "2026-10-07T19:37:40.027Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:31ecea7f-01b7-4d7d-ae89-a41b20dc7b92",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/use-agent-os/agent-os",
+        "codeSubstance": {
+          "verdict": "SUBSTANTIVE",
+          "classifierVersion": "commit-substance-v3",
+          "countsAsBuilding": true,
+          "commitsListed": 43,
+          "commitsRead": 5,
+          "changedCode": 3,
+          "documentationOrMaintenance": 2,
+          "substanceUnknown": 0,
+          "notRead": 38,
+          "files": {
+            "source": 4,
+            "test": 5,
+            "docs": 3,
+            "readme": 0,
+            "dependency": 0,
+            "config": 0,
+            "ci": 0,
+            "generated": 0,
+            "asset": 0,
+            "whitespace": 0,
+            "rename": 0,
+            "data": 0,
+            "unknown": 0
+          },
+          "weekFullyListed": true,
+          "automatedCommits": 0,
+          "sampled": true,
+          "basis": null,
+          "summary": "This week HEY looked inside 5 of 43 commits to see what changed: 3 changed code, 2 documentation or maintenance only. In a burst week, enough of a sample has to change code for the week to count."
+        },
+        "project": {
+          "slug": "agentos",
+          "name": "AgentOS",
+          "symbol": "agentos",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-09T03:43:12.000Z",
+          "primaryNarrative": {
+            "slug": "ai",
+            "name": "AI"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x6eda83fc299c10d474068a7e69771c809bcbbba3"
+          },
+          "websiteUrl": "https://useagentos.dev/",
+          "officialX": {
+            "handle": "useAgentOS",
+            "url": "https://x.com/useAgentOS"
+          },
+          "marketCap": {
+            "usd": 507590,
+            "source": "dexscreener",
+            "kind": "fdv",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "liquidity": {
+            "usd": 350713.43,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 471.34,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "ACTIVE_MARKET",
+            "reason": "launch_pool_trading"
+          },
+          "tokenVerification": {
+            "status": "VERIFIED",
+            "reason": "site_names_contract"
+          },
+          "venue": "DEX",
+          "trades24h": {
+            "buys": 18,
+            "sells": 28,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "priceChange24hPct": -2.99,
+          "hasBuilderSource": true,
+          "logoUrl": "https://coin-images.coingecko.com/coins/images/102174570/small/b6b5ojnnrpnx7zs0zm302gumiizv.?1784093688",
+          "url": "https://heyresearch.xyz/project/agentos"
+        },
+        "url": "https://heyresearch.xyz/project/agentos#ship-31ecea7f-01b7-4d7d-ae89-a41b20dc7b92"
+      },
+      {
+        "id": "a5979090-b594-43d2-a2ba-f46870f1fe72",
+        "title": "AgentOS 2026.10.6",
+        "summary": "A trading release: 4 PRs merged since v2026.10.4. The desk learns to list every pool a Robinhood Stock Token trades in — including the memecoins launched *priced in NVDA* — and can finally swap Stock Tokens; brackets and price triggers let the engine watch and fire exits by itself; and the Mac app gains a Settings › Environment pane. ## AgentOS for Mac Signed and notarized builds are attached: `AgentOS-2026.1006.0-arm64.dmg` for Apple silicon and `AgentOS-2026.1006.0.dmg` for Intel. An installed app offers the update itself. - **Markets tab.** The BOOK beside the desk chat and the full desk ge",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-10-06T13:53:11.000Z",
+        "detectedAt": "2026-10-07T19:37:39.815Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:a5979090-b594-43d2-a2ba-f46870f1fe72",
+        "verification": "PUBLICLY_VERIFIED",
+        "sourceUrl": "https://github.com/use-agent-os/agent-os/releases/tag/v2026.10.6",
+        "project": {
+          "slug": "agentos",
+          "name": "AgentOS",
+          "symbol": "agentos",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-09T03:43:12.000Z",
+          "primaryNarrative": {
+            "slug": "ai",
+            "name": "AI"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x6eda83fc299c10d474068a7e69771c809bcbbba3"
+          },
+          "websiteUrl": "https://useagentos.dev/",
+          "officialX": {
+            "handle": "useAgentOS",
+            "url": "https://x.com/useAgentOS"
+          },
+          "marketCap": {
+            "usd": 507590,
+            "source": "dexscreener",
+            "kind": "fdv",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "liquidity": {
+            "usd": 350713.43,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 471.34,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "ACTIVE_MARKET",
+            "reason": "launch_pool_trading"
+          },
+          "tokenVerification": {
+            "status": "VERIFIED",
+            "reason": "site_names_contract"
+          },
+          "venue": "DEX",
+          "trades24h": {
+            "buys": 18,
+            "sells": 28,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "priceChange24hPct": -2.99,
+          "hasBuilderSource": true,
+          "logoUrl": "https://coin-images.coingecko.com/coins/images/102174570/small/b6b5ojnnrpnx7zs0zm302gumiizv.?1784093688",
+          "url": "https://heyresearch.xyz/project/agentos"
+        },
+        "url": "https://heyresearch.xyz/project/agentos#ship-a5979090-b594-43d2-a2ba-f46870f1fe72"
+      },
+      {
+        "id": "3393733e-1008-44d8-b8f5-413dda563f46",
+        "title": "AgentOS 2026.10.4",
+        "summary": "A fixes release: 6 PRs merged since v2026.10.3. A chat send that intermittently failed with \"session_key conflict\", a browser tool that could not find `agent-browser` when the gateway was started by the desktop app or a service manager, two redaction gaps, and workspace bootstrap files written by PowerShell. ## AgentOS for Mac Signed and notarized builds are attached: `AgentOS-2026.1004.0-arm64.dmg` for Apple silicon and `AgentOS-2026.1004.0.dmg` for Intel. An installed app offers the update itself. ## Chat - **No more \"session_key conflict\" on the first send.** In the desktop app and the web",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-10-04T11:31:52.000Z",
+        "detectedAt": "2026-10-07T19:37:39.840Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:3393733e-1008-44d8-b8f5-413dda563f46",
+        "verification": "PUBLICLY_VERIFIED",
+        "sourceUrl": "https://github.com/use-agent-os/agent-os/releases/tag/v2026.10.4",
+        "project": {
+          "slug": "agentos",
+          "name": "AgentOS",
+          "symbol": "agentos",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-09T03:43:12.000Z",
+          "primaryNarrative": {
+            "slug": "ai",
+            "name": "AI"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x6eda83fc299c10d474068a7e69771c809bcbbba3"
+          },
+          "websiteUrl": "https://useagentos.dev/",
+          "officialX": {
+            "handle": "useAgentOS",
+            "url": "https://x.com/useAgentOS"
+          },
+          "marketCap": {
+            "usd": 507590,
+            "source": "dexscreener",
+            "kind": "fdv",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "liquidity": {
+            "usd": 350713.43,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 471.34,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "ACTIVE_MARKET",
+            "reason": "launch_pool_trading"
+          },
+          "tokenVerification": {
+            "status": "VERIFIED",
+            "reason": "site_names_contract"
+          },
+          "venue": "DEX",
+          "trades24h": {
+            "buys": 18,
+            "sells": 28,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "priceChange24hPct": -2.99,
+          "hasBuilderSource": true,
+          "logoUrl": "https://coin-images.coingecko.com/coins/images/102174570/small/b6b5ojnnrpnx7zs0zm302gumiizv.?1784093688",
+          "url": "https://heyresearch.xyz/project/agentos"
+        },
+        "url": "https://heyresearch.xyz/project/agentos#ship-3393733e-1008-44d8-b8f5-413dda563f46"
+      },
+      {
+        "id": "a723cd1b-e5f6-4294-a734-19b025d6a1a6",
+        "title": "AgentOS 2026.10.3",
+        "summary": "A desktop-focused release: 19 PRs merged since v2026.10.1.post1. The Mac app gains three features only a native shell can offer — a menu bar status item, a Touch ID gate in front of money-moving clicks, and Quick Ask, a system-wide hotkey — alongside a skills install policy and a batch of contributor fixes across tools, channels and redaction. ## AgentOS for Mac Signed and notarized builds are attached: `AgentOS-2026.1003.0-arm64.dmg` for Apple silicon and `AgentOS-2026.1003.0.dmg` for Intel. An installed app offers the update itself. - **Menu bar status item.** The app keeps the gateway, DCA",
+        "eventType": "GITHUB_RELEASE",
+        "publishedAt": "2026-10-03T14:15:25.000Z",
+        "detectedAt": "2026-10-07T19:37:39.857Z",
+        "precision": "EXACT",
+        "evidenceId": "ship:a723cd1b-e5f6-4294-a734-19b025d6a1a6",
+        "verification": "PUBLICLY_VERIFIED",
+        "sourceUrl": "https://github.com/use-agent-os/agent-os/releases/tag/v2026.10.3",
+        "project": {
+          "slug": "agentos",
+          "name": "AgentOS",
+          "symbol": "agentos",
+          "projectKind": "OTHER",
+          "activityStatus": "SHIPPING",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-10-09T03:43:12.000Z",
+          "primaryNarrative": {
+            "slug": "ai",
+            "name": "AI"
+          },
+          "token": {
+            "chainId": 4663,
+            "contractAddress": "0x6eda83fc299c10d474068a7e69771c809bcbbba3"
+          },
+          "websiteUrl": "https://useagentos.dev/",
+          "officialX": {
+            "handle": "useAgentOS",
+            "url": "https://x.com/useAgentOS"
+          },
+          "marketCap": {
+            "usd": 507590,
+            "source": "dexscreener",
+            "kind": "fdv",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "liquidity": {
+            "usd": 350713.43,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z",
+            "kind": "launch_inventory"
+          },
+          "volume24h": {
+            "usd": 471.34,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "launchStage": "DEX",
+          "tokenMarket": {
+            "status": "ACTIVE_MARKET",
+            "reason": "launch_pool_trading"
+          },
+          "tokenVerification": {
+            "status": "VERIFIED",
+            "reason": "site_names_contract"
+          },
+          "venue": "DEX",
+          "trades24h": {
+            "buys": 18,
+            "sells": 28,
+            "source": "dexscreener",
+            "observedAt": "2026-10-09T04:15:35.833Z"
+          },
+          "priceChange24hPct": -2.99,
+          "hasBuilderSource": true,
+          "logoUrl": "https://coin-images.coingecko.com/coins/images/102174570/small/b6b5ojnnrpnx7zs0zm302gumiizv.?1784093688",
+          "url": "https://heyresearch.xyz/project/agentos"
+        },
+        "url": "https://heyresearch.xyz/project/agentos#ship-a723cd1b-e5f6-4294-a734-19b025d6a1a6"
+      }
+    ],
+    "firstSeenAt": "2026-09-12T16:34:29.797Z",
+    "firstRecordedByHeyAt": "2026-09-02T19:50:10.691Z",
+    "isClaimed": false,
+    "submitted": false,
+    "narratives": [
+      {
+        "slug": "ai",
+        "name": "AI",
+        "isPrimary": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://useagentos.dev/",
+        "sourceType": "WEBSITE",
+        "isVerified": true,
+        "confidence": "DISCOVERED",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/cli",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/configuration",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/desktop-app",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/features",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/gateway",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/glossary",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/installation",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/quickstart",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/sessions",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/use-cases",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://useagentos.dev/docs/web-ui",
+        "sourceType": "DOCS",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://github.com/use-agent-os/agent-os",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://x.com/useAgentOS",
+        "sourceType": "X",
+        "isVerified": false,
+        "confidence": "DISCOVERED",
+        "contextOnly": false
+      }
+    ],
+    "market": {
+      "marketCapUsd": 507590,
+      "valuationKind": "fdv",
+      "fdvUsd": 507590,
+      "liquidityUsd": 350713.43,
+      "liquidityKind": "launch_inventory",
+      "volume24hUsd": 471.34,
+      "priceUsd": 0.000005075,
+      "buys24h": 18,
+      "sells24h": 28,
+      "priceChange6hPct": 0.21,
+      "priceChange24hPct": -2.99,
+      "venue": "DEX",
+      "pairAddress": "0x1299aa8c4ea0db5b8453757ed129ed8e916561925926a161cb89842e3987401a",
+      "observedAt": "2026-10-09T04:15:35.833Z",
+      "source": "dexscreener"
+    },
+    "score": {
+      "buildMomentum": 81.7,
+      "discoveryGapWithheld": "market_too_thin",
+      "stillBuilding": false,
+      "stillBuildingState": "NOT_MEASURED",
+      "stillBuildingWithheld": "market_too_thin",
+      "calculatedAt": "2026-10-09T04:13:10.037Z",
+      "scoringVersion": "hbm-v26"
+    },
+    "onchainActivity": {
+      "daysCovered": 7,
+      "daysMeasured": 0,
+      "truncated": true,
+      "observedAt": "2026-10-09T00:04:34.715Z",
+      "calls24h": 415,
+      "transactions24h": 5,
+      "methods": 5
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

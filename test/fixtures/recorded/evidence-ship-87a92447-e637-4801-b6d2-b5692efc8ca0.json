@@ -1,0 +1,42 @@
+{
+  "path": "/api/evidence/ship%3A87a92447-e637-4801-b6d2-b5692efc8ca0",
+  "recordedAt": "2026-10-09T04:24:23.480Z",
+  "body": {
+    "id": "ship:87a92447-e637-4801-b6d2-b5692efc8ca0",
+    "withdrawn": false,
+    "project": {
+      "slug": "projectopensea-tool-sdk",
+      "name": "tool-sdk",
+      "url": "https://heyresearch.xyz/project/projectopensea-tool-sdk"
+    },
+    "domain": "build",
+    "claimType": "GITHUB_RELEASE",
+    "summary": "v0.29.0",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.29.0",
+    "publishedAt": "2026-08-23T19:05:48.000Z",
+    "detectedAt": "2026-09-03T21:07:35.855Z",
+    "precision": "EXACT",
+    "verification": "PUBLICLY_VERIFIED",
+    "countsAsBuilding": true,
+    "recordedAt": "2026-09-03T21:07:35.855Z",
+    "metadata": {
+      "summary": "## What's changed **Breaking.** A paid tool whose settlement fails now returns 502 without the output, instead of 200 with the result. `createToolHandler` gains `settlement`, defaulting to `\"required\"`. Set `settlement: \"best-effort\"` to restore the previous behavior, which only suits callers who reconcile failed settlements out of band. This is a minor version because the package is pre-1.0, not because the change is small. Also in this release: - `replayGuard` on the hosted x402 gates and `paidPredicateGate`, an optional single-use claim over each authorization's `(payer, nonce)` pair. Off b",
+      "releaseVersion": "v0.29.0",
+      "prerelease": false
+    },
+    "sources": [
+      {
+        "evidenceRowId": "bf6447f2-8458-448b-96d6-c165377e04d2",
+        "sourceType": "GITHUB_REPO",
+        "sourceUrl": "https://github.com/ProjectOpenSea/tool-sdk/releases/tag/v0.29.0",
+        "observedAt": "2026-09-03T21:07:35.858Z",
+        "metadata": {
+          "tag": "v0.29.0",
+          "prerelease": false
+        }
+      }
+    ],
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

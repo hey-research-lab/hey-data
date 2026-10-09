@@ -4,6 +4,20 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project uses
 [Semantic Versioning](https://semver.org/).
 
+## 0.2.0 — 2026-10-09
+
+Kept in step with HEY's public API as of 2026-10-09.
+
+### Added
+
+- `projects.ndjson`: each kept coverage dimension also carries HEY's additive `stateDetail` (`MAPPING_BLOCKED` under `NO_SOURCE`, `PARTIAL` under `MEASURED`) and `cause` (`own_source_unreachable`, `provider_unavailable`, `budget_deferred`) when HEY sends them. `state` keeps its nine values and its meaning. `schemaVersion` stays 1: the change is additive.
+
+### Changed
+
+- Test fixtures re-recorded from production on 2026-10-09 (current code-week titles, scoring version, coverage details), with personal handles replaced by neutral placeholders as before.
+
+Checked against the 2026-10-09 contract and unchanged: the change-ledger types kept and left out (HEY now refuses an unknown `type` or `domain` filter; hey-data sends neither), the change fact keys, the evidence `contextReason` values (`launch_window` passes through as HEY words it), and the sync cursor walk.
+
 ## 0.1.1 — 2026-10-02
 
 - `pnpm generate -- --out …` works: the separator pnpm 9 passes through is dropped (it failed as `Unknown command`). The README no longer uses it.

@@ -1,36 +1,36 @@
 {
-  "path": "/api/projects/ophis-fi-ophis/coverage",
-  "recordedAt": "2026-10-02T11:40:10.637Z",
+  "path": "/api/projects/rebateprotocol-pons-fork/coverage",
+  "recordedAt": "2026-10-09T04:24:07.242Z",
   "body": {
     "project": {
-      "slug": "ophis-fi-ophis",
-      "name": "ophis",
-      "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+      "slug": "rebateprotocol-pons-fork",
+      "name": "pons_fork",
+      "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork"
     },
     "dimensions": {
       "identity": {
         "state": "MEASURED",
-        "since": "2026-09-03T21:05:00.215Z",
-        "asOf": "2026-09-03T20:54:48.881Z",
+        "since": "2026-09-03T21:30:52.152Z",
+        "asOf": "2026-09-03T21:25:04.199Z",
         "reason": "research_level_verified_builder",
-        "detailUrl": "https://heyresearch.xyz/api/projects/ophis-fi-ophis"
+        "detailUrl": "https://heyresearch.xyz/api/projects/rebateprotocol-pons-fork"
       },
       "builderEvidence": {
         "state": "MEASURED",
-        "asOf": "2026-10-02T11:15:51.685Z",
-        "reason": "activity_shipping"
+        "asOf": "2026-10-08T22:59:14.096Z",
+        "reason": "activity_dormant"
       },
       "repositories": {
         "state": "MEASURED",
-        "reason": "own_repositories",
-        "detailUrl": "https://heyresearch.xyz/api/projects/ophis-fi-ophis"
+        "reason": "own_and_context_only_repositories",
+        "detailUrl": "https://heyresearch.xyz/api/projects/rebateprotocol-pons-fork"
       },
       "releases": {
         "state": "MEASURED",
-        "since": "2026-08-05T00:00:00.000Z",
-        "asOf": "2026-09-27T00:00:00.000Z",
+        "since": "2026-08-09T02:05:03.000Z",
+        "asOf": "2026-08-09T03:07:04.000Z",
         "reason": "releases_recorded",
-        "detailUrl": "https://heyresearch.xyz/api/ships?project=ophis-fi-ophis"
+        "detailUrl": "https://heyresearch.xyz/api/ships?project=rebateprotocol-pons-fork"
       },
       "marketCurrent": {
         "state": "NOT_APPLICABLE",
@@ -74,38 +74,35 @@
       },
       "timeline": {
         "state": "MEASURED",
-        "since": "2026-09-03T21:05:00.215Z",
+        "since": "2026-09-03T21:30:52.152Z",
         "reason": "complete_default_window",
-        "detailUrl": "https://heyresearch.xyz/api/projects/ophis-fi-ophis/timeline"
+        "detailUrl": "https://heyresearch.xyz/api/projects/rebateprotocol-pons-fork/timeline"
       },
       "officialDocs": {
-        "state": "MEASURED",
-        "asOf": "2026-10-01T13:48:07.732Z",
-        "reason": "official_docs",
-        "detailUrl": "https://heyresearch.xyz/api/projects/ophis-fi-ophis"
+        "state": "NO_SOURCE",
+        "reason": "no_official_site"
       },
       "apiDocs": {
-        "state": "NOT_ENOUGH_YET",
-        "reason": "site_files_not_read_yet"
+        "state": "NO_SOURCE",
+        "reason": "no_official_site"
       },
       "sourceChanges": {
-        "state": "NOT_ENOUGH_YET",
-        "reason": "no_baseline_yet"
+        "state": "NO_SOURCE",
+        "reason": "no_official_site"
       },
       "gitHost": {
         "state": "MEASURED",
-        "asOf": "2026-09-27T06:35:49.999Z",
+        "asOf": "2026-10-05T05:06:27.388Z",
         "reason": "repository_metadata_read"
       },
       "package": {
         "state": "MEASURED",
-        "asOf": "2026-10-02T11:13:26.677Z",
-        "reason": "accepted_package_links"
+        "asOf": "2026-10-05T05:06:27.388Z",
+        "reason": "none_found_in_package_index"
       },
       "securityContext": {
-        "state": "MEASURED",
-        "asOf": "2026-09-27T13:08:30.072Z",
-        "reason": "no_advisory_for_published_version"
+        "state": "NOT_APPLICABLE",
+        "reason": "no_accepted_package"
       }
     },
     "freshness": [
@@ -113,18 +110,18 @@
         "source": "code",
         "label": "Code",
         "state": "fresh",
-        "observedAt": "2026-10-02T11:15:51.685Z",
-        "staleAfterHours": 72
+        "observedAt": "2026-10-08T22:59:14.096Z",
+        "staleAfterHours": 108
       },
       {
         "source": "score",
         "label": "Scores",
         "state": "fresh",
-        "observedAt": "2026-10-02T11:20:11.754Z",
+        "observedAt": "2026-10-09T04:10:30.011Z",
         "staleAfterHours": 24
       }
     ],
-    "computedAt": "2026-10-02T11:40:10.668Z",
+    "computedAt": "2026-10-09T04:24:07.292Z",
     "states": {
       "MEASURED": "HEY read it; figures elsewhere are measurements, zeros included.",
       "NO_SOURCE": "HEY holds nothing to read it from; a zero or an absence is not a finding.",

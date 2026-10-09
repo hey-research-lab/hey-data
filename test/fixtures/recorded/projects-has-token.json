@@ -1,6 +1,6 @@
 {
   "path": "/api/projects?has=token&limit=2",
-  "recordedAt": "2026-10-02T11:40:07.976Z",
+  "recordedAt": "2026-10-09T04:23:59.487Z",
   "body": {
     "query": {
       "limit": 2,
@@ -8,112 +8,117 @@
       "has": "token",
       "sort": "activity"
     },
-    "total": 2987,
+    "total": 3044,
     "nextOffset": 2,
     "items": [
       {
-        "slug": "priors-agents",
-        "name": "Priors Agents",
-        "symbol": "PRIORS",
-        "shortDescription": "The credit layer for AI agents. Unsecured USDG lines, repayment records on-chain, x402 payments. Built on Robinhood Chain.",
+        "slug": "agentos",
+        "name": "AgentOS",
+        "symbol": "agentos",
         "projectKind": "OTHER",
         "activityStatus": "SHIPPING",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-10-02T10:39:03.000Z",
+        "lastShippedAt": "2026-10-09T03:43:12.000Z",
         "primaryNarrative": {
-          "slug": "ai-agents",
-          "name": "AI Agents"
+          "slug": "ai",
+          "name": "AI"
         },
         "token": {
           "chainId": 4663,
-          "contractAddress": "0x7e7154eb9dd81084625a7a2e9e731cadfddb9ab7"
+          "contractAddress": "0x6eda83fc299c10d474068a7e69771c809bcbbba3"
         },
-        "websiteUrl": "https://www.priors.live/",
+        "websiteUrl": "https://useagentos.dev/",
         "officialX": {
-          "handle": "priors_agent",
-          "url": "https://x.com/priors_agent"
+          "handle": "useAgentOS",
+          "url": "https://x.com/useAgentOS"
         },
-        "valuationWithheld": "launch_pool_no_trades",
+        "marketCap": {
+          "usd": 507590,
+          "source": "dexscreener",
+          "kind": "fdv",
+          "observedAt": "2026-10-09T04:15:35.833Z"
+        },
         "liquidity": {
-          "usd": 1.8769,
-          "source": "geckoterminal",
-          "observedAt": "2026-10-02T11:36:52.443Z",
+          "usd": 350713.43,
+          "source": "dexscreener",
+          "observedAt": "2026-10-09T04:15:35.833Z",
           "kind": "launch_inventory"
         },
         "volume24h": {
-          "usd": 0,
-          "source": "geckoterminal",
-          "observedAt": "2026-10-02T11:36:52.443Z"
+          "usd": 471.34,
+          "source": "dexscreener",
+          "observedAt": "2026-10-09T04:15:35.833Z"
         },
         "launchStage": "DEX",
         "tokenMarket": {
-          "status": "TRADING_INACTIVE",
-          "reason": "launch_pool_no_trades"
+          "status": "ACTIVE_MARKET",
+          "reason": "launch_pool_trading"
         },
         "tokenVerification": {
-          "status": "UNVERIFIED",
-          "reason": "market_listing"
+          "status": "VERIFIED",
+          "reason": "site_names_contract"
         },
-        "venue": "Uniswap v2",
+        "venue": "DEX",
         "trades24h": {
-          "buys": 0,
-          "sells": 0,
-          "source": "geckoterminal",
-          "observedAt": "2026-10-02T11:36:52.443Z"
+          "buys": 18,
+          "sells": 28,
+          "source": "dexscreener",
+          "observedAt": "2026-10-09T04:15:35.833Z"
         },
-        "priceChange24hPct": 0,
+        "priceChange24hPct": -2.99,
         "hasBuilderSource": true,
-        "logoUrl": "https://cdn.dexscreener.com/cms/images/ok_csxBkS9qtiMzl?width=64&height=64&fit=crop&quality=95&format=auto",
-        "url": "https://heyresearch.xyz/project/priors-agents"
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/102174570/small/b6b5ojnnrpnx7zs0zm302gumiizv.?1784093688",
+        "url": "https://heyresearch.xyz/project/agentos"
       },
       {
-        "slug": "merrymen",
-        "name": "Merrymen",
-        "symbol": "MERRYMEN",
-        "shortDescription": "**MERRYMEN** ,your own band of autonomous trading agents. WE run 24/7 on your machine, trade only within your on chain permission walls, and never take custody of your funds. Name them. Chat with them. Control them from Telegram. Self hosted. Open source.",
-        "projectKind": "OTHER",
+        "slug": "hey-research-lab",
+        "name": "Hey Research Lab",
+        "symbol": "HEY",
+        "shortDescription": "Coordination token for HEY Research Lab, the builder-discovery layer for Robinhood Chain.",
+        "projectKind": "INFRASTRUCTURE",
         "activityStatus": "SHIPPING",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
-        "stillBuildingState": "NOT_HELD",
-        "lastShippedAt": "2026-10-02T10:31:42.000Z",
+        "stillBuildingState": "NOT_MEASURED",
+        "heysOwnToken": true,
+        "lastShippedAt": "2026-10-09T03:32:54.000Z",
         "primaryNarrative": {
-          "slug": "ai-agents",
-          "name": "AI Agents"
+          "slug": "infrastructure",
+          "name": "Infrastructure"
         },
         "token": {
           "chainId": 4663,
-          "contractAddress": "0xa15cd06dd305269a0f48bebeb30aa3588fba7b32"
+          "contractAddress": "0xb33eb16782776b4d738c0fd643577cb0284db610"
         },
         "launchedVia": {
-          "name": "Virtuals",
-          "url": "https://app.virtuals.io/virtuals/5ff1941a-7501-4de1-9c71-676a107d4995"
+          "name": "Pons",
+          "url": "https://ponsfamily.com/launchpad/0xb33eb16782776b4d738c0fd643577cb0284db610"
         },
-        "websiteUrl": "https://merrymen.dev/",
+        "websiteUrl": "https://heyresearch.xyz",
         "officialX": {
-          "handle": "merrymenai",
-          "url": "https://x.com/merrymenai"
+          "handle": "HeyResearch",
+          "url": "https://x.com/HeyResearch"
         },
         "marketCap": {
-          "usd": 515040,
+          "usd": 84562,
           "source": "dexscreener",
           "kind": "fdv",
-          "observedAt": "2026-10-02T11:38:38.309Z"
+          "observedAt": "2026-10-09T04:06:20.476Z"
         },
         "liquidity": {
-          "usd": 123407.33,
+          "usd": 26847.01,
           "source": "dexscreener",
-          "observedAt": "2026-10-02T11:38:38.309Z",
+          "observedAt": "2026-10-09T04:06:20.476Z",
           "kind": "market"
         },
         "volume24h": {
-          "usd": 86578.29,
+          "usd": 5107.49,
           "source": "dexscreener",
-          "observedAt": "2026-10-02T11:38:38.309Z"
+          "observedAt": "2026-10-09T04:06:20.476Z"
         },
         "launchStage": "DEX",
         "tokenMarket": {
@@ -122,29 +127,37 @@
         },
         "tokenVerification": {
           "status": "VERIFIED",
-          "reason": "site_names_contract"
+          "reason": "onchain_signature"
         },
-        "venue": "Uniswap v2",
+        "venue": "DEX",
         "trades24h": {
-          "buys": 202,
-          "sells": 148,
+          "buys": 11,
+          "sells": 23,
           "source": "dexscreener",
-          "observedAt": "2026-10-02T11:38:38.309Z"
+          "observedAt": "2026-10-09T04:06:20.476Z"
         },
-        "priceChange24hPct": -25.6,
+        "tokenLock": {
+          "supplyPct": 6.177032,
+          "until": "2027-09-09",
+          "nextUnlockAt": "2027-03-22",
+          "nextUnlockPct": 3.644615,
+          "pairLocked": false,
+          "pairLockScope": "hoodlock_only"
+        },
+        "priceChange24hPct": -28.95,
         "hasBuilderSource": true,
-        "logoUrl": "https://s3.ap-southeast-1.amazonaws.com/virtualprotocolcdn/108011_Merrymen_eb9a3613ae.png",
-        "url": "https://heyresearch.xyz/project/merrymen"
+        "logoUrl": "https://heyresearch.xyz/apple-icon.png?5a717b8624016dc8",
+        "url": "https://heyresearch.xyz/project/hey-research-lab"
       }
     ],
     "catalogue": {
-      "verifiedBuilders": 1871,
-      "stillBuilding": 4,
-      "underTheRadar": 9,
-      "verifiedBuildersOnChain": 907,
+      "verifiedBuilders": 1787,
+      "stillBuilding": 1,
+      "underTheRadar": 1,
+      "verifiedBuildersOnChain": 990,
       "published": 5032,
       "chainId": 4663,
-      "asOf": "2026-10-02T11:39:49.577Z",
+      "asOf": "2026-10-09T04:23:48.025Z",
       "listScope": "published",
       "definitions": "https://heyresearch.xyz/methodology#counts"
     },

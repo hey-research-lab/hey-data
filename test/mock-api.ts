@@ -1,6 +1,6 @@
 /**
  * A small HEY API built from responses recorded read-only from
- * https://heyresearch.xyz on 2026-10-02 (test/fixtures/recorded, written by
+ * https://heyresearch.xyz on 2026-10-09 (test/fixtures/recorded, written by
  * scripts/record-fixtures.mjs). The records are real, with personal handles
  * replaced by neutral placeholders; the paging envelopes
  * (totals, offsets, cursors) are recomputed over the recorded set so a whole

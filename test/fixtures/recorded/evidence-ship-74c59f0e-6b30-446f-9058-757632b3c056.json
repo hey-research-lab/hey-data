@@ -1,0 +1,47 @@
+{
+  "path": "/api/evidence/ship%3A74c59f0e-6b30-446f-9058-757632b3c056",
+  "recordedAt": "2026-10-09T04:24:22.150Z",
+  "body": {
+    "id": "ship:74c59f0e-6b30-446f-9058-757632b3c056",
+    "withdrawn": false,
+    "project": {
+      "slug": "agentos",
+      "name": "AgentOS",
+      "url": "https://heyresearch.xyz/project/agentos"
+    },
+    "domain": "build",
+    "claimType": "GITHUB_RELEASE",
+    "summary": "AgentOS 2026.10.9",
+    "sourceType": "github",
+    "sourceUrl": "https://github.com/use-agent-os/agent-os/releases/tag/v2026.10.9",
+    "publishedAt": "2026-10-09T03:43:12.000Z",
+    "detectedAt": "2026-10-09T03:49:41.463Z",
+    "precision": "EXACT",
+    "verification": "PUBLICLY_VERIFIED",
+    "countsAsBuilding": true,
+    "recordedAt": "2026-10-09T03:49:41.463Z",
+    "metadata": {
+      "releaseVersion": "v2026.10.9",
+      "prerelease": false
+    },
+    "sources": [
+      {
+        "evidenceRowId": "e535fcda-fdd2-4bb1-8a07-666d8c411ac6",
+        "sourceType": "GITHUB_REPO",
+        "sourceUrl": "https://github.com/use-agent-os/agent-os/releases/tag/v2026.10.9",
+        "observedAt": "2026-10-09T03:49:41.463Z",
+        "metadata": {
+          "tag": "v2026.10.9",
+          "assetCount": 4,
+          "assetKinds": [
+            "cli",
+            "checksums",
+            "other"
+          ],
+          "prerelease": false
+        }
+      }
+    ],
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

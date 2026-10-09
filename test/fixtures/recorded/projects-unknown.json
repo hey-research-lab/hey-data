@@ -1,6 +1,6 @@
 {
   "path": "/api/projects?status=UNKNOWN&limit=2",
-  "recordedAt": "2026-10-02T11:40:06.569Z",
+  "recordedAt": "2026-10-09T04:23:58.116Z",
   "body": {
     "query": {
       "limit": 2,
@@ -8,91 +8,100 @@
       "status": "UNKNOWN",
       "sort": "activity"
     },
-    "total": 3084,
+    "total": 3150,
     "nextOffset": 2,
     "items": [
       {
-        "slug": "builder-twelve-robinxbt",
-        "name": "builder-twelve",
+        "slug": "spikecalls-tocsin",
+        "name": "SpikeCalls",
+        "shortDescription": "The exit radar for pons v2 on Robinhood Chain. Reads the wallet, not the chart. Local, open, read-only by default.",
         "projectKind": "OTHER",
         "activityStatus": "UNKNOWN",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-08-31T21:26:53.000Z",
+        "lastShippedAt": "2026-09-06T21:26:48.000Z",
+        "primaryNarrative": {
+          "slug": "devtools",
+          "name": "Dev Tools"
+        },
         "hasBuilderSource": false,
-        "logoUrl": "https://avatars.githubusercontent.com/builder-twelve",
-        "url": "https://heyresearch.xyz/project/builder-twelve-robinxbt"
+        "logoUrl": "https://avatars.githubusercontent.com/SpikeCalls",
+        "url": "https://heyresearch.xyz/project/spikecalls-tocsin"
       },
       {
-        "slug": "bitcoin-ethereum-tether-usdt-bnb-usdc-xrp-solana-tron-hyperliqui",
-        "name": "Bitcoin Ethereum Tether USDt BNB USDC XRP Solana TRON Hyperliquid Dogecoin Rain Zcash Decimal UNUS SED LEO Stellar Monero Chainlink Cardano Canton Dai Bitcoin Cash World Liberty Financial USD Ethena U",
-        "symbol": "BTCETHUSDTBNBUSDCXRPSOLTRXHYPEDO",
-        "shortDescription": "There are too many coins to choose from. Bitcoin. DOGE. PEPE. WIF. Hundreds more. So why keep choosing? $ALLCOINSINONE is the meme that says: what if you just had them all?",
+        "slug": "chicken",
+        "name": "CHICKEN",
+        "symbol": "chkn",
+        "shortDescription": "With a team of specialized bot heroes working together, HatchFi is designed to bring more structure, automation, and resilience to the token economy. Each bot has a specific role within the ecosystem — helping to support the floor price, manage token supply, execute buybacks and burns, and create a more dynamic experience for holders. Our goal is to build an ecosystem where market activity actively contributes to the strength of the token. Instead of relying only on speculation, HatchFi introduces automated mechanisms designed to reinforce the economy over time, reduce circulating supply, and create continuous support around the token. At HatchFi, we’re hatching a future where every holder becomes part of the mission. A community united around transparent mechanics, automated systems, and a crypto experience that is designed to be more engaging, more sustainable, and simply more fun. At the center of it all is our most distinctive concept: the world’s first token ecosystem built around an unbreakable, rising floor price. As the ecosystem grows, the bots keep working. The Predator supports the floor, the Sniper executes buybacks, the Joker burns tokens, while the rest of the team helps coordinate the system behind the scenes. More activity. More automation. Less supply. A stronger floor. Welcome to HatchFi — where the bots never sleep.",
         "projectKind": "OTHER",
         "activityStatus": "UNKNOWN",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
-        "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-08-30T02:59:55.000Z",
+        "stillBuildingState": "NOT_HELD",
+        "lastShippedAt": "2026-09-06T14:48:05.000Z",
         "primaryNarrative": {
           "slug": "animal-meme",
           "name": "Animal Meme"
         },
         "token": {
           "chainId": 4663,
-          "contractAddress": "0xae2df3c1749daee721c1bfcbbfdde5d61ae7cb99"
+          "contractAddress": "0x75ce3ea0f536671c404e68f8b4bb8bc5326242ed"
         },
-        "websiteUrl": "https://allcoinsinonehood.fun/",
+        "websiteUrl": "https://www.hatchfi.io/",
+        "officialX": {
+          "handle": "HatchfiCoin",
+          "url": "https://x.com/HatchfiCoin"
+        },
         "marketCap": {
-          "usd": 69791,
+          "usd": 305704,
           "source": "dexscreener",
           "kind": "fdv",
-          "observedAt": "2026-10-02T10:58:37.594Z"
+          "observedAt": "2026-10-09T03:55:00.176Z"
         },
         "liquidity": {
-          "usd": 52822.51,
+          "usd": 139376.58,
           "source": "dexscreener",
-          "observedAt": "2026-10-02T10:58:37.594Z",
-          "kind": "launch_inventory"
+          "observedAt": "2026-10-09T03:55:00.176Z",
+          "kind": "market"
         },
         "volume24h": {
-          "usd": 4080.67,
+          "usd": 125.06,
           "source": "dexscreener",
-          "observedAt": "2026-10-02T10:58:37.594Z"
+          "observedAt": "2026-10-09T03:55:00.176Z"
         },
         "launchStage": "DEX",
         "tokenMarket": {
           "status": "ACTIVE_MARKET",
-          "reason": "launch_pool_trading"
+          "reason": "liquidity_and_volume"
         },
         "tokenVerification": {
           "status": "VERIFIED",
           "reason": "site_names_contract"
         },
-        "venue": "Uniswap v3",
+        "venue": "Uniswap v2",
         "trades24h": {
-          "buys": 103,
-          "sells": 319,
+          "buys": 1,
+          "sells": 6,
           "source": "dexscreener",
-          "observedAt": "2026-10-02T10:58:37.594Z"
+          "observedAt": "2026-10-09T03:55:00.176Z"
         },
-        "priceChange24hPct": 15.86,
+        "priceChange24hPct": -3.64,
         "hasBuilderSource": false,
-        "logoUrl": "https://cdn.dexscreener.com/cms/images/q9oMOMQO01JtYFvT?width=800&height=800&quality=95&format=auto",
-        "url": "https://heyresearch.xyz/project/bitcoin-ethereum-tether-usdt-bnb-usdc-xrp-solana-tron-hyperliqui"
+        "logoUrl": "https://coin-images.coingecko.com/coins/images/102176789/small/dsdd.png?1788714226",
+        "url": "https://heyresearch.xyz/project/chicken"
       }
     ],
     "catalogue": {
-      "verifiedBuilders": 1871,
-      "stillBuilding": 4,
-      "underTheRadar": 9,
-      "verifiedBuildersOnChain": 907,
+      "verifiedBuilders": 1787,
+      "stillBuilding": 1,
+      "underTheRadar": 1,
+      "verifiedBuildersOnChain": 990,
       "published": 5032,
       "chainId": 4663,
-      "asOf": "2026-10-02T11:39:49.577Z",
+      "asOf": "2026-10-09T04:23:48.025Z",
       "listScope": "published",
       "definitions": "https://heyresearch.xyz/methodology#counts"
     },

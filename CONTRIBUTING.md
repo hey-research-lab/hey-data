@@ -42,7 +42,8 @@ TypeScript strict, ESLint and Prettier as configured, small conventional commits
 
 hey-data copies no production code. Its vocabularies, field names and route behaviour follow HEY
 Research Lab's public API contract (`/api/projects`, `/api/projects/{slug}`, `/coverage`,
-`/api/ships`, `/api/changes`, `/api/evidence/{id}`) as of production commit
-`21775391f6c0fb4494575e0b4463df535c65cb96` and `@hey-research-lab/sdk` 0.1.1; `src/chain.ts` and
+`/api/ships`, `/api/changes`, `/api/evidence/{id}`) as last checked against the public OpenAPI
+document (https://heyresearch.xyz/openapi.json) on 2026-10-09, and `@hey-research-lab/sdk` 0.1.1;
+the fixtures were re-recorded the same day. `src/chain.ts` and
 `src/evm.ts` are the ecosystem's shared constants, verbatim. When the API adds a field, nothing
 changes here until the allowlist is updated on purpose.

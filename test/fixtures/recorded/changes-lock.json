@@ -1,6 +1,6 @@
 {
   "path": "/api/changes?domain=lock&limit=3",
-  "recordedAt": "2026-10-02T11:40:28.187Z",
+  "recordedAt": "2026-10-09T04:24:19.519Z",
   "body": {
     "query": {
       "domain": "lock",
@@ -9,87 +9,8 @@
     },
     "items": [
       {
-        "id": "lock:4663:615:observed",
-        "revision": 1,
-        "op": "upsert",
-        "type": "lock.observed",
-        "domain": "lock",
-        "origin": "live",
-        "project": {
-          "slug": "trench-agents-ed73ee",
-          "name": "TRENCH AGENTS",
-          "url": "https://heyresearch.xyz/project/trench-agents-ed73ee"
-        },
-        "token": {
-          "chainId": 4663,
-          "address": "0xed73ee61d3b2bdee20f7394501956741537a3514"
-        },
-        "occurredAt": null,
-        "precision": "OBSERVED",
-        "detectedAt": "2026-10-02T00:45:59.524Z",
-        "recordedAt": "2026-10-02T00:55:04.608Z",
-        "summary": "HoodLock #615 observed: tokens locked until 2026-10-31",
-        "evidence": [
-          {
-            "id": "lock:4663:615",
-            "url": "https://hoodlock.tech/proof/lock/615",
-            "label": "HoodLock proof"
-          }
-        ],
-        "source": "hoodlock",
-        "facts": {
-          "lockId": 615,
-          "unlockAt": "2026-10-31T22:24:00.000Z",
-          "assetKind": "TOKEN"
-        },
-        "links": {
-          "project": "https://heyresearch.xyz/project/trench-agents-ed73ee",
-          "evidence": "https://heyresearch.xyz/api/evidence/lock%3A4663%3A615",
-          "timeline": "https://heyresearch.xyz/api/projects/trench-agents-ed73ee/timeline"
-        }
-      },
-      {
-        "id": "lock:4663:158:due",
-        "revision": 1,
-        "op": "upsert",
-        "type": "lock.unlock_due",
-        "domain": "lock",
-        "origin": "live",
-        "project": {
-          "slug": "hoodlock",
-          "name": "Hoodlock",
-          "url": "https://heyresearch.xyz/project/hoodlock"
-        },
-        "token": {
-          "chainId": 4663,
-          "address": "0xd5bf43f29bf7aa5bb42ae9e217b84b86eb7a4b94"
-        },
-        "occurredAt": "2026-10-08T18:57:00.000Z",
-        "precision": "SCHEDULED",
-        "detectedAt": "2026-10-01T19:00:01.605Z",
-        "recordedAt": "2026-10-01T19:00:01.605Z",
-        "summary": "HoodLock #158 unlocks on 2026-10-08 (tokens)",
-        "evidence": [
-          {
-            "id": "lock:4663:158",
-            "url": "https://hoodlock.tech/proof/lock/158",
-            "label": "HoodLock proof"
-          }
-        ],
-        "source": "hoodlock",
-        "facts": {
-          "lockId": 158,
-          "assetKind": "TOKEN"
-        },
-        "links": {
-          "project": "https://heyresearch.xyz/project/hoodlock",
-          "evidence": "https://heyresearch.xyz/api/evidence/lock%3A4663%3A158",
-          "timeline": "https://heyresearch.xyz/api/projects/hoodlock/timeline"
-        }
-      },
-      {
-        "id": "lock:4663:393:due",
-        "revision": 4,
+        "id": "lock:4663:476:due",
+        "revision": 6,
         "op": "upsert",
         "type": "lock.unlock_due",
         "domain": "lock",
@@ -103,11 +24,50 @@
           "chainId": 4663,
           "address": "0xd5bf43f29bf7aa5bb42ae9e217b84b86eb7a4b94"
         },
-        "occurredAt": "2026-10-03T20:24:00.000Z",
+        "occurredAt": "2026-10-11T08:04:00.000Z",
         "precision": "SCHEDULED",
         "detectedAt": "2026-09-26T11:36:09.260Z",
-        "recordedAt": "2026-10-01T18:45:01.149Z",
-        "summary": "HoodLock #393 unlocks on 2026-10-03 (tokens)",
+        "recordedAt": "2026-10-09T00:40:30.137Z",
+        "summary": "HoodLock #476 unlocks on 2026-10-11 (tokens)",
+        "evidence": [
+          {
+            "id": "lock:4663:476",
+            "url": "https://hoodlock.tech/proof/lock/476",
+            "label": "HoodLock proof"
+          }
+        ],
+        "source": "hoodlock",
+        "facts": {
+          "lockId": 476,
+          "assetKind": "TOKEN"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/hoodlock",
+          "evidence": "https://heyresearch.xyz/api/evidence/lock%3A4663%3A476",
+          "timeline": "https://heyresearch.xyz/api/projects/hoodlock/timeline"
+        }
+      },
+      {
+        "id": "lock:4663:393:due",
+        "revision": 7,
+        "op": "upsert",
+        "type": "lock.unlock_due",
+        "domain": "lock",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "hoodlock",
+          "name": "Hoodlock",
+          "url": "https://heyresearch.xyz/project/hoodlock"
+        },
+        "token": {
+          "chainId": 4663,
+          "address": "0xd5bf43f29bf7aa5bb42ae9e217b84b86eb7a4b94"
+        },
+        "occurredAt": "2026-10-11T15:24:00.000Z",
+        "precision": "SCHEDULED",
+        "detectedAt": "2026-09-26T11:36:09.260Z",
+        "recordedAt": "2026-10-09T00:40:30.137Z",
+        "summary": "HoodLock #393 unlocks on 2026-10-11 (tokens)",
         "evidence": [
           {
             "id": "lock:4663:393",
@@ -125,15 +85,54 @@
           "evidence": "https://heyresearch.xyz/api/evidence/lock%3A4663%3A393",
           "timeline": "https://heyresearch.xyz/api/projects/hoodlock/timeline"
         }
+      },
+      {
+        "id": "lock:4663:286:due",
+        "revision": 8,
+        "op": "upsert",
+        "type": "lock.unlock_due",
+        "domain": "lock",
+        "origin": "bootstrap",
+        "project": {
+          "slug": "hoodlock",
+          "name": "Hoodlock",
+          "url": "https://heyresearch.xyz/project/hoodlock"
+        },
+        "token": {
+          "chainId": 4663,
+          "address": "0xd5bf43f29bf7aa5bb42ae9e217b84b86eb7a4b94"
+        },
+        "occurredAt": "2026-10-11T13:00:00.000Z",
+        "precision": "SCHEDULED",
+        "detectedAt": "2026-09-26T11:36:09.260Z",
+        "recordedAt": "2026-10-09T00:40:30.137Z",
+        "summary": "HoodLock #286 unlocks on 2026-10-11 (tokens)",
+        "evidence": [
+          {
+            "id": "lock:4663:286",
+            "url": "https://hoodlock.tech/proof/lock/286",
+            "label": "HoodLock proof"
+          }
+        ],
+        "source": "hoodlock",
+        "facts": {
+          "lockId": 286,
+          "assetKind": "TOKEN"
+        },
+        "links": {
+          "project": "https://heyresearch.xyz/project/hoodlock",
+          "evidence": "https://heyresearch.xyz/api/evidence/lock%3A4663%3A286",
+          "timeline": "https://heyresearch.xyz/api/projects/hoodlock/timeline"
+        }
       }
     ],
-    "nextCursor": "YzEuNDc4MTk",
+    "nextCursor": "YzEuODMzNDg",
     "hasMore": true,
     "ledger": {
       "collectionStart": "2026-09-26T11:35:57.227Z",
       "transitionsFrom": "2026-09-26T11:32:48.791Z",
-      "newestRecordedAt": "2026-10-02T11:40:02.246Z",
-      "projectorRanAt": "2026-10-02T11:40:02.246Z"
+      "newestRecordedAt": "2026-10-09T04:20:00.249Z",
+      "projectorRanAt": "2026-10-09T04:20:00.249Z"
     },
     "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
   }

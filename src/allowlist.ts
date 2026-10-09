@@ -226,9 +226,16 @@ export const COVERAGE_DIMENSIONS = [
   'securityContext',
 ] as const;
 
+/**
+ * `state` keeps HEY's nine values; `stateDetail` (`MAPPING_BLOCKED` under NO_SOURCE, `PARTIAL`
+ * under MEASURED) and `cause` (`own_source_unreachable`, `provider_unavailable`,
+ * `budget_deferred`) are HEY's additive finer readings (2026-10-09), kept when HEY sends them.
+ */
 const COVERAGE_ENTRY: Spec = {
   state: 'string',
+  stateDetail: 'string',
   reason: 'string',
+  cause: 'string',
   since: 'datetime',
   asOf: 'datetime',
 };

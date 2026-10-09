@@ -1,0 +1,133 @@
+{
+  "path": "/api/projects/spikecalls-tocsin",
+  "recordedAt": "2026-10-09T04:24:08.801Z",
+  "body": {
+    "slug": "spikecalls-tocsin",
+    "name": "SpikeCalls",
+    "shortDescription": "The exit radar for pons v2 on Robinhood Chain. Reads the wallet, not the chart. Local, open, read-only by default.",
+    "projectKind": "OTHER",
+    "activityStatus": "UNKNOWN",
+    "researchLevel": "VERIFIED_BUILDER",
+    "catalogStatus": "VERIFIED_BUILDER",
+    "stillBuilding": false,
+    "stillBuildingState": "NOT_MEASURED",
+    "lastShippedAt": "2026-09-06T21:26:48.000Z",
+    "primaryNarrative": {
+      "slug": "devtools",
+      "name": "Dev Tools"
+    },
+    "hasBuilderSource": false,
+    "logoUrl": "https://avatars.githubusercontent.com/SpikeCalls",
+    "url": "https://heyresearch.xyz/project/spikecalls-tocsin",
+    "ships": [
+      {
+        "id": "e7c1a774-4a63-44aa-ba6b-4c25fd2a0f40",
+        "title": "Code changes, week of 2026-08-31 – 2026-09-06",
+        "summary": "1 active day in SpikeCalls/hoodrat.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-09-06T21:26:48.000Z",
+        "detectedAt": "2026-09-15T15:47:51.898Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:e7c1a774-4a63-44aa-ba6b-4c25fd2a0f40",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/SpikeCalls/hoodrat",
+        "project": {
+          "slug": "spikecalls-tocsin",
+          "name": "SpikeCalls",
+          "shortDescription": "The exit radar for pons v2 on Robinhood Chain. Reads the wallet, not the chart. Local, open, read-only by default.",
+          "projectKind": "OTHER",
+          "activityStatus": "UNKNOWN",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-09-06T21:26:48.000Z",
+          "primaryNarrative": {
+            "slug": "devtools",
+            "name": "Dev Tools"
+          },
+          "hasBuilderSource": false,
+          "logoUrl": "https://avatars.githubusercontent.com/SpikeCalls",
+          "url": "https://heyresearch.xyz/project/spikecalls-tocsin"
+        },
+        "url": "https://heyresearch.xyz/project/spikecalls-tocsin#ship-e7c1a774-4a63-44aa-ba6b-4c25fd2a0f40"
+      },
+      {
+        "id": "6374bad9-e512-417c-a12d-c34cdf1a3600",
+        "title": "Code changes, week of 2026-08-31 – 2026-09-06",
+        "summary": "1 active day in SpikeCalls/tocsin.",
+        "eventType": "CODE_ACTIVITY",
+        "publishedAt": "2026-09-05T18:15:03.000Z",
+        "detectedAt": "2026-09-06T00:45:03.272Z",
+        "precision": "WEEK",
+        "evidenceId": "ship:6374bad9-e512-417c-a12d-c34cdf1a3600",
+        "verification": "SOURCE_LINKED",
+        "sourceUrl": "https://github.com/SpikeCalls/tocsin",
+        "project": {
+          "slug": "spikecalls-tocsin",
+          "name": "SpikeCalls",
+          "shortDescription": "The exit radar for pons v2 on Robinhood Chain. Reads the wallet, not the chart. Local, open, read-only by default.",
+          "projectKind": "OTHER",
+          "activityStatus": "UNKNOWN",
+          "researchLevel": "VERIFIED_BUILDER",
+          "catalogStatus": "VERIFIED_BUILDER",
+          "stillBuilding": false,
+          "stillBuildingState": "NOT_MEASURED",
+          "lastShippedAt": "2026-09-06T21:26:48.000Z",
+          "primaryNarrative": {
+            "slug": "devtools",
+            "name": "Dev Tools"
+          },
+          "hasBuilderSource": false,
+          "logoUrl": "https://avatars.githubusercontent.com/SpikeCalls",
+          "url": "https://heyresearch.xyz/project/spikecalls-tocsin"
+        },
+        "url": "https://heyresearch.xyz/project/spikecalls-tocsin#ship-6374bad9-e512-417c-a12d-c34cdf1a3600"
+      }
+    ],
+    "firstSeenAt": "2026-09-06T00:02:28.260Z",
+    "firstRecordedByHeyAt": "2026-09-06T00:13:17.375Z",
+    "isClaimed": false,
+    "submitted": false,
+    "narratives": [
+      {
+        "slug": "devtools",
+        "name": "Dev Tools",
+        "isPrimary": true
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://github.com/SpikeCalls/hoodrat",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://github.com/SpikeCalls/tocsin",
+        "sourceType": "GITHUB_REPO",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      },
+      {
+        "url": "https://github.com/SpikeCalls",
+        "sourceType": "GITHUB_ORG",
+        "isVerified": false,
+        "confidence": "AUTHORITATIVE_LINK",
+        "contextOnly": false
+      }
+    ],
+    "score": {
+      "buildMomentum": 16.3,
+      "discoveryGapWithheld": "no_token",
+      "stillBuilding": false,
+      "stillBuildingState": "NOT_MEASURED",
+      "stillBuildingWithheld": "no_token",
+      "calculatedAt": "2026-10-09T03:48:24.653Z",
+      "scoringVersion": "hbm-v26"
+    },
+    "disclaimer": "Public, source-backed activity HEY recorded. Still Building means verified activity through a tracked market drawdown — it is not a prediction, not a ranking by price, and not investment advice. Few projects meet Still Building or Under the Radar at any time; both are strict by design, and list responses carry the counts."
+  }
+}

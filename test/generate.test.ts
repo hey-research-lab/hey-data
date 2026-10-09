@@ -90,21 +90,50 @@ describe('a full run over recorded fixtures', () => {
   it('keeps identity, states, narratives, the newest ship and coverage states', async () => {
     const { outDir } = await run(buildWorld());
     const bySlug = new Map(readNdjson(outDir, 'projects.ndjson').map((p) => [p['slug'], p]));
-    const priors = bySlug.get('priors-agents') as Record<string, unknown>;
-    expect(priors['token']).toEqual({
+    const agentos = bySlug.get('agentos') as Record<string, unknown>;
+    expect(agentos['token']).toEqual({
       chainId: 4663,
-      contractAddress: '0x7e7154eb9dd81084625a7a2e9e731cadfddb9ab7',
+      contractAddress: '0x6eda83fc299c10d474068a7e69771c809bcbbba3',
     });
-    expect(priors['tokenVerification']).toEqual({ status: 'UNVERIFIED', reason: 'market_listing' });
-    expect((priors['narratives'] as unknown[]).length).toBe(3);
-    expect((priors['latestShip'] as Record<string, unknown>)['evidenceId']).toMatch(/^ship:/);
-    expect(priors['scoringVersion']).toBe('hbm-v22');
-    const coverage = priors['coverage'] as Record<string, Record<string, unknown>>;
+    expect(agentos['tokenVerification']).toEqual({
+      status: 'VERIFIED',
+      reason: 'site_names_contract',
+    });
+    expect((agentos['narratives'] as unknown[]).length).toBe(1);
+    expect((agentos['latestShip'] as Record<string, unknown>)['evidenceId']).toMatch(/^ship:/);
+    expect(agentos['scoringVersion']).toBe('hbm-v26');
+    const coverage = agentos['coverage'] as Record<string, Record<string, unknown>>;
     expect(coverage['identity']?.['state']).toBe('MEASURED');
+    expect(coverage['identity']).not.toHaveProperty('detailUrl');
     expect(coverage['marketCurrent']).toBeUndefined();
     expect(coverage['distribution']).toBeUndefined();
+    // contractActivity carries stateDetail PARTIAL in the recording; it is usage, so it stays out.
     expect(coverage['contractActivity']).toBeUndefined();
-    expect(priors['detailRead']).toBe('read');
+    expect(agentos['detailRead']).toBe('read');
+    // HEY's additive coverage cause (2026-10-09) is kept beside the state it explains.
+    const tocsin = bySlug.get('spikecalls-tocsin') as Record<string, unknown>;
+    expect((tocsin['coverage'] as Record<string, unknown>)['repositories']).toEqual({
+      state: 'SOURCE_UNAVAILABLE',
+      reason: 'every_repository_unavailable',
+      cause: 'own_source_unreachable',
+    });
+  });
+
+  it("keeps coverage's stateDetail beside the unchanged state", async () => {
+    const world = buildWorld();
+    const body = world.coverage.get('agentos') as { dimensions: Record<string, unknown> };
+    body.dimensions['officialDocs'] = {
+      state: 'NO_SOURCE',
+      stateDetail: 'MAPPING_BLOCKED',
+      reason: 'context_only_docs',
+    };
+    const { outDir } = await run(world);
+    const agentos = readNdjson(outDir, 'projects.ndjson').find((p) => p['slug'] === 'agentos');
+    expect((agentos?.['coverage'] as Record<string, unknown>)['officialDocs']).toEqual({
+      state: 'NO_SOURCE',
+      stateDetail: 'MAPPING_BLOCKED',
+      reason: 'context_only_docs',
+    });
   });
 
   it('keeps unknown unknown: an absent fact is absent, never 0, false or null', async () => {

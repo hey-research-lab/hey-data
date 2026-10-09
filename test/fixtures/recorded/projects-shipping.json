@@ -1,6 +1,6 @@
 {
   "path": "/api/projects?status=SHIPPING&limit=2",
-  "recordedAt": "2026-10-02T11:39:59.869Z",
+  "recordedAt": "2026-10-09T04:23:51.394Z",
   "body": {
     "query": {
       "limit": 2,
@@ -8,57 +8,56 @@
       "status": "SHIPPING",
       "sort": "activity"
     },
-    "total": 550,
+    "total": 421,
     "nextOffset": 2,
     "items": [
       {
-        "slug": "ophis-fi-ophis",
-        "name": "ophis",
-        "shortDescription": "Intent-based DEX aggregator",
+        "slug": "builder-one-hoodlauch",
+        "name": "HOODLAUCH",
+        "shortDescription": "Launch Platform for Robinhood. Work in progress",
         "projectKind": "OTHER",
         "activityStatus": "SHIPPING",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-10-02T11:07:23.000Z",
+        "lastShippedAt": "2026-10-09T04:17:18.000Z",
         "primaryNarrative": {
-          "slug": "dex",
-          "name": "DEX"
+          "slug": "launchpad",
+          "name": "Launchpad"
         },
-        "websiteUrl": "https://ophis.fi",
         "hasBuilderSource": true,
-        "logoUrl": "https://avatars.githubusercontent.com/ophis-fi",
-        "url": "https://heyresearch.xyz/project/ophis-fi-ophis"
+        "logoUrl": "https://avatars.githubusercontent.com/builder-one",
+        "url": "https://heyresearch.xyz/project/builder-one-hoodlauch"
       },
       {
-        "slug": "builder-twenty-blockchain-rpc-nodes",
-        "name": "blockchain-rpc-nodes",
-        "shortDescription": "Self-hosted RPC & archive nodes for EVM chains — Docker Compose setups for BSC, Arbitrum, Optimism & Linea. More chains added regularly.",
+        "slug": "tagai-dao-tagai-ui",
+        "name": "tagai-dao",
+        "shortDescription": "wormhole+donut+pump.fun+nutbox",
         "projectKind": "OTHER",
         "activityStatus": "SHIPPING",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-10-02T11:03:36.000Z",
+        "lastShippedAt": "2026-10-09T04:09:24.000Z",
         "primaryNarrative": {
-          "slug": "infrastructure",
-          "name": "Infrastructure"
+          "slug": "launchpad",
+          "name": "Launchpad"
         },
         "hasBuilderSource": true,
-        "logoUrl": "https://avatars.githubusercontent.com/builder-twenty",
-        "url": "https://heyresearch.xyz/project/builder-twenty-blockchain-rpc-nodes"
+        "logoUrl": "https://avatars.githubusercontent.com/tagai-dao",
+        "url": "https://heyresearch.xyz/project/tagai-dao-tagai-ui"
       }
     ],
     "catalogue": {
-      "verifiedBuilders": 1871,
-      "stillBuilding": 4,
-      "underTheRadar": 9,
-      "verifiedBuildersOnChain": 907,
+      "verifiedBuilders": 1787,
+      "stillBuilding": 1,
+      "underTheRadar": 1,
+      "verifiedBuildersOnChain": 990,
       "published": 5032,
       "chainId": 4663,
-      "asOf": "2026-10-02T11:39:49.577Z",
+      "asOf": "2026-10-09T04:23:48.025Z",
       "listScope": "published",
       "definitions": "https://heyresearch.xyz/methodology#counts"
     },

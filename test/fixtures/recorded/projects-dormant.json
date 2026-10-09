@@ -1,6 +1,6 @@
 {
   "path": "/api/projects?status=DORMANT&limit=2",
-  "recordedAt": "2026-10-02T11:40:03.955Z",
+  "recordedAt": "2026-10-09T04:23:55.431Z",
   "body": {
     "query": {
       "limit": 2,
@@ -8,54 +8,51 @@
       "status": "DORMANT",
       "sort": "activity"
     },
-    "total": 366,
+    "total": 412,
     "nextOffset": 2,
     "items": [
       {
-        "slug": "builder-thirteen-clubpengu",
-        "name": "ClubPengu",
-        "shortDescription": "Play at https://waddle.bet - please read the whitepaper, it will answer all questions. ETH: 0xcf83b446d4cf400b132538d7bb03e36bdbd3c8b8 - SOL: 9kdJA8Ahjyh7Yt8UDWpihznwTMtKJVEAmhsUFmeppump - BSC: soon",
+        "slug": "rebateprotocol-pons-fork",
+        "name": "pons_fork",
+        "shortDescription": "Pons Fork — automated creator-fee engine on Robinhood Chain (buyback & burn, cashback, charity, RWA, LP). EVM deployment of the Rebate ecosystem. Monorepo of 12 services + site + backend.",
         "projectKind": "OTHER",
         "activityStatus": "DORMANT",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-08-02T23:59:00.000Z",
-        "websiteUrl": "https://whitepaper.waddle.bet",
+        "lastShippedAt": "2026-08-09T23:59:00.000Z",
+        "primaryNarrative": {
+          "slug": "rwa",
+          "name": "RWA"
+        },
         "hasBuilderSource": true,
-        "logoUrl": "https://avatars.githubusercontent.com/builder-thirteen",
-        "url": "https://heyresearch.xyz/project/builder-thirteen-clubpengu"
+        "logoUrl": "https://avatars.githubusercontent.com/rebateprotocol",
+        "url": "https://heyresearch.xyz/project/rebateprotocol-pons-fork"
       },
       {
-        "slug": "sherwood-exchange-sherwood",
-        "name": "sherwood",
-        "shortDescription": "Privacy-first exchange on Robinhood Chain — shielded ZK pool, multi-DEX aggregator, $SWOOD, and an autonomous trading agent live on Virtuals ACP",
+        "slug": "builder-two-sample-app",
+        "name": "sample-app",
         "projectKind": "OTHER",
         "activityStatus": "DORMANT",
         "researchLevel": "VERIFIED_BUILDER",
         "catalogStatus": "VERIFIED_BUILDER",
         "stillBuilding": false,
         "stillBuildingState": "NOT_MEASURED",
-        "lastShippedAt": "2026-08-02T23:59:00.000Z",
-        "primaryNarrative": {
-          "slug": "ai-agents",
-          "name": "AI Agents"
-        },
-        "websiteUrl": "https://sherwood.spot",
+        "lastShippedAt": "2026-08-09T23:59:00.000Z",
         "hasBuilderSource": true,
-        "logoUrl": "https://avatars.githubusercontent.com/sherwood-exchange",
-        "url": "https://heyresearch.xyz/project/sherwood-exchange-sherwood"
+        "logoUrl": "https://avatars.githubusercontent.com/builder-two",
+        "url": "https://heyresearch.xyz/project/builder-two-sample-app"
       }
     ],
     "catalogue": {
-      "verifiedBuilders": 1871,
-      "stillBuilding": 4,
-      "underTheRadar": 9,
-      "verifiedBuildersOnChain": 907,
+      "verifiedBuilders": 1787,
+      "stillBuilding": 1,
+      "underTheRadar": 1,
+      "verifiedBuildersOnChain": 990,
       "published": 5032,
       "chainId": 4663,
-      "asOf": "2026-10-02T11:39:49.577Z",
+      "asOf": "2026-10-09T04:23:48.025Z",
       "listScope": "published",
       "definitions": "https://heyresearch.xyz/methodology#counts"
     },
