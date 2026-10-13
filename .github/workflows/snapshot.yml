@@ -1,8 +1,12 @@
 name: Snapshot
-# Manual only: there is no schedule. The snapshot is uploaded as a workflow
-# artifact; with `release` set, a separate job attaches it to a GitHub Release.
+# Weekly on a schedule (Mondays 02:00 UTC, the full snapshot, attached to a
+# GitHub Release), and by hand with the inputs below. The snapshot is uploaded
+# as a workflow artifact; with `release` set — always on the schedule — a
+# separate job attaches it to a GitHub Release tagged data-<date>-<run id>.
 # Snapshots are never committed to the repository.
 on:
+  schedule:
+    - cron: '0 2 * * 1'
   workflow_dispatch:
     inputs:
       details:
@@ -45,8 +49,9 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
       - name: Validate inputs
+        # A scheduled run has no inputs: the defaults a manual run would show stand in.
         env:
-          EVIDENCE_LIMIT: ${{ inputs.evidence_limit }}
+          EVIDENCE_LIMIT: ${{ inputs.evidence_limit || '500' }}
           RESUME_FROM_RUN: ${{ inputs.resume_from_run }}
         run: |
           set -euo pipefail
@@ -62,8 +67,9 @@ jobs:
           github-token: ${{ github.token }}
       - name: Generate
         env:
-          EVIDENCE_LIMIT: ${{ inputs.evidence_limit }}
-          DETAILS: ${{ inputs.details }}
+          EVIDENCE_LIMIT: ${{ inputs.evidence_limit || '500' }}
+          # The schedule reads every dossier and coverage; a manual run says.
+          DETAILS: ${{ github.event_name == 'schedule' || inputs.details }}
         run: |
           set -euo pipefail
           args=(generate --out snapshot --evidence-limit "$EVIDENCE_LIMIT")
@@ -93,7 +99,8 @@ jobs:
 
   release:
     needs: snapshot
-    if: inputs.release
+    # Always on the schedule; by hand only when asked.
+    if: github.event_name == 'schedule' || inputs.release
     runs-on: ubuntu-latest
     timeout-minutes: 15
     permissions:

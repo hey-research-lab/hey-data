@@ -198,13 +198,27 @@ atomically (temporary file, then rename) and `.work` is removed.
 ## GitHub Actions
 
 - `ci.yml` — on push and pull request: leak scan, lint, typecheck, tests (offline), build.
-- `snapshot.yml` — **manual only** (`workflow_dispatch`, no schedule). It builds a snapshot and
-  uploads it as a workflow artifact with `LICENSE-DATA`. With the `release` input set, a separate
-  job (the only one with `contents: write`) attaches the snapshot to a GitHub Release tagged
-  `data-<date>-<run id>`. A stopped run uploads its `.work` as `hey-data-partial`; pass that run's
-  id as `resume_from_run` to continue it.
+- `snapshot.yml` — **weekly, and by hand.** Every Monday at 02:00 UTC it builds the full snapshot
+  (dossiers, coverage, 500 evidence records) and a separate job (the only one with
+  `contents: write`) attaches it to a GitHub Release tagged `data-<date>-<run id>`, with
+  `LICENSE-DATA`, a `.tar.gz` and `SHA256SUMS` — so a wholesale, citable dataset exists at a
+  stable URL under [Releases](https://github.com/hey-research-lab/hey-data/releases). A manual
+  run (`workflow_dispatch`) takes the inputs above and attaches a release only with `release` set.
+  A stopped run uploads its `.work` as `hey-data-partial`; pass that run's id as `resume_from_run`
+  to continue it.
 
 Snapshots are never committed to this repository.
+
+## Daily snapshots from HEY itself
+
+HEY also publishes a daily snapshot of the same records, under the same licence and allowlist, at
+[heyresearch.xyz/data](https://heyresearch.xyz/data): `projects.ndjson.gz`, `ships.ndjson.gz`, that
+UTC day's `changes.ndjson.gz` (one day of the public change ledger in `seq` order), uncapped
+`projects.csv` and `ships.csv`, and a `metadata.json` naming the rule versions and the citation
+("HEY Research Lab, <snapshot URL>, retrieved <date>"). `/data/latest/<file>` is always the newest
+day; thirty dailies and the first of every month are kept. The daily files carry no per-project
+coverage and no per-project scoring fields; this generator reads both. One allowlist decides what
+either may hold; a field added to one is added to the other on purpose.
 
 ## Examples
 
