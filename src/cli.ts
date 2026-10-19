@@ -36,7 +36,7 @@ Usage:
 Options:
   --out <dir>             output directory (default ./snapshot)
   --delay-ms <n>          pause between requests, at least ${MIN_CLI_DELAY_MS} (default ${DEFAULT_DELAY_MS})
-  --max-retries <n>       retries of a 429/5xx with the server's delay, 0-${MAX_RETRIES_CAP} (default ${DEFAULT_MAX_RETRIES})
+  --max-retries <n>       retries of a 429, 5xx, network failure or timeout, 0-${MAX_RETRIES_CAP} (default ${DEFAULT_MAX_RETRIES})
   --evidence-limit <n>    evidence records to fetch, 0 for none (default ${DEFAULT_EVIDENCE_LIMIT})
   --no-details            listing fields only: no per-project dossier or coverage reads
   --no-coverage           skip per-project coverage reads

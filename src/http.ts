@@ -2,8 +2,10 @@
  * The one door to the network. HEY's anonymous limit is 120 requests a minute
  * per client; hey-data paces itself far below it (one request per `delayMs`,
  * 1,100 ms by default, about 55 a minute), honours `retry-after` on a 429 or a
- * 503, and retries a retryable answer a bounded number of times with the
- * server's delay. It never follows a redirect and caps every body.
+ * 503, and retries a retryable answer — a 429, a 5xx from HEY or from the CDN in
+ * front of it (520–524), a network failure or a timeout — a bounded number of
+ * times with the server's delay. Every request is a GET, so a retry is safe. It
+ * never follows a redirect and caps every body; an oversized body is not retried.
  */
 import { retryAfterSeconds, type FetchLike } from '@hey-research-lab/sdk';
 
@@ -12,7 +14,11 @@ export const DEFAULT_DELAY_MS = 1_100;
 export const MIN_CLI_DELAY_MS = 600;
 export const DEFAULT_MAX_RETRIES = 1;
 export const MAX_RETRIES_CAP = 5;
-const RETRYABLE = new Set([429, 500, 502, 503, 504]);
+/**
+ * 520–524 are what Cloudflare, in front of heyresearch.xyz, answers when the
+ * origin errs, refuses, times out or cannot be reached: transient, like a 502.
+ */
+const RETRYABLE = new Set([429, 500, 502, 503, 504, 520, 521, 522, 523, 524]);
 const DEFAULT_BACKOFF_SECONDS = { 429: 60, other: 30 } as const;
 
 export class BaseUrlError extends Error {
@@ -148,7 +154,23 @@ export function politeFetch(options: PoliteFetchOptions): {
   const fetchImpl: FetchLike = async (input, init) => {
     let retries = 0;
     for (;;) {
-      const { response, body } = await attempt(input, init, retries < maxRetries);
+      let result: Awaited<ReturnType<typeof attempt>>;
+      try {
+        result = await attempt(input, init, retries < maxRetries);
+      } catch (error) {
+        // A network failure or a timeout is retried like a 5xx; an oversized body is not.
+        if (error instanceof BodyTooLargeError || retries >= maxRetries) throw error;
+        const seconds = DEFAULT_BACKOFF_SECONDS.other;
+        retries += 1;
+        stats.retries += 1;
+        options.log?.(
+          `${error instanceof Error ? error.message : 'The request failed.'} Waiting ${seconds}s, then retrying (retry ${retries} of ${maxRetries}).`,
+        );
+        await sleep(seconds * 1000);
+        nextSlot = now() + options.delayMs;
+        continue;
+      }
+      const { response, body } = result;
       if (body === undefined) {
         const told = retryAfterSeconds(response.headers.get('retry-after'));
         const seconds =
