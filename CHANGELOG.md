@@ -6,6 +6,7 @@ All notable changes to this project are documented here. The format follows
 
 ## Unreleased
 
+- A 520–524 answer (what the CDN in front of HEY returns when the origin errs or times out), a network failure and a timeout are now retried like a 502, within `--max-retries`; an oversized body still is not. The weekly Snapshot workflow passes `--max-retries 3`. Its first scheduled run (2026-10-19) stopped after 26 minutes on a single 520.
 - The Snapshot workflow runs weekly (Mondays 02:00 UTC) and attaches the full snapshot to a GitHub Release, so a wholesale dataset exists at a stable URL without a manual run; `workflow_dispatch` stays for a run by hand (2026-10-14).
 - README: HEY's own daily snapshots at heyresearch.xyz/data, under the same licence and allowlist, and how they differ from this generator's files.
 - Depends on `@hey-research-lab/sdk` `^0.2.0` (published 2026-10-09), which types the API's additive fields since 0.1.2; a caret on 0.x does not cross a minor, so `^0.1.1` kept the older SDK.

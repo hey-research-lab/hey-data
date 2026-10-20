@@ -266,9 +266,10 @@ describe('resume', () => {
     const clean = await run(buildWorld());
     const outDir = tempOut();
     const failAt = 14;
+    // maxRetries 0: the one network failure stops the run instead of being retried.
     const stopped = await run(
       buildWorld(),
-      { outDir },
+      { outDir, maxRetries: 0 },
       {
         intercept: (_url, n) =>
           n === failAt ? Promise.reject(new TypeError('socket hang up')) : undefined,
@@ -289,7 +290,7 @@ describe('resume', () => {
     const outDir = tempOut();
     await run(
       buildWorld(),
-      { outDir },
+      { outDir, maxRetries: 0 },
       { intercept: (_u, n) => (n === 20 ? Promise.reject(new TypeError('reset')) : undefined) },
     ).catch(() => undefined);
     const { appendFileSync } = await import('node:fs');
@@ -303,7 +304,7 @@ describe('resume', () => {
     const outDir = tempOut();
     await run(
       buildWorld(),
-      { outDir },
+      { outDir, maxRetries: 0 },
       { intercept: (_u, n) => (n === 5 ? Promise.reject(new TypeError('x')) : undefined) },
     ).catch(() => undefined);
     await expect(run(buildWorld(), { outDir, evidenceLimit: 1 })).rejects.toThrow(WorkStateError);

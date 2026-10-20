@@ -72,7 +72,9 @@ jobs:
           DETAILS: ${{ github.event_name == 'schedule' || inputs.details }}
         run: |
           set -euo pipefail
-          args=(generate --out snapshot --evidence-limit "$EVIDENCE_LIMIT")
+          # A full run is thousands of requests over hours: ride out a brief CDN or origin
+          # error instead of failing the whole run on one (it stopped on one 520 on 2026-10-19).
+          args=(generate --out snapshot --evidence-limit "$EVIDENCE_LIMIT" --max-retries 3)
           if [ "$DETAILS" != "true" ]; then args+=(--no-details); fi
           node dist/bin.js "${args[@]}"
       - name: Keep partial work for a resume

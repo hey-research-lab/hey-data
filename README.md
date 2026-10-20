@@ -149,7 +149,7 @@ hey-data generate [options]
 
   --out <dir>             output directory (default ./snapshot)
   --delay-ms <n>          pause between requests, at least 600 (default 1100)
-  --max-retries <n>       retries of a 429/5xx with the server's delay, 0-5 (default 1)
+  --max-retries <n>       retries of a 429, 5xx, network failure or timeout, 0-5 (default 1)
   --evidence-limit <n>    evidence records to fetch, 0 for none (default 500)
   --no-details            listing fields only: no per-project dossier or coverage reads
   --no-coverage           skip per-project coverage reads
@@ -175,7 +175,8 @@ hey-data generate [options]
 HEY's anonymous limit is 120 requests a minute per client. hey-data sends one request every
 `--delay-ms` (1,100 ms by default, about 55 a minute; the CLI refuses less than 600 ms), honours
 `retry-after` on a 429 or 503, retries a retryable answer at most `--max-retries` times with the
-server's delay, never follows a redirect and caps every response body at 8 MB. It sends no key.
+server's delay (a 429; a 5xx, including the 520–524 errors the CDN in front of HEY answers when the
+origin errs; a network failure or a timeout — every request is a GET), never follows a redirect and caps every response body at 8 MB. It sends no key.
 
 ### Resume
 

@@ -91,6 +91,96 @@ describe('politeFetch', () => {
     expect(long.stats.retries).toBe(0);
   });
 
+  it("retries the CDN's origin errors (520–524) like a 502", async () => {
+    const clock = fakeClock();
+    const statuses = [520, 522, 524];
+    let calls = 0;
+    const polite = politeFetch({
+      fetchImpl: async () => {
+        const status = statuses[calls];
+        calls += 1;
+        return status ? new Response('<html>origin error</html>', { status }) : ok();
+      },
+      delayMs: 0,
+      maxRetries: 3,
+      sleep: clock.sleep,
+      now: () => clock.now().getTime(),
+    });
+    expect((await polite.fetch('http://localhost/x')).status).toBe(200);
+    expect(calls).toBe(4);
+    expect(polite.stats.retries).toBe(3);
+    expect(clock.waits.filter((ms) => ms === 30_000)).toHaveLength(3);
+  });
+
+  it('returns the last 520 once the retries are spent', async () => {
+    const clock = fakeClock();
+    let calls = 0;
+    const polite = politeFetch({
+      fetchImpl: async () => {
+        calls += 1;
+        return new Response('', { status: 520, headers: { 'retry-after': '60' } });
+      },
+      delayMs: 0,
+      maxRetries: 2,
+      sleep: clock.sleep,
+      now: () => clock.now().getTime(),
+    });
+    expect((await polite.fetch('http://localhost/x')).status).toBe(520);
+    expect(calls).toBe(3);
+    expect(clock.waits).toContain(60_000);
+  });
+
+  it('retries a network failure within the bound, then throws it', async () => {
+    const clock = fakeClock();
+    let calls = 0;
+    const lines: string[] = [];
+    const flaky = politeFetch({
+      fetchImpl: async () => {
+        calls += 1;
+        if (calls === 1) throw new TypeError('fetch failed');
+        return ok();
+      },
+      delayMs: 0,
+      maxRetries: 1,
+      sleep: clock.sleep,
+      now: () => clock.now().getTime(),
+      log: (line) => lines.push(line),
+    });
+    expect((await flaky.fetch('http://localhost/x')).status).toBe(200);
+    expect(calls).toBe(2);
+    expect(lines[0]).toContain('retry 1 of 1');
+
+    const down = politeFetch({
+      fetchImpl: async () => {
+        throw new TypeError('fetch failed');
+      },
+      delayMs: 0,
+      maxRetries: 2,
+      sleep: clock.sleep,
+      now: () => clock.now().getTime(),
+    });
+    await expect(down.fetch('http://localhost/x')).rejects.toThrow('fetch failed');
+    expect(down.stats.retries).toBe(2);
+  });
+
+  it('does not retry an oversized body', async () => {
+    const clock = fakeClock();
+    let calls = 0;
+    const polite = politeFetch({
+      fetchImpl: async () => {
+        calls += 1;
+        return new Response('x'.repeat(2048));
+      },
+      delayMs: 0,
+      maxRetries: 3,
+      maxBodyBytes: 1024,
+      sleep: clock.sleep,
+      now: () => clock.now().getTime(),
+    });
+    await expect(polite.fetch('http://localhost/x')).rejects.toThrow(BodyTooLargeError);
+    expect(calls).toBe(1);
+  });
+
   it('does not retry a 4xx that is not a rate limit', async () => {
     const clock = fakeClock();
     let calls = 0;
