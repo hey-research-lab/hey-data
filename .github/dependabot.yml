@@ -1,0 +1,19 @@
+# Keeps the SHA-pinned Actions current within their major version. For npm, version-update pull requests are off
+# (limit 0): Dependabot opens security-update pull requests only. A person merges every pull request.
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      actions:
+        patterns: ['*']
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 0

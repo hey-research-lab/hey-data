@@ -67,7 +67,7 @@ describe('politeFetch', () => {
       fetchImpl: async () => {
         calls += 1;
         return calls === 1
-          ? new Response('{}', { status: 503, headers: { 'retry-after': '4' } })
+          ? new Response('{}', { status: 503, headers: { 'retry-after': '45' } })
           : ok();
       },
       delayMs: 0,
@@ -76,7 +76,7 @@ describe('politeFetch', () => {
       now: () => clock.now().getTime(),
     });
     expect((await polite.fetch('http://localhost/x')).status).toBe(200);
-    expect(clock.waits).toContain(4000);
+    expect(clock.waits).toContain(45_000);
 
     const long = politeFetch({
       fetchImpl: async () =>
@@ -109,7 +109,29 @@ describe('politeFetch', () => {
     expect((await polite.fetch('http://localhost/x')).status).toBe(200);
     expect(calls).toBe(4);
     expect(polite.stats.retries).toBe(3);
-    expect(clock.waits.filter((ms) => ms === 30_000)).toHaveLength(3);
+    expect(clock.waits.filter((ms) => ms >= 30_000)).toEqual([30_000, 60_000, 120_000]);
+  });
+
+  it('backs off exponentially, waits at least the backoff on a short 5xx retry-after, and caps at 300 s', async () => {
+    const clock = fakeClock();
+    let calls = 0;
+    const polite = politeFetch({
+      fetchImpl: async () => {
+        calls += 1;
+        if (calls === 1) throw new TypeError('fetch failed');
+        if (calls <= 5) return new Response('{}', { status: 503, headers: { 'retry-after': '5' } });
+        return ok();
+      },
+      delayMs: 0,
+      maxRetries: 5,
+      sleep: clock.sleep,
+      now: () => clock.now().getTime(),
+    });
+    expect((await polite.fetch('http://localhost/x')).status).toBe(200);
+    expect(polite.stats.retries).toBe(5);
+    expect(clock.waits.filter((ms) => ms >= 5_000)).toEqual([
+      30_000, 60_000, 120_000, 240_000, 300_000,
+    ]);
   });
 
   it('returns the last 520 once the retries are spent', async () => {

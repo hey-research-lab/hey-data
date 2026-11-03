@@ -174,9 +174,10 @@ hey-data generate [options]
 
 HEY's anonymous limit is 120 requests a minute per client. hey-data sends one request every
 `--delay-ms` (1,100 ms by default, about 55 a minute; the CLI refuses less than 600 ms), honours
-`retry-after` on a 429 or 503, retries a retryable answer at most `--max-retries` times with the
-server's delay (a 429; a 5xx, including the 520–524 errors the CDN in front of HEY answers when the
-origin errs; a network failure or a timeout — every request is a GET), never follows a redirect and caps every response body at 8 MB. It sends no key.
+`retry-after` on a 429 or 503, and retries a retryable answer at most `--max-retries` times (a 429;
+a 5xx, including the 520–524 errors the CDN in front of HEY answers when the origin errs; a network
+failure or a timeout — every request is a GET). A 429 waits what the server asks; a server error or a
+network failure backs off 30 s, 60 s, 120 s, 240 s, then 300 s, or longer when the server asks. It never follows a redirect and caps every response body at 8 MB. It sends no key.
 
 ### Resume
 
@@ -199,14 +200,16 @@ atomically (temporary file, then rename) and `.work` is removed.
 ## GitHub Actions
 
 - `ci.yml` — on push and pull request: leak scan, lint, typecheck, tests (offline), build.
-- `snapshot.yml` — **weekly, and by hand.** Every Monday at 02:00 UTC it builds the full snapshot
+- `snapshot.yml` — **weekly, and by hand.** Every Monday at 02:17 UTC it builds the full snapshot
   (dossiers, coverage, 500 evidence records) and a separate job (the only one with
   `contents: write`) attaches it to a GitHub Release tagged `data-<date>-<run id>`, with
   `LICENSE-DATA`, a `.tar.gz` and `SHA256SUMS` — so a wholesale, citable dataset exists at a
   stable URL under [Releases](https://github.com/hey-research-lab/hey-data/releases). A manual
   run (`workflow_dispatch`) takes the inputs above and attaches a release only with `release` set.
-  A stopped run uploads its `.work` as `hey-data-partial`; pass that run's id as `resume_from_run`
-  to continue it.
+  It runs with `--max-retries 5`; when HEY is still unreachable or rate-limiting after those, it
+  waits 15 minutes and resumes from its own partial work, up to twice. A run that still stops
+  uploads its `.work` as `hey-data-partial` (pass that run's id as `resume_from_run` to continue
+  it), and a scheduled one opens or comments on the issue "Weekly snapshot did not finish".
 
 Snapshots are never committed to this repository.
 

@@ -55,7 +55,7 @@
   },
   "dependencies": {
     "@hey-research-lab/sdk": "^0.2.0",
-    "zod": "^3.24.1"
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
@@ -66,7 +66,7 @@
     "tsup": "^8.5.1",
     "typescript": "^5.7.2",
     "typescript-eslint": "^8.18.0",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.12"
   },
   "pnpm": {
     "overrides": {

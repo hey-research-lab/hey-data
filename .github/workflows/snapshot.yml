@@ -1,12 +1,13 @@
 name: Snapshot
-# Weekly on a schedule (Mondays 02:00 UTC, the full snapshot, attached to a
+# Weekly on a schedule (Mondays 02:17 UTC, the full snapshot, attached to a
 # GitHub Release), and by hand with the inputs below. The snapshot is uploaded
 # as a workflow artifact; with `release` set — always on the schedule — a
 # separate job attaches it to a GitHub Release tagged data-<date>-<run id>.
 # Snapshots are never committed to the repository.
 on:
   schedule:
-    - cron: '0 2 * * 1'
+    # Off the top of the hour, when GitHub's scheduler is least delayed.
+    - cron: '17 2 * * 1'
   workflow_dispatch:
     inputs:
       details:
@@ -39,12 +40,13 @@ jobs:
       # Only to download a stopped run's partial work when resume_from_run is set.
       actions: read
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
         with:
           persist-credentials: false
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
         with:
           node-version: 22
+          package-manager-cache: false
       - run: corepack enable
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
@@ -59,7 +61,7 @@ jobs:
           [[ -z "$RESUME_FROM_RUN" || "$RESUME_FROM_RUN" =~ ^[0-9]{1,20}$ ]] || { echo "resume_from_run must be a run id"; exit 2; }
       - name: Download partial work from the stopped run
         if: inputs.resume_from_run != ''
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: hey-data-partial
           path: snapshot/.work
@@ -71,15 +73,26 @@ jobs:
           # The schedule reads every dossier and coverage; a manual run says.
           DETAILS: ${{ github.event_name == 'schedule' || inputs.details }}
         run: |
-          set -euo pipefail
-          # A full run is thousands of requests over hours: ride out a brief CDN or origin
-          # error instead of failing the whole run on one (it stopped on one 520 on 2026-10-19).
-          args=(generate --out snapshot --evidence-limit "$EVIDENCE_LIMIT" --max-retries 3)
+          set -uo pipefail
+          # A full run is thousands of requests over hours. Each request rides out a CDN or
+          # origin error with exponential backoff (about 12 minutes over 5 retries); if HEY is
+          # still unreachable (exit 6) or still rate-limiting (exit 5), the run waits 15 minutes
+          # and resumes from its own partial work in snapshot/.work, up to twice. It stopped on
+          # one 520 on 2026-10-19 and on two minutes of timeouts and a 503 on 2026-11-02.
+          args=(generate --out snapshot --evidence-limit "$EVIDENCE_LIMIT" --max-retries 5)
           if [ "$DETAILS" != "true" ]; then args+=(--no-details); fi
-          node dist/bin.js "${args[@]}"
+          for attempt in 1 2 3; do
+            node dist/bin.js "${args[@]}"
+            code=$?
+            if [ "$code" -eq 0 ]; then exit 0; fi
+            if [ "$code" -ne 5 ] && [ "$code" -ne 6 ]; then exit "$code"; fi
+            if [ "$attempt" -eq 3 ]; then exit "$code"; fi
+            echo "::warning::HEY did not answer (exit $code); resuming from the partial work in 15 minutes (attempt $((attempt + 1)) of 3)."
+            sleep 900
+          done
       - name: Keep partial work for a resume
         if: failure()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: hey-data-partial
           path: snapshot/.work
@@ -89,7 +102,7 @@ jobs:
       - name: Add the data licence
         run: cp LICENSE-DATA snapshot/LICENSE-DATA
       - name: Upload snapshot
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
           name: hey-data-snapshot-${{ github.run_id }}
           path: |
@@ -109,7 +122,7 @@ jobs:
       # The only job that can write: it creates the release and its tag.
       contents: write
     steps:
-      - uses: actions/download-artifact@v4
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131 # v7.0.0
         with:
           name: hey-data-snapshot-${{ github.run_id }}
           path: snapshot
@@ -143,3 +156,29 @@ jobs:
           gh release create "$tag" --target "$TARGET_SHA" --title "HEY data snapshot ${day}" \
             --notes-file notes.md \
             ./*.ndjson metadata.json LICENSE-DATA "hey-data-${day}.tar.gz" SHA256SUMS
+
+  alert:
+    needs: [snapshot, release]
+    # A scheduled snapshot that did not finish opens (or comments on) one issue, so a missed week is seen.
+    if: failure() && github.event_name == 'schedule'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      issues: write
+    steps:
+      - name: Open or update the failure issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          set -euo pipefail
+          title="Weekly snapshot did not finish"
+          body="The scheduled snapshot run ${RUN_URL} failed, so no release was cut this week. Its partial work is kept for 7 days as the hey-data-partial artifact: run Snapshot by hand with resume_from_run set to ${RUN_ID} and release on."
+          number=$(gh issue list --state open --search "\"$title\" in:title" --json number --jq '.[0].number // empty')
+          if [ -n "$number" ]; then
+            gh issue comment "$number" --body "$body"
+          else
+            gh issue create --title "$title" --body "$body"
+          fi

@@ -4,7 +4,10 @@
  * 1,100 ms by default, about 55 a minute), honours `retry-after` on a 429 or a
  * 503, and retries a retryable answer — a 429, a 5xx from HEY or from the CDN in
  * front of it (520–524), a network failure or a timeout — a bounded number of
- * times with the server's delay. Every request is a GET, so a retry is safe. It
+ * times. A 429 waits what the server asks; a server error or a network failure
+ * backs off exponentially (30 s, 60 s, 120 s, 240 s, then 300 s), or longer when
+ * the server asks for longer, so a restart of a few minutes does not end a run
+ * of hours. Every request is a GET, so a retry is safe. It
  * never follows a redirect and caps every body; an oversized body is not retried.
  */
 import { retryAfterSeconds, type FetchLike } from '@hey-research-lab/sdk';
@@ -20,6 +23,12 @@ export const MAX_RETRIES_CAP = 5;
  */
 const RETRYABLE = new Set([429, 500, 502, 503, 504, 520, 521, 522, 523, 524]);
 const DEFAULT_BACKOFF_SECONDS = { 429: 60, other: 30 } as const;
+const MAX_BACKOFF_SECONDS = 300;
+
+/** The wait before retry `n` (1-based) after a server error or a network failure. */
+export function backoffSeconds(retry: number): number {
+  return Math.min(DEFAULT_BACKOFF_SECONDS.other * 2 ** Math.max(0, retry - 1), MAX_BACKOFF_SECONDS);
+}
 
 export class BaseUrlError extends Error {
   readonly code = 'invalid_base_url';
@@ -160,8 +169,8 @@ export function politeFetch(options: PoliteFetchOptions): {
       } catch (error) {
         // A network failure or a timeout is retried like a 5xx; an oversized body is not.
         if (error instanceof BodyTooLargeError || retries >= maxRetries) throw error;
-        const seconds = DEFAULT_BACKOFF_SECONDS.other;
         retries += 1;
+        const seconds = backoffSeconds(retries);
         stats.retries += 1;
         options.log?.(
           `${error instanceof Error ? error.message : 'The request failed.'} Waiting ${seconds}s, then retrying (retry ${retries} of ${maxRetries}).`,
@@ -173,9 +182,12 @@ export function politeFetch(options: PoliteFetchOptions): {
       const { response, body } = result;
       if (body === undefined) {
         const told = retryAfterSeconds(response.headers.get('retry-after'));
+        // A 429 is the rate limit speaking: wait what it asks. A server error is the origin in
+        // trouble: wait at least the backoff, longer when it asks for longer.
         const seconds =
-          told ??
-          (response.status === 429 ? DEFAULT_BACKOFF_SECONDS[429] : DEFAULT_BACKOFF_SECONDS.other);
+          response.status === 429
+            ? (told ?? DEFAULT_BACKOFF_SECONDS[429])
+            : Math.max(told ?? 0, backoffSeconds(retries + 1));
         if (seconds <= maxRetryAfter) {
           retries += 1;
           stats.retries += 1;

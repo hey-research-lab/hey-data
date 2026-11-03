@@ -6,6 +6,14 @@ All notable changes to this project are documented here. The format follows
 
 ## Unreleased
 
+- The weekly snapshot failed on 2026-10-19 (one 520) and 2026-11-02 (two minutes of timeouts and a 503, three
+  minutes into the dossier reads). A server error, network failure or timeout now backs off exponentially
+  (30 s doubling to 300 s; a short `retry-after` on a 5xx waits at least the backoff); the workflow passes
+  `--max-retries 5`, resumes from its own partial work twice after 15 minutes when HEY is still
+  unreachable, runs at 02:17 instead of on the hour, and a scheduled run that still fails opens or
+  comments on one issue.
+- Security: `zod` moves from `^3.24.1` to `^4.6.7` (GHSA-mrhx-c7xc-m3w5; no 3.x release is fixed).
+- Development: vitest 4.1.12; CI actions pinned to commit SHAs, kept current by Dependabot.
 - A 520–524 answer (what the CDN in front of HEY returns when the origin errs or times out), a network failure and a timeout are now retried like a 502, within `--max-retries`; an oversized body still is not. The weekly Snapshot workflow passes `--max-retries 3`. Its first scheduled run (2026-10-19) stopped after 26 minutes on a single 520.
 - The Snapshot workflow runs weekly (Mondays 02:00 UTC) and attaches the full snapshot to a GitHub Release, so a wholesale dataset exists at a stable URL without a manual run; `workflow_dispatch` stays for a run by hand (2026-10-14).
 - README: HEY's own daily snapshots at heyresearch.xyz/data, under the same licence and allowlist, and how they differ from this generator's files.
