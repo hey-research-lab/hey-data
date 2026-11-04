@@ -99,6 +99,15 @@ jobs:
           include-hidden-files: true
           if-no-files-found: ignore
           retention-days: 7
+      - name: Copy HEY's hooks file
+        # Every Uniswap v4 hook HEY's hooks page shows, from HEY's daily /data snapshot (checksum and allowlist
+        # checked). A snapshot that carries no hooks file yet (exit 4) leaves this week without one, with a warning.
+        run: |
+          set -uo pipefail
+          node dist/bin.js hooks --out snapshot
+          code=$?
+          if [ "$code" -eq 4 ]; then echo "::warning::HEY's newest snapshot has no hooks file; this release carries none."; exit 0; fi
+          exit "$code"
       - name: Add the data licence
         run: cp LICENSE-DATA snapshot/LICENSE-DATA
       - name: Upload snapshot
@@ -108,6 +117,7 @@ jobs:
           path: |
             snapshot/*.ndjson
             snapshot/metadata.json
+            snapshot/hooks.metadata.json
             snapshot/LICENSE-DATA
           if-no-files-found: error
           retention-days: 30
@@ -139,13 +149,18 @@ jobs:
           [[ "$generated" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}T ]] || { echo "metadata.json has no generatedAt"; exit 1; }
           day=${generated:0:10}
           tag="data-${day}-${RUN_ID}"
-          tar -czf "hey-data-${day}.tar.gz" ./*.ndjson metadata.json LICENSE-DATA
-          sha256sum ./*.ndjson metadata.json LICENSE-DATA "hey-data-${day}.tar.gz" > SHA256SUMS
+          extra=()
+          [ -f hooks.metadata.json ] && extra+=(hooks.metadata.json)
+          tar -czf "hey-data-${day}.tar.gz" ./*.ndjson metadata.json "${extra[@]}" LICENSE-DATA
+          sha256sum ./*.ndjson metadata.json "${extra[@]}" LICENSE-DATA "hey-data-${day}.tar.gz" > SHA256SUMS
           {
             echo "HEY data snapshot generated at ${generated}."
             echo
             echo "Record counts:"
             jq -r '.recordCount | to_entries[] | "- \(.key): \(.value)"' metadata.json
+            if [ -f hooks.metadata.json ]; then
+              jq -r '"- hooks.ndjson: \(.recordCount) (\(.tied) tied to a project, \(.notTied) not tied), copied from HEY'"'"'s snapshot of \(.day)"' hooks.metadata.json
+            fi
             echo
             echo "Data licence: CC BY 4.0. Attribution: HEY Research Lab, https://heyresearch.xyz"
             echo
@@ -155,7 +170,7 @@ jobs:
           } > notes.md
           gh release create "$tag" --target "$TARGET_SHA" --title "HEY data snapshot ${day}" \
             --notes-file notes.md \
-            ./*.ndjson metadata.json LICENSE-DATA "hey-data-${day}.tar.gz" SHA256SUMS
+            ./*.ndjson metadata.json "${extra[@]}" LICENSE-DATA "hey-data-${day}.tar.gz" SHA256SUMS
 
   alert:
     needs: [snapshot, release]

@@ -6,6 +6,10 @@ All notable changes to this project are documented here. The format follows
 
 ## Unreleased
 
+- `hey-data hooks` copies HEY's daily hooks file (every Uniswap v4 hook HEY's hooks page shows: the project HEY ties
+  it to, the basis and the receipt, or not tied) into `hooks.ndjson` with `hooks.metadata.json`, checked against the
+  day's `SHA256SUMS` and the new `HOOK_RECORD` allowlist. The weekly Snapshot workflow runs it and attaches both to
+  the release; a HEY snapshot without the file leaves that week without one, with a warning (2026-11-05).
 - The weekly snapshot failed on 2026-10-19 (one 520) and 2026-11-02 (two minutes of timeouts and a 503, three
   minutes into the dossier reads). A server error, network failure or timeout now backs off exponentially
   (30 s doubling to 300 s; a short `retry-after` on a 5xx waits at least the backoff); the workflow passes

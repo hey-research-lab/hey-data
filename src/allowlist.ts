@@ -451,9 +451,38 @@ export const EVIDENCE_RECORD: Spec = {
   sources: [{ sourceType: 'string', sourceUrl: 'url', observedAt: 'datetime' }],
 };
 
+/**
+ * `hooks.ndjson`: one Uniswap v4 hook on Robinhood Chain, copied from HEY's daily `/data` snapshot (HEY's
+ * `HOOK_RECORD`, kept in step by hand). The hooks HEY ties to a published project, with the basis, the tie in words
+ * and the receipt, and the hooks Uniswap's hooklist lists that HEY ties to no project. Never the account that created
+ * a hook, and no pool count.
+ */
+export const HOOK_RECORD: Spec = {
+  evidenceId: 'string',
+  chainId: 'chainId',
+  address: 'address',
+  explorerUrl: 'url',
+  receiptUrl: 'url',
+  callbacks: 'string',
+  tied: 'boolean',
+  project: PROJECT_REF,
+  basis: 'string',
+  basisLabel: 'string',
+  tie: 'text',
+  factory: { address: 'address', explorerUrl: 'url' },
+  deploymentEvidenceId: 'string',
+  reviewedAt: 'datetime',
+  hooklist: { name: 'text', url: 'url' },
+  deployedAt: 'datetime',
+  deployedBlock: 'integer',
+  firstPoolBlock: 'integer',
+  firstPoolAt: 'datetime',
+};
+
 export const OUTPUT_SPECS = {
   'projects.ndjson': PROJECT_RECORD,
   'ships.ndjson': SHIP_RECORD,
   'changes.ndjson': CHANGE_RECORD,
   'evidence.ndjson': EVIDENCE_RECORD,
+  'hooks.ndjson': HOOK_RECORD,
 } as const;

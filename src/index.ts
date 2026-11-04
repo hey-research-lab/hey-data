@@ -10,6 +10,7 @@ export {
 export {
   FORBIDDEN_FIELD,
   OUTPUT_SPECS,
+  HOOK_RECORD,
   LISTING_INPUT,
   DOSSIER_INPUT,
   COVERAGE_INPUT,
@@ -24,5 +25,13 @@ export {
   type Spec,
 } from './allowlist.js';
 export { politeFetch, resolveBaseUrl, type RequestStats } from './http.js';
+export {
+  copyHooks,
+  HooksChecksumError,
+  HooksFetchError,
+  MAX_HOOKS_BYTES,
+  type CopyHooksOptions,
+  type HooksMetadata,
+} from './hooks.js';
 export { CHAIN_ID, CAIP2, CHAIN_NAME, UnsupportedChainError, assertChainId } from './chain.js';
 export type { Metadata } from './metadata.js';

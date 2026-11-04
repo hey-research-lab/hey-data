@@ -1,6 +1,8 @@
 /**
  * hey-data generate — writes projects.ndjson, ships.ndjson, changes.ndjson,
  * evidence.ndjson and metadata.json from HEY's public API.
+ * hey-data hooks — copies HEY's daily hooks file as hooks.ndjson and
+ * hooks.metadata.json, checksum and allowlist checked.
  *
  * Exit codes (ecosystem conventions): 0 done · 1 a totals check or the schema
  * failed · 2 usage · 3 HEY refused · 4 not found · 5 rate limited · 6 network
@@ -26,12 +28,14 @@ import {
   MAX_RETRIES_CAP,
   MIN_CLI_DELAY_MS,
 } from './http.js';
+import { HooksChecksumError, HooksFetchError, copyHooks } from './hooks.js';
 import { WorkStateError } from './work.js';
 
 const HELP = `hey-data ${GENERATOR_VERSION} — research snapshots of HEY's public builder records (Robinhood Chain 4663)
 
 Usage:
   hey-data generate [options]
+  hey-data hooks [--out <dir>] [--quiet]
 
 Options:
   --out <dir>             output directory (default ./snapshot)
@@ -47,6 +51,9 @@ Options:
   --quiet                 no progress lines on stderr
   -h, --help              this help
   -v, --version           the version
+
+\`hooks\` copies HEY's newest daily hooks file (/data/latest) into <dir>/hooks.ndjson with
+hooks.metadata.json, after checking its SHA256SUMS line and every line against the allowlist.
 
 A stopped run resumes when the same command is run again.
 Exit codes: 0 done, 1 check failed, 2 usage, 3 refused, 4 not found, 5 rate limited, 6 network/5xx.`;
@@ -67,6 +74,13 @@ function exitCodeFor(error: unknown): number {
   if (error instanceof TotalsMismatchError || error instanceof SchemaDriftError) return 1;
   if (error instanceof ForbiddenFieldError || error instanceof WorkStateError) return 1;
   if (error instanceof BodyTooLargeError) return 6;
+  if (error instanceof HooksChecksumError) return 1;
+  if (error instanceof HooksFetchError) {
+    if (error.status === 404) return 4;
+    if (error.status === 429) return 5;
+    if (error.status !== undefined && error.status < 500) return 3;
+    return 6;
+  }
   if (error instanceof HeyApiError) {
     if (error.code === 'not_found') return 4;
     if (error.code === 'rate_limited' || error.code === 'quota') return 5;
@@ -131,11 +145,24 @@ export async function main(argv: string[]): Promise<number> {
     process.stdout.write(`${HELP}\n`);
     return positionals.length === 0 && !values.help ? 2 : 0;
   }
-  if (positionals[0] !== 'generate' || positionals.length > 1) {
+  if (!['generate', 'hooks'].includes(positionals[0] ?? '') || positionals.length > 1) {
     process.stderr.write(`Unknown command: ${positionals.join(' ')}\n\n${HELP}\n`);
     return 2;
   }
   const log = values.quiet ? () => undefined : (line: string) => process.stderr.write(`${line}\n`);
+  if (positionals[0] === 'hooks') {
+    try {
+      await copyHooks({
+        outDir: values.out ?? 'snapshot',
+        baseUrl: process.env['HEY_BASE_URL'] || undefined,
+        log,
+      });
+      return 0;
+    } catch (error) {
+      process.stderr.write(`hey-data: ${describe(error)}\n`);
+      return exitCodeFor(error);
+    }
+  }
   try {
     const result = await generate({
       outDir: values.out ?? 'snapshot',

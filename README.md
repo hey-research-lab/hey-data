@@ -65,6 +65,7 @@ The test suite runs offline over recorded API answers: `pnpm test`.
 | `ships.ndjson`    | ship (release, code week, product ship)                           | `GET /api/ships?sort=detected`                                                                               |
 | `changes.ndjson`  | change-ledger event, at its highest revision, retractions applied | `GET /api/changes?after=` from the start of the ledger                                                       |
 | `evidence.ndjson` | evidence record referenced by a ship or change (bounded)          | `GET /api/evidence/{id}`                                                                                     |
+| `hooks.ndjson`    | Uniswap v4 hook on Robinhood Chain that HEY's hooks page shows    | `hey-data hooks`: HEY's daily `/data/<day>/hooks.ndjson.gz`, checked against its `SHA256SUMS` line           |
 | `metadata.json`   | the snapshot                                                      | —                                                                                                            |
 
 `builders.ndjson` is **not produced**: HEY's only builder listing is the Builder Radar, a ranking
@@ -142,10 +143,27 @@ holds a candidate source and nothing yet ties it to the project) or `PARTIAL` un
 `evidence` (referenced, eligible, limit, truncated), `license` (`CC-BY-4.0`), `licenseUrl`,
 `attribution`, `codeLicense`, `limitations[]`, `disclaimer` and `nonAffiliation`.
 
+## Hooks
+
+`hey-data hooks --out snapshot` copies HEY's newest daily hooks file into `snapshot/hooks.ndjson` and writes
+`snapshot/hooks.metadata.json` (the source day and file, its checksum, the counts and the citation). It reads three
+files: `/data/latest/metadata.json` for the day, then that day's `SHA256SUMS` and `hooks.ndjson.gz`, which never
+change. A checksum that does not match, a key outside `HOOK_RECORD`, or a chain other than 4663 stops it. The public
+API answers at most 100 hooks a call and counts factory instances, so the daily file is the complete record.
+
+One line per hook: `evidenceId` (`v4hook:4663:<address>`), `chainId`, `address`, `explorerUrl`, `receiptUrl`,
+`callbacks` (the PoolManager callbacks the address declares, comma-separated), `tied`; for a hook HEY ties to a
+published project `project {slug, name, url}`, `basis` (`chain`, `project`, `linked`, `factory`, `review`),
+`basisLabel`, `tie`, `factory {address, explorerUrl}` for a factory instance, `deploymentEvidenceId` and `reviewedAt`;
+for any hook `hooklist {name, url}` when Uniswap's hooklist lists it, `deployedAt`, `deployedBlock`, `firstPoolBlock`,
+`firstPoolAt`. The account that created a hook and pool counts are never in the file. How HEY ties a hook:
+[heyresearch.xyz/integrations/uniswap/hooks#method](https://heyresearch.xyz/integrations/uniswap/hooks#method).
+
 ## Usage
 
 ```
 hey-data generate [options]
+hey-data hooks [--out <dir>] [--quiet]
 
   --out <dir>             output directory (default ./snapshot)
   --delay-ms <n>          pause between requests, at least 600 (default 1100)
@@ -201,7 +219,7 @@ atomically (temporary file, then rename) and `.work` is removed.
 
 - `ci.yml` — on push and pull request: leak scan, lint, typecheck, tests (offline), build.
 - `snapshot.yml` — **weekly, and by hand.** Every Monday at 02:17 UTC it builds the full snapshot
-  (dossiers, coverage, 500 evidence records) and a separate job (the only one with
+  (dossiers, coverage, 500 evidence records), copies HEY's daily hooks file (`hey-data hooks`), and a separate job (the only one with
   `contents: write`) attaches it to a GitHub Release tagged `data-<date>-<run id>`, with
   `LICENSE-DATA`, a `.tar.gz` and `SHA256SUMS` — so a wholesale, citable dataset exists at a
   stable URL under [Releases](https://github.com/hey-research-lab/hey-data/releases). A manual
@@ -217,8 +235,8 @@ Snapshots are never committed to this repository.
 
 HEY also publishes a daily snapshot of the same records, under the same licence and allowlist, at
 [heyresearch.xyz/data](https://heyresearch.xyz/data): `projects.ndjson.gz`, `ships.ndjson.gz`, that
-UTC day's `changes.ndjson.gz` (one day of the public change ledger in `seq` order), uncapped
-`projects.csv` and `ships.csv`, and a `metadata.json` naming the rule versions and the citation
+UTC day's `changes.ndjson.gz` (one day of the public change ledger in `seq` order), `hooks.ndjson.gz`
+(every Uniswap v4 hook its hooks page shows), uncapped `projects.csv`, `ships.csv` and `hooks.csv`, and a `metadata.json` naming the rule versions and the citation
 ("HEY Research Lab, <snapshot URL>, retrieved <date>"). `/data/latest/<file>` is always the newest
 day; thirty dailies and the first of every month are kept. The daily files carry no per-project
 coverage and no per-project scoring fields; this generator reads both. One allowlist decides what
