@@ -6,6 +6,9 @@ All notable changes to this project are documented here. The format follows
 
 ## Unreleased
 
+- `hey-data huggingface` and the weekly `Hugging Face copy` workflow keep
+  huggingface.co/datasets/heyresearch/robinhood-chain-builders on HEY's newest daily CSVs, checksum and column
+  checked, with a dataset card naming the day and the counts. Needs the `HF_TOKEN` secret (2026-11-05).
 - `hey-data hooks` copies HEY's daily hooks file (every Uniswap v4 hook HEY's hooks page shows: the project HEY ties
   it to, the basis and the receipt, or not tied) into `hooks.ndjson` with `hooks.metadata.json`, checked against the
   day's `SHA256SUMS` and the new `HOOK_RECORD` allowlist. The weekly Snapshot workflow runs it and attaches both to

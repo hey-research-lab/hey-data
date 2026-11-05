@@ -59,7 +59,8 @@ export type HooksMetadata = {
   citation: string;
 };
 
-async function get(
+/** One GET of a file HEY publishes: no redirects, a size cap, three tries on an outage, a missing file at once. */
+export async function getHeyFile(
   url: string,
   options: Required<Pick<CopyHooksOptions, 'fetchImpl' | 'sleep'>>,
 ): Promise<Uint8Array> {
@@ -108,7 +109,7 @@ export async function copyHooks(
   };
   const log = options.log ?? (() => undefined);
 
-  const latest = JSON.parse(text(await get(`${base}/data/latest/metadata.json`, deps))) as {
+  const latest = JSON.parse(text(await getHeyFile(`${base}/data/latest/metadata.json`, deps))) as {
     day?: unknown;
     chainId?: unknown;
   };
@@ -117,7 +118,7 @@ export async function copyHooks(
   assertChainId(latest.chainId);
   const day = latest.day;
 
-  const sums = text(await get(`${base}/data/${day}/SHA256SUMS`, deps));
+  const sums = text(await getHeyFile(`${base}/data/${day}/SHA256SUMS`, deps));
   const expected = sums
     .split('\n')
     .map((line) => line.trim().split(/\s+/))
@@ -125,7 +126,7 @@ export async function copyHooks(
   if (!expected || !/^[0-9a-f]{64}$/.test(expected))
     throw new HooksFetchError(`HEY's snapshot of ${day} lists no hooks file.`, 404);
 
-  const gz = await get(`${base}/data/${day}/hooks.ndjson.gz`, deps);
+  const gz = await getHeyFile(`${base}/data/${day}/hooks.ndjson.gz`, deps);
   const actual = createHash('sha256').update(gz).digest('hex');
   if (actual !== expected)
     throw new HooksChecksumError(

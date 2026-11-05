@@ -1,0 +1,52 @@
+name: Hugging Face copy
+# Weekly (Mondays 03:47 UTC, after the snapshot) and by hand: copies HEY's newest daily
+# projects.csv, ships.csv, hooks.csv and metadata.json (checksum and column checked by
+# `hey-data huggingface`) to huggingface.co/datasets/heyresearch/robinhood-chain-builders.
+# Needs the repository secret HF_TOKEN: a Hugging Face fine-grained token with write access
+# to that one dataset. Without it the run says so and does nothing.
+on:
+  schedule:
+    - cron: '47 3 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: huggingface
+  cancel-in-progress: false
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      HF_REPO: heyresearch/robinhood-chain-builders
+    steps:
+      - name: Check the token is set
+        id: token
+        run: |
+          if [ -z "$HF_TOKEN" ]; then echo "::warning::HF_TOKEN is not set; nothing is copied."; echo "ok=false" >> "$GITHUB_OUTPUT"; else echo "ok=true" >> "$GITHUB_OUTPUT"; fi
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+        if: steps.token.outputs.ok == 'true'
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        if: steps.token.outputs.ok == 'true'
+        with:
+          node-version: 22
+          package-manager-cache: false
+      - name: Build
+        if: steps.token.outputs.ok == 'true'
+        run: |
+          corepack enable
+          pnpm install --frozen-lockfile
+          pnpm build
+      - name: Prepare the copy
+        if: steps.token.outputs.ok == 'true'
+        run: node dist/bin.js huggingface --out hf
+      - name: Upload to Hugging Face
+        if: steps.token.outputs.ok == 'true'
+        run: |
+          set -euo pipefail
+          python3 -m pip install --quiet 'huggingface_hub==0.26.2'
+          day=$(jq -r '.day' hf/metadata.json)
+          huggingface-cli upload "$HF_REPO" hf . --repo-type dataset --commit-message "Snapshot of ${day} from heyresearch.xyz/data"

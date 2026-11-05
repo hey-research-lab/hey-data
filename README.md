@@ -159,11 +159,21 @@ for any hook `hooklist {name, url}` when Uniswap's hooklist lists it, `deployedA
 `firstPoolAt`. The account that created a hook and pool counts are never in the file. How HEY ties a hook:
 [heyresearch.xyz/integrations/uniswap/hooks#method](https://heyresearch.xyz/integrations/uniswap/hooks#method).
 
+## Hugging Face copy
+
+`hey-data huggingface --out hf` writes HEY's newest daily `projects.csv`, `ships.csv`, `hooks.csv` and `metadata.json`
+(each checked against the day's `SHA256SUMS`, every CSV column against the allowlist) with a dataset card. The
+`Hugging Face copy` workflow runs it every Monday at 03:47 UTC and uploads the result to
+[huggingface.co/datasets/heyresearch/robinhood-chain-builders](https://huggingface.co/datasets/heyresearch/robinhood-chain-builders).
+It needs the repository secret `HF_TOKEN` (a fine-grained token with write access to that dataset only); without it
+the run warns and copies nothing.
+
 ## Usage
 
 ```
 hey-data generate [options]
 hey-data hooks [--out <dir>] [--quiet]
+hey-data huggingface [--out <dir>] [--quiet]
 
   --out <dir>             output directory (default ./snapshot)
   --delay-ms <n>          pause between requests, at least 600 (default 1100)

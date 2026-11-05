@@ -29,6 +29,7 @@ import {
   MIN_CLI_DELAY_MS,
 } from './http.js';
 import { HooksChecksumError, HooksFetchError, copyHooks } from './hooks.js';
+import { prepareHuggingFaceMirror } from './huggingface.js';
 import { WorkStateError } from './work.js';
 
 const HELP = `hey-data ${GENERATOR_VERSION} — research snapshots of HEY's public builder records (Robinhood Chain 4663)
@@ -36,6 +37,7 @@ const HELP = `hey-data ${GENERATOR_VERSION} — research snapshots of HEY's publ
 Usage:
   hey-data generate [options]
   hey-data hooks [--out <dir>] [--quiet]
+  hey-data huggingface [--out <dir>] [--quiet]
 
 Options:
   --out <dir>             output directory (default ./snapshot)
@@ -54,6 +56,8 @@ Options:
 
 \`hooks\` copies HEY's newest daily hooks file (/data/latest) into <dir>/hooks.ndjson with
 hooks.metadata.json, after checking its SHA256SUMS line and every line against the allowlist.
+\`huggingface\` writes HEY's newest daily projects.csv, ships.csv, hooks.csv and metadata.json, checksum
+and column checked, with a dataset card, for the Hugging Face copy (default <dir>: hf).
 
 A stopped run resumes when the same command is run again.
 Exit codes: 0 done, 1 check failed, 2 usage, 3 refused, 4 not found, 5 rate limited, 6 network/5xx.`;
@@ -145,11 +149,27 @@ export async function main(argv: string[]): Promise<number> {
     process.stdout.write(`${HELP}\n`);
     return positionals.length === 0 && !values.help ? 2 : 0;
   }
-  if (!['generate', 'hooks'].includes(positionals[0] ?? '') || positionals.length > 1) {
+  if (
+    !['generate', 'hooks', 'huggingface'].includes(positionals[0] ?? '') ||
+    positionals.length > 1
+  ) {
     process.stderr.write(`Unknown command: ${positionals.join(' ')}\n\n${HELP}\n`);
     return 2;
   }
   const log = values.quiet ? () => undefined : (line: string) => process.stderr.write(`${line}\n`);
+  if (positionals[0] === 'huggingface') {
+    try {
+      await prepareHuggingFaceMirror({
+        outDir: values.out ?? 'hf',
+        baseUrl: process.env['HEY_BASE_URL'] || undefined,
+        log,
+      });
+      return 0;
+    } catch (error) {
+      process.stderr.write(`hey-data: ${describe(error)}\n`);
+      return exitCodeFor(error);
+    }
+  }
   if (positionals[0] === 'hooks') {
     try {
       await copyHooks({
