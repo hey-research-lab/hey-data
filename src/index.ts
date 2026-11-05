@@ -33,5 +33,12 @@ export {
   type CopyHooksOptions,
   type HooksMetadata,
 } from './hooks.js';
+export {
+  prepareHuggingFaceMirror,
+  checkCsvColumns,
+  datasetCard,
+  HUGGING_FACE_FILES,
+  type HuggingFaceMirrorOptions,
+} from './huggingface.js';
 export { CHAIN_ID, CAIP2, CHAIN_NAME, UnsupportedChainError, assertChainId } from './chain.js';
 export type { Metadata } from './metadata.js';
