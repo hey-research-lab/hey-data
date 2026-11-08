@@ -4,10 +4,10 @@ A resumable generator that turns HEY Research Lab's public API into research-fri
 snapshots of HEY's own builder records on Robinhood Chain: projects, ships, changes and evidence.
 
 [![CI](https://github.com/hey-research-lab/hey-data/actions/workflows/ci.yml/badge.svg)](https://github.com/hey-research-lab/hey-data/actions/workflows/ci.yml)
-![Code licence: MIT](https://img.shields.io/badge/code-MIT-blue)
-![Data licence: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-blue)
-![Node >= 22](https://img.shields.io/badge/node-%3E%3D22-informational)
-![Robinhood Chain 4663](https://img.shields.io/badge/Robinhood%20Chain-4663-informational)
+![Code licence: MIT](assets/badges/code-mit.svg)
+![Data licence: CC BY 4.0](assets/badges/data-cc-by-4-0.svg)
+![Node >= 22](assets/badges/node-22.svg)
+![Robinhood Chain 4663](assets/badges/robinhood-chain-4663.svg)
 
 ## Why it exists
 
