@@ -24,7 +24,16 @@ export type Leaf =
   | 'primitive'
   | 'primitive|null';
 
-export type Spec = { readonly [key: string]: Leaf | Spec | readonly [Spec] };
+/**
+ * `[spec]` is a list of records. `[spec, 'or-null']` is a list HEY may send as `null` instead:
+ * its unknown, which is never `[]` (HEY's machine rule 4). A `null` there is kept as `null`; any
+ * other non-list is still schema drift.
+ */
+export type ListRule = readonly [Spec] | readonly [Spec, 'or-null'];
+
+export type Spec = { readonly [key: string]: Leaf | Spec | ListRule };
+
+const nullableList = (rule: ListRule): boolean => rule.length === 2 && rule[1] === 'or-null';
 
 /**
  * A field name that can never appear in any dataset, at any depth. Market
@@ -116,8 +125,14 @@ export function pick(source: unknown, spec: Spec, path = '$'): Record<string, un
     if (typeof rule === 'string') {
       out[key] = readLeaf(rule as Leaf, value, at);
     } else if (Array.isArray(rule)) {
-      if (!Array.isArray(value)) throw new SchemaDriftError(at, 'array', typeName(value));
-      const [inner] = rule as readonly [Spec];
+      const list = rule as ListRule;
+      if (value === null && nullableList(list)) {
+        out[key] = null;
+        continue;
+      }
+      if (!Array.isArray(value))
+        throw new SchemaDriftError(at, nullableList(list) ? 'array|null' : 'array', typeName(value));
+      const [inner] = list;
       out[key] = value.flatMap((item, i) => pick(item, inner, `${at}[${i}]`) ?? []);
     } else {
       const nested = pick(value, rule as Spec, at);
@@ -141,8 +156,10 @@ export function assertConforms(record: unknown, spec: Spec, path = '$'): void {
     if (typeof rule === 'string') {
       if (isRecord(value) || Array.isArray(value)) throw new ForbiddenFieldError(at);
     } else if (Array.isArray(rule)) {
+      const list = rule as ListRule;
+      if (value === null && nullableList(list)) continue;
       if (!Array.isArray(value)) throw new ForbiddenFieldError(at);
-      const [inner] = rule as readonly [Spec];
+      const [inner] = list;
       value.forEach((item, i) => assertConforms(item, inner, `${at}[${i}]`));
     } else {
       assertConforms(value, rule as Spec, at);
@@ -155,7 +172,7 @@ export function specPaths(spec: Spec, prefix = ''): string[] {
   return Object.entries(spec).flatMap(([key, rule]) => {
     const here = prefix ? `${prefix}.${key}` : key;
     if (typeof rule === 'string') return [here];
-    if (Array.isArray(rule)) return [here, ...specPaths((rule as readonly [Spec])[0], `${here}[]`)];
+    if (Array.isArray(rule)) return [here, ...specPaths((rule as ListRule)[0], `${here}[]`)];
     return [here, ...specPaths(rule as Spec, here)];
   });
 }
@@ -190,6 +207,8 @@ export const LISTING_INPUT: Spec = {
 export const DOSSIER_INPUT: Spec = {
   narratives: [{ slug: 'string', name: 'text', isPrimary: 'boolean' }],
   firstRecordedByHeyAt: 'datetime',
+  // `null` when HEY does not read the project's building: HEY cannot say none shipped, so it
+  // sends null with `shipsNotMeasured` rather than `[]`.
   ships: [
     {
       evidenceId: 'string',
@@ -199,7 +218,9 @@ export const DOSSIER_INPUT: Spec = {
       precision: 'string',
       verification: 'string',
     },
+    'or-null',
   ],
+  shipsNotMeasured: { reason: 'string', text: 'text' },
   score: { scoringVersion: 'string', calculatedAt: 'datetime' },
 };
 
@@ -259,6 +280,7 @@ export const PROJECT_RECORD: Spec = {
     precision: 'string',
     verification: 'string',
   },
+  latestShipNotMeasured: { reason: 'string', text: 'text' },
   scoringVersion: 'string',
   scoredAt: 'datetime',
   coverage: COVERAGE_INPUT['dimensions'] as Spec,

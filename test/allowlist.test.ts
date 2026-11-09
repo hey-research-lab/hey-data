@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   CHANGE_RECORD,
+  DOSSIER_INPUT,
   FORBIDDEN_FIELD,
   ForbiddenFieldError,
   INCLUDED_CHANGE_TYPES,
@@ -93,6 +94,24 @@ describe('allowlists', () => {
       id: 'x',
       occurredAt: null,
     });
+  });
+
+  it('keeps a null ships list with its reason, never as [], and still refuses any other non-list', () => {
+    // Seen live on 2026-11-09 (0swap): HEY sends `ships: null` with `shipsNotMeasured` when it does
+    // not read a project's building, because unknown is never an empty list.
+    const notMeasured = { reason: 'activity_not_measured', text: 'Not measured.' };
+    expect(pick({ ships: null, shipsNotMeasured: notMeasured }, DOSSIER_INPUT)).toEqual({
+      ships: null,
+      shipsNotMeasured: notMeasured,
+    });
+    expect(() => pick({ ships: 'none' }, DOSSIER_INPUT)).toThrow(SchemaDriftError);
+    expect(() => pick({ ships: {} }, DOSSIER_INPUT)).toThrow(SchemaDriftError);
+    // A list the spec does not mark nullable still refuses null.
+    expect(() => pick({ narratives: null }, DOSSIER_INPUT)).toThrow(SchemaDriftError);
+    expect(() =>
+      assertConforms({ slug: 'a', latestShipNotMeasured: notMeasured }, PROJECT_RECORD),
+    ).not.toThrow();
+    expect(() => assertConforms({ slug: 'a', latestShip: null }, PROJECT_RECORD)).toThrow();
   });
 
   it('rejects any chain but Robinhood Chain 4663 with unsupported_chain', () => {

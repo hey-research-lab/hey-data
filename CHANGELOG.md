@@ -6,6 +6,11 @@ All notable changes to this project are documented here. The format follows
 
 ## Unreleased
 
+- The weekly snapshot stopped on 2026-11-09: HEY's API now sends a project's `ships` as `null`, with
+  `shipsNotMeasured {reason, text}`, when it does not read the project's building (unknown is never `[]`), and
+  the allowlist expected a list. The dossier spec now accepts `null` for that list only (`[spec, 'or-null']`);
+  any other non-list is still schema drift. Such a project has no `latestShip` and carries
+  `latestShipNotMeasured {reason, text}` instead (additive; `schemaVersion` stays 1).
 - `hey-data huggingface` and the weekly `Hugging Face copy` workflow keep
   huggingface.co/datasets/heyresearch/robinhood-chain-builders on HEY's newest daily CSVs, checksum and column
   checked, with a dataset card naming the day and the counts. Needs the `HF_TOKEN` secret (2026-11-05).

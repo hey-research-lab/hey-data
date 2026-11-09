@@ -49,7 +49,7 @@ head -n 1 snapshot/projects.ndjson
 ```
 
 The full snapshot reads each project's dossier and coverage too (about two requests per project;
-roughly three and a half hours for ~5,000 projects). Stop it at any time; the same command resumes.
+roughly three and a half hours for ~5,400 projects). Stop it at any time; the same command resumes.
 
 ```sh
 pnpm generate --out snapshot
@@ -85,7 +85,9 @@ field. Field names and state words are the API's own.
   `narratives[]`, `token {chainId, contractAddress}`, `tokenVerification {status, reason}`,
   `websiteUrl`, `officialX`, `logoUrl`, `hasBuilderSource`, `firstRecordedByHeyAt`,
   `latestShip {evidenceId, eventType, publishedAt, detectedAt, precision, verification}` (the newest
-  meaningful ship HEY lists), `scoringVersion`, `scoredAt`, `coverage {<dimension>: {state,
+  meaningful ship HEY lists; absent when HEY sends no ship list), `latestShipNotMeasured {reason, text}`
+  (only when HEY sends `ships: null` because it does not read the project's building: the newest ship is
+  unknown, not "none"), `scoringVersion`, `scoredAt`, `coverage {<dimension>: {state,
 stateDetail, reason, cause, since, asOf}}`, `coverageComputedAt`, and `detailRead` (`read`, `dossier_only`, `not_found` when
   the project was unpublished between the listing and its detail read, or `skipped` with
   `--no-details`).

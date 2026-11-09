@@ -728,6 +728,10 @@ function buildProjects(run: Run): Record<string, unknown>[] {
       record['firstRecordedByHeyAt'] = dossier['firstRecordedByHeyAt'];
       const ships = dossier['ships'];
       if (Array.isArray(ships) && ships.length > 0) record['latestShip'] = ships[0];
+      // HEY sends `ships: null` with a reason when it does not read the project's building:
+      // the newest ship is unknown, never "none", so the record carries the reason instead.
+      const notMeasured = dossier['shipsNotMeasured'];
+      if (ships === null && isRecord(notMeasured)) record['latestShipNotMeasured'] = notMeasured;
       const score = dossier['score'];
       if (isRecord(score)) {
         record['scoringVersion'] = score['scoringVersion'];

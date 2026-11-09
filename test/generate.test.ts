@@ -119,6 +119,25 @@ describe('a full run over recorded fixtures', () => {
     });
   });
 
+  it('keeps a null ships list as no latestShip with its reason, never as an empty list', async () => {
+    const world = buildWorld();
+    const listed = world.projects.find((x) => x['slug'] !== 'agentos') as Record<string, unknown>;
+    const slug = String(listed['slug']);
+    const notMeasured = { reason: 'activity_not_measured', text: 'Not measured.' };
+    world.dossiers.set(slug, {
+      ...listed,
+      narratives: [],
+      ships: null,
+      shipsNotMeasured: notMeasured,
+      disclaimer: 'x',
+    });
+    const { outDir } = await run(world);
+    const record = readNdjson(outDir, 'projects.ndjson').find((p) => p['slug'] === slug);
+    expect(record).toBeDefined();
+    expect(record).not.toHaveProperty('latestShip');
+    expect(record?.['latestShipNotMeasured']).toEqual(notMeasured);
+  });
+
   it("keeps coverage's stateDetail beside the unchanged state", async () => {
     const world = buildWorld();
     const body = world.coverage.get('agentos') as { dimensions: Record<string, unknown> };
