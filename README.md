@@ -205,7 +205,7 @@ hey-data huggingface [--out <dir>] [--quiet]
 HEY's anonymous limit is 120 requests a minute per client. hey-data sends one request every
 `--delay-ms` (1,100 ms by default, about 55 a minute; the CLI refuses less than 600 ms), honours
 `retry-after` on a 429 or 503, and retries a retryable answer at most `--max-retries` times (a 429;
-a 5xx, including the 520–524 errors the CDN in front of HEY answers when the origin errs; a network
+a 5xx, including the 520–525 errors the CDN in front of HEY answers when the origin errs; a network
 failure or a timeout — every request is a GET). A 429 waits what the server asks; a server error or a
 network failure backs off 30 s, 60 s, 120 s, 240 s, then 300 s, or longer when the server asks. It never follows a redirect and caps every response body at 8 MB. It sends no key.
 

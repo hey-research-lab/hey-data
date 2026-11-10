@@ -91,9 +91,9 @@ describe('politeFetch', () => {
     expect(long.stats.retries).toBe(0);
   });
 
-  it("retries the CDN's origin errors (520–524) like a 502", async () => {
+  it("retries the CDN's origin errors (520–525) like a 502", async () => {
     const clock = fakeClock();
-    const statuses = [520, 522, 524];
+    const statuses = [520, 524, 525];
     let calls = 0;
     const polite = politeFetch({
       fetchImpl: async () => {

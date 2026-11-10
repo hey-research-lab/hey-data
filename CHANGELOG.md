@@ -11,6 +11,8 @@ All notable changes to this project are documented here. The format follows
   the allowlist expected a list. The dossier spec now accepts `null` for that list only (`[spec, 'or-null']`);
   any other non-list is still schema drift. Such a project has no `latestShip` and carries
   `latestShipNotMeasured {reason, text}` instead (additive; `schemaVersion` stays 1).
+- A 525 (the CDN's TLS handshake to HEY's origin failing, seen while the origin restarts) is now retried like
+  520–524. The 2026-11-10 run read 4,700 of 5,435 dossiers with no schema drift, then stopped on one 525.
 - `hey-data huggingface` and the weekly `Hugging Face copy` workflow keep
   huggingface.co/datasets/heyresearch/robinhood-chain-builders on HEY's newest daily CSVs, checksum and column
   checked, with a dataset card naming the day and the counts. Needs the `HF_TOKEN` secret (2026-11-05).

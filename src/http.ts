@@ -3,7 +3,7 @@
  * per client; hey-data paces itself far below it (one request per `delayMs`,
  * 1,100 ms by default, about 55 a minute), honours `retry-after` on a 429 or a
  * 503, and retries a retryable answer — a 429, a 5xx from HEY or from the CDN in
- * front of it (520–524), a network failure or a timeout — a bounded number of
+ * front of it (520–525), a network failure or a timeout — a bounded number of
  * times. A 429 waits what the server asks; a server error or a network failure
  * backs off exponentially (30 s, 60 s, 120 s, 240 s, then 300 s), or longer when
  * the server asks for longer, so a restart of a few minutes does not end a run
@@ -18,10 +18,11 @@ export const MIN_CLI_DELAY_MS = 600;
 export const DEFAULT_MAX_RETRIES = 1;
 export const MAX_RETRIES_CAP = 5;
 /**
- * 520–524 are what Cloudflare, in front of heyresearch.xyz, answers when the
- * origin errs, refuses, times out or cannot be reached: transient, like a 502.
+ * 520–525 are what the CDN in front of heyresearch.xyz answers when the origin
+ * errs, refuses, times out, cannot be reached or fails its TLS handshake (525,
+ * seen while the origin restarts): transient, like a 502.
  */
-const RETRYABLE = new Set([429, 500, 502, 503, 504, 520, 521, 522, 523, 524]);
+const RETRYABLE = new Set([429, 500, 502, 503, 504, 520, 521, 522, 523, 524, 525]);
 const DEFAULT_BACKOFF_SECONDS = { 429: 60, other: 30 } as const;
 const MAX_BACKOFF_SECONDS = 300;
 
