@@ -288,6 +288,8 @@ zero-width characters are removed; links are kept exactly as HEY recorded them, 
 link's scheme before rendering it), reads only allowlisted keys (so `__proto__` and friends are
 never copied), and writes only fixed file names inside `--out`, refusing symbolic links.
 
+HEY Research Lab also reviews other projects' code and reports what it finds privately first: [security credits](https://github.com/hey-research-lab#security-credits).
+
 ## Contributing
 
 See [CONTRIBUTING.md](CONTRIBUTING.md). `pnpm lint`, `pnpm typecheck`, `pnpm test`, `pnpm build`
