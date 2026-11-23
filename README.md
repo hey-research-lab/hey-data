@@ -49,7 +49,7 @@ head -n 1 snapshot/projects.ndjson
 ```
 
 The full snapshot reads each project's dossier and coverage too (about two requests per project;
-roughly three and a half hours for ~5,400 projects). Stop it at any time; the same command resumes.
+roughly three and a half hours for ~5,500 projects). Stop it at any time; the same command resumes.
 
 ```sh
 pnpm generate --out snapshot
